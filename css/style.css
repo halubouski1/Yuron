@@ -1,0 +1,534 @@
+/* ==========================================================================
+   YURON CLINIC — Main Stylesheet
+   ==========================================================================
+   Sections:
+   1. CSS Variables (tokens)
+   2. Fonts
+   3. Base / Reset additions
+   4. Layout helpers (container)
+   5. Buttons
+   6. Header
+   7. Hero
+   8. Systems (heading + card slider)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. CSS Variables (tokens)
+   ========================================================================== */
+:root {
+  /* Colors — surfaces */
+  --color-bg-cream: #efe5d3;
+  --color-bg-dark: #1a120b;
+  --color-surface-light: #ffffff;
+
+  /* Colors — text */
+  --color-text-dark: #1a120b;
+  --color-text-muted: #5a4a3d;
+  --color-text-light: #f5ebdc;
+  --color-text-on-dark: #ffffff;
+
+  /* Colors — accents */
+  --color-accent: #c98a5a;
+  --color-border-light: rgba(245, 235, 220, 0.18);
+
+  /* Typography — families */
+  --font-sans: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+
+  /* Typography — sizes (fluid) */
+
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-nav: 14px;
+
+  /* Spacing scale */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+
+  /* Layout */
+  --container-max: 1940px;
+  --container-pad: 50px;
+
+  /* Radii */
+  --radius-pill: 999px;
+  --radius-md: 12px;
+
+  /* Transitions */
+  --t-fast: 0.2s ease;
+  --t-base: 0.3s ease;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal"), local("NeueMontreal-Regular"),
+    url("../assets/fonts/NeueMontreal-Regular.woff2") format("woff2"),
+    url("../assets/fonts/NeueMontreal-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal Medium"), local("NeueMontreal-Medium"),
+    url("../assets/fonts/NeueMontreal-Medium.woff2") format("woff2"),
+    url("../assets/fonts/NeueMontreal-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: local("Neue Montreal Bold"), local("NeueMontreal-Bold"),
+    url("../assets/fonts/NeueMontreal-Bold.woff2") format("woff2"),
+    url("../assets/fonts/NeueMontreal-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ==========================================================================
+   3. Base / Reset additions
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  color: var(--color-text-dark);
+  background: var(--color-bg-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* ==========================================================================
+   4. Layout helpers
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+
+/* ==========================================================================
+   5. Buttons
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  color: #282828;
+  justify-content: center;
+  background: #fff;
+  padding: 22px 16px;
+  gap: 90px;
+  border-radius: 5px;
+  white-space: nowrap;
+  transition: background-color var(--t-fast), color var(--t-fast),
+    transform var(--t-fast);
+}
+
+.btn--dark {
+  border-radius: 10px;
+  background: #000;
+  padding: 20px;
+  color: #fff9f3;
+  gap: 50px;
+}
+
+.btn--dark:hover {
+  background: var(--color-text-light);
+}
+
+.btn--dark:hover {
+  background: #2a1f18;
+}
+
+
+/* ==========================================================================
+   6. Header
+   Wrapped inside .hero, absolutely positioned at the top of the viewport.
+   ========================================================================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.header__logo {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.header__nav-dot {
+  flex-shrink: 0;
+}
+
+.header__nav a {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff5ed;
+  transition: opacity var(--t-fast);
+}
+
+.header__nav a:hover {
+  opacity: 0.7;
+}
+
+
+/* ==========================================================================
+   7. Hero
+   Full-viewport section. Contains the absolute header, a video background,
+   a subtle dark overlay, the headline, and the bottom row (features + CTA).
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: var(--color-text-on-dark);
+  isolation: isolate;
+}
+
+/* — Background video — */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* — Subtle dark overlay so text stays readable — */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* — Inner content layout — */
+.hero__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 64px;
+}
+
+/* — Headline — */
+.hero__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 769px;
+}
+
+/* — Bottom row: features (left) + CTA (right) — */
+.hero__bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+/* — Features list — */
+.hero__features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero__features li {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  color: var(--color-text-light);
+}
+
+.hero__feature-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.hero__feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero__feature-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  color: #fff9f3;
+}
+
+.hero__feature-sub {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  opacity: 0.7;
+}
+
+/* — CTA block — */
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+    max-width: 750px;
+}
+
+.hero__cta-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff5ed;
+}
+
+
+/* ==========================================================================
+   8. Systems (heading + card slider)
+   Heading sits inside .container, slider extends right past the container
+   so the next card peeks into view.
+   ========================================================================== */
+.systems {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #fff9f3;
+  overflow: hidden;
+}
+
+.systems__title {
+  margin: 0 0 56px;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  max-width: 500px;
+}
+
+/* — Slider wrapper — */
+.systems__slider {
+  --systems-slider-gap: 16px;
+  --systems-card-width: calc((100vw - (var(--systems-slider-gap) * 3)) / 3);
+  width: 100%;
+}
+
+/* — Card — */
+.systems-card {
+  position: relative;
+  width: var(--systems-card-width);
+  aspect-ratio: 640 / 800;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  isolation: isolate;
+  color: var(--color-text-on-dark);
+}
+
+.systems-card__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* — Header (absolute): top row + edge-to-edge bottom divider — */
+.systems-card__header {
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Top row: title | vertical divider | description (inset by 24px) */
+.systems-card__top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.systems-card__half {
+  width: 50%;
+  padding-top: 28px;
+  padding-right: 28px;
+  padding-bottom: 40px;
+}
+
+.systems-card__half--end {
+    display: flex;
+    justify-content: end;
+}
+
+.systems-card__half:first-child {
+    border-right: 1px rgba(255, 255, 255, 0.2) solid;
+    padding-left: 28px;
+    padding-right: 0;
+}
+
+.systems-card__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 116%;
+  color: #fff9f3;
+}
+
+.systems-card__desc {
+  margin: 0;
+  max-width: 180px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 128%;
+  opacity: 0.77;
+  text-align: right;
+  color: #fff9f3;
+}
+
+/* — Bottom row: tags + arrow (absolute, pinned to card bottom) — */
+.systems-card__bottom {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.systems-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 70%;
+}
+
+.systems-card__tags li {
+  padding: 10px 12px;
+  backdrop-filter: blur(11px);
+  background: rgba(255, 255, 255, 0.19);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  white-space: nowrap;
+}
+
+.systems-card__arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 57px;
+  height: 57px;
+  flex-shrink: 0;
+  transition: transform var(--t-fast);
+}
+
+.systems-card__arrow:hover {
+  transform: translate(2px, -2px);
+}

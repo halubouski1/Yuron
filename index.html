@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuron Clinic — Regenerative Aesthetics</title>
+    <meta
+      name="description"
+      content="Yuron Clinic — regenerative aesthetics rooted in functional medicine. Personalised, evidence-led care."
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <!-- =====================================================================
+         HERO (wraps the header)
+         ===================================================================== -->
+    <section class="hero">
+      <!-- Background video -->
+      <video
+        class="hero__video"
+        src="assets/videos/hero.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+      <!-- Dark overlay for text legibility -->
+      <div class="hero__overlay"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="container header__inner">
+          <a href="#" class="header__logo">Yuron Clinic</a>
+
+          <nav class="header__nav" aria-label="Primary">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="#concept">Concept</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a href="#founder">Founder</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a href="#process">Process</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a href="#news">News</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a href="#faq">FAQ</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+            </ul>
+          </nav>
+
+          <a href="#consultation" class="btn btn--dark">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- Hero content -->
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+          We treat what you<br />
+          can see by addressing<br />
+          what you can&rsquo;t
+        </h1>
+
+        <div class="hero__bottom">
+          <!-- Left: feature list -->
+          <ul class="hero__features">
+            <li>
+              <svg class="hero__feature-icon" width="42" height="42" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.9717 28.6231C16.4692 29.0099 16.9871 29.3786 17.5483 29.7027C18.1096 30.0267 18.6873 30.291 19.2716 30.5283C17.9677 34.4228 16.0803 38.6776 15.5561 39.5846C15.1265 40.3287 14.4329 40.8615 13.6037 41.0837C12.7746 41.3058 11.9076 41.1918 11.1634 40.7617C10.4192 40.3315 9.88658 39.6385 9.66441 38.8093C9.44223 37.9801 9.55628 37.1132 9.98641 36.369C10.5104 35.4613 13.2509 31.6996 15.9717 28.6231Z" fill="#FFF9F3" />
+                <path d="M13.4708 11.3082C15.2258 8.26926 18.0535 6.22664 21.2024 5.38289C24.3513 4.53913 27.8209 4.8944 30.8603 6.64869C36.9385 10.158 39.0289 17.9593 35.5197 24.0382C32.0097 30.116 24.209 32.2062 18.1303 28.6977C12.052 25.1884 9.9622 17.3869 13.4708 11.3082Z" fill="#FFF9F3" />
+              </svg>
+              <div class="hero__feature-text">
+                <span class="hero__feature-title">Clinical Precision</span>
+                <span class="hero__feature-sub">Diagnostic accuracy</span>
+              </div>
+            </li>
+            <li>
+              <svg class="hero__feature-icon" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.0355 24.5915C9.25346 22.8797 8.93168 21.0027 9.10033 19.1367C9.26899 17.2708 9.92255 15.4772 10.9996 13.9243C13.3413 10.5512 21.0081 7.57642 34 5C33.565 15.8161 32.1783 22.9107 29.8398 26.2839C28.2015 28.6461 25.6883 30.3015 22.825 30.9045C19.9617 31.5075 16.9695 31.0116 14.4732 29.5202C15.3851 27.9628 16.6441 26.6239 18.1578 25.6019L18.9808 25.0462C19.6885 24.5693 20.1725 23.8385 20.3262 23.0145C20.4799 22.1906 20.2908 21.341 19.8005 20.6527C19.3101 19.9644 18.5588 19.4937 17.7116 19.3442C16.8644 19.1946 15.9909 19.3786 15.2832 19.8555L14.4602 20.4111C12.7592 21.5581 11.2642 22.9699 10.0355 24.5899V24.5915ZM11.2463 35.4213C11.2463 35.84 11.0753 36.2416 10.7709 36.5376C10.4665 36.8337 10.0537 37 9.62317 37C9.19268 37 8.77982 36.8337 8.47542 36.5376C8.17101 36.2416 8 35.84 8 35.4213C8 29.9496 10.7594 24.8252 15.3854 21.7088L16.2084 21.1531C16.5623 20.9147 16.999 20.8227 17.4226 20.8975C17.8462 20.9722 18.2219 21.2076 18.467 21.5518C18.7122 21.8959 18.8068 22.3207 18.7299 22.7327C18.653 23.1447 18.4111 23.51 18.0572 23.7485L17.2342 24.3042C15.3871 25.549 13.8775 27.2106 12.8347 29.1466C11.7919 31.0827 11.2469 33.2357 11.2463 35.4213Z" fill="white" />
+              </svg>
+              <div class="hero__feature-text">
+                <span class="hero__feature-title">Regenerative Focus</span>
+                <span class="hero__feature-sub">Tissue renewal</span>
+              </div>
+            </li>
+            <li>
+              <svg class="hero__feature-icon" width="42" height="42" viewBox="0 0 41 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.7396 6C19.0075 6 18.3054 6.29632 17.7878 6.82376C17.2701 7.35121 16.9793 8.06658 16.9793 8.8125V11.2575L14.8998 10.035C14.266 9.66265 13.513 9.56192 12.8063 9.75493C12.0996 9.94795 11.497 10.4189 11.131 11.0644L8.3706 15.9356C8.18908 16.2556 8.07121 16.6088 8.02374 16.9752C7.97627 17.3415 8.00014 17.7139 8.09396 18.0708C8.18779 18.4278 8.34974 18.7624 8.57056 19.0556C8.79138 19.3487 9.06674 19.5947 9.3809 19.7794L11.4585 21L9.37906 22.2225C8.7462 22.5961 8.28473 23.2103 8.096 23.9303C7.90726 24.6503 8.00669 25.4172 8.37244 26.0625L11.1328 30.9338C11.3139 31.2538 11.5551 31.5343 11.8426 31.7593C12.1301 31.9843 12.4583 32.1494 12.8085 32.2452C13.1586 32.3409 13.5239 32.3655 13.8833 32.3174C14.2428 32.2693 14.5894 32.1496 14.9035 31.965L16.9793 30.7406V33.1875C16.9793 33.9334 17.2701 34.6488 17.7878 35.1762C18.3054 35.7037 19.0075 36 19.7396 36H25.2604C25.9925 36 26.6946 35.7037 27.2122 35.1762C27.7299 34.6488 28.0207 33.9334 28.0207 33.1875V30.7425L30.1002 31.965C30.734 32.3373 31.487 32.4381 32.1937 32.2451C32.9004 32.052 33.503 31.5811 33.869 30.9356L36.6294 26.0644C36.8109 25.7444 36.9288 25.3912 36.9763 25.0248C37.0237 24.6585 36.9999 24.2861 36.906 23.9292C36.8122 23.5722 36.6503 23.2376 36.4294 22.9444C36.2086 22.6513 35.9333 22.4053 35.6191 22.2206L33.5415 21L35.6209 19.7775C36.2546 19.4042 36.7168 18.7898 36.9059 18.0693C37.0951 17.3489 36.9956 16.5814 36.6294 15.9356L33.869 11.0644C33.6879 10.7444 33.4467 10.4639 33.1592 10.2388C32.8717 10.0138 32.5435 9.84872 32.1933 9.75296C31.8432 9.6572 31.478 9.63265 31.1185 9.68072C30.759 9.72879 30.4124 9.84854 30.0984 10.0331L28.0207 11.2594V8.8125C28.0207 8.06658 27.7299 7.35121 27.2122 6.82376C26.6946 6.29632 25.9925 6 25.2604 6H19.7396ZM22.5 24.75C21.5239 24.75 20.5877 24.3549 19.8975 23.6516C19.2073 22.9484 18.8195 21.9946 18.8195 21C18.8195 20.0054 19.2073 19.0516 19.8975 18.3483C20.5877 17.6451 21.5239 17.25 22.5 17.25C23.4761 17.25 24.4123 17.6451 25.1025 18.3483C25.7927 19.0516 26.1805 20.0054 26.1805 21C26.1805 21.9946 25.7927 22.9484 25.1025 23.6516C24.4123 24.3549 23.4761 24.75 22.5 24.75Z" fill="white" />
+              </svg>
+              <div class="hero__feature-text">
+                <span class="hero__feature-title">Ongoing Optimisation</span>
+                <span class="hero__feature-sub">Sustained results</span>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Right: CTA block -->
+          <div class="hero__cta">
+            <p class="hero__cta-text">
+              Our role is to unlock this potential and provide advanced,
+              personalized care.
+            </p>
+            <a href="#consultation" class="btn">
+              Book the consultation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SYSTEMS (heading + Swiper slider with 6 cards)
+         ===================================================================== -->
+    <section class="systems" id="concept">
+      <div class="container">
+        <h2 class="systems__title">From Skin &amp; Hair to Systems</h2>
+      </div>
+
+      <!-- Slider -->
+      <div class="systems__slider swiper">
+        <div class="swiper-wrapper">
+
+          <!-- Card 1 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-1.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss & Thinning</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Growth-factor-based protocols</li>
+                <li>PRP</li>
+                <li>Exosomes</li>
+                <li>Mesotherapy</li>
+                <li>Personalised home-care plan</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Hair Loss">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-2.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Skin Restructuring Injections</li>
+                <li>Exosomes</li>
+                <li>Microneedling</li>
+                <li>PRP</li>
+                <li>RF Microneedling</li>
+                <li>Lasers</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Skin Ageing">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-3.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Plasma Bio-Filler</li>
+                <li>Fat Transfer</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Face Volume Loss">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-4.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Medical-grade topical protocols</li>
+                <li>Targeted peels</li>
+                <li>Lasers &amp; Light-based therapy</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Pigmentation">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-5.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Body contouring</li>
+                <li>Lymphatic therapy</li>
+                <li>Nutritional protocols</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Body Shape">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="swiper-slide systems-card">
+            <img src="assets/images/systems-card-6.jpg" alt="" class="systems-card__bg" />
+
+            <div class="systems-card__header">
+                <div class="systems-card__half">
+                  <h3 class="systems-card__title">Hair Loss</h3>
+                </div>
+                <div class="systems-card__half systems-card__half--end">
+                  <p class="systems-card__desc">Hair loss is complex and multifactorial.</p>
+                </div>
+            </div>
+
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>Diagnostic panels</li>
+                <li>Hormonal balance</li>
+                <li>Personalised nutrition</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Open Wellness">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
