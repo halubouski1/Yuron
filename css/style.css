@@ -13,6 +13,7 @@
    9. Foundation (video bg + title, buttons, description)
    10. Founder (3-col flex: side labels + portrait stack)
    11. Results (full-bleed image + title + CTA)
+   12. Process (heading + dark CTA + 6-card slider)
    ========================================================================== */
 
 
@@ -551,7 +552,6 @@ svg {
   position: relative;
   width: 100%;
   min-height: 1200px;
-  border-radius: 12px;
   overflow: hidden;
   isolation: isolate;
   color: #fff9f3;
@@ -747,8 +747,10 @@ color: #282828;
    Reuses .btn for the "View Gallery" button.
    ========================================================================== */
 .results {
+  display: flex;
+  align-items: center;
   position: relative;
-  min-height: 100vh;
+  min-height: 1200px;
   overflow: hidden;
   isolation: isolate;
   color: #fff9f3;
@@ -768,18 +770,151 @@ color: #282828;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
   text-align: center;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 
 .results__title {
-  margin: 0 0 48px;
-  font-weight: 500;
-  font-size: 60px;
-  line-height: 110%;
+  margin: 0 0 60px;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90%;
   letter-spacing: -0.02em;
-  color: #fff9f3;
+  text-align: center;
+  color: #fff;
   max-width: 1000px;
+}
+
+.results__btn {
+  gap: 170px;
+}
+
+
+/* ==========================================================================
+   12. Process (heading + dark CTA + 6-card slider)
+   Cards reuse the same divider architecture as systems cards: absolute
+   header with mid (vertical) + bottom (edge-to-edge) dividers. No bg image.
+   ========================================================================== */
+.process {
+  padding: 120px 0;
+  background: #fff9f3;
+}
+
+/* — Top row: heading (left) + CTA (right) — */
+.process__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+.process__title {
+  margin: 0;
+  max-width: 700px;
+font-weight: 400;
+font-size: 76px;
+line-height: 98%;
+letter-spacing: -0.02em;
+color: #282828;
+}
+
+.process__cta {
+  flex-shrink: 0;
+  font-size: 14px;
+  padding: 14px 18px;
+  gap: 24px;
+  border-radius: 8px;
+}
+
+/* — Slider — */
+.process__slider {
+  width: 100%;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+    overflow: hidden;
+}
+
+/* — Card — */
+.process-card {
+  position: relative;
+  width: 540px;
+  aspect-ratio: 540 / 430;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--color-bg-cream);
+  color: var(--color-text-dark);
+}
+
+/* Header (absolute): icon + number + bottom edge-to-edge divider */
+.process-card__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 24px;
+}
+
+.process-card__top {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+  gap: 24px;
+  padding: 0 24px;
+}
+
+.process-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process-card__number {
+  align-self: center;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: rgba(26, 18, 11, 0.5);
+}
+
+/* Dividers (dark hairlines on the cream cards) */
+.process-card__divider {
+  background: rgba(26, 18, 11, 0.18);
+}
+
+.process-card__divider--mid {
+  width: 1px;
+  justify-self: center;
+  align-self: stretch;
+}
+
+.process-card__divider--bottom {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-top: 16px;
+}
+
+/* Bottom: title + description, pinned to card bottom */
+.process-card__body {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+}
+
+.process-card__title {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: var(--color-text-dark);
+}
+
+.process-card__desc {
+  margin: 0;
+  font-size: 14px;
+  line-height: 140%;
+  color: rgba(26, 18, 11, 0.65);
+  max-width: 90%;
 }

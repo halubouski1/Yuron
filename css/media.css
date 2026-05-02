@@ -158,6 +158,29 @@
     font-size: 40px;
     margin-bottom: 32px;
   }
+
+  .process {
+    padding: 80px 0;
+  }
+
+  .process__head {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .process__title {
+    font-size: 40px;
+  }
+
+  .process-card {
+    width: 320px;
+    aspect-ratio: 320 / 360;
+  }
+
+  .process-card__title {
+    font-size: 18px;
+  }
 }
 
 

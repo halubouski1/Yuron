@@ -17,5 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
         1200: { spaceBetween: 16 },
       },
     });
+
+    // ---------------------------------------------------------------
+    // Process slider
+    // ---------------------------------------------------------------
+    new Swiper(".process__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      grabCursor: true,
+      speed: 500,
+    });
   }
 });
