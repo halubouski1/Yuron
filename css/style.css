@@ -10,6 +10,9 @@
    6. Header
    7. Hero
    8. Systems (heading + card slider)
+   9. Foundation (video bg + title, buttons, description)
+   10. Founder (3-col flex: side labels + portrait stack)
+   11. Results (full-bleed image + title + CTA)
    ========================================================================== */
 
 
@@ -531,4 +534,252 @@ svg {
 
 .systems-card__arrow:hover {
   transform: translate(2px, -2px);
+}
+
+
+/* ==========================================================================
+   9. Foundation (video bg + title, buttons, description)
+   Full-bleed-ish video container with 16px side margins. Content is a flex
+   column: title -> buttons row -> description.
+   ========================================================================== */
+.foundation {
+  padding: 16px;
+  background: #fff9f3
+}
+
+.foundation__inner {
+  position: relative;
+  width: 100%;
+  min-height: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff9f3;
+}
+
+/* — Background video — */
+.foundation__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* — Centered content stack — */
+.foundation__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: inherit;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+.foundation__title {
+  margin: 0 0 40px;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fff;
+  max-width: 1200px;
+}
+
+/* — Buttons row — */
+.foundation__buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 110px;
+}
+
+.foundation-btn {
+  gap: 80px;
+  min-width: 335px;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.foundation-btn__text {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+}
+
+.foundation-btn__title {
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.foundation-btn__sub {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.foundation-btn__icon {
+  flex-shrink: 0;
+}
+
+/* — Description — */
+.foundation__desc {
+  margin: 0;
+  max-width: 640px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 123%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #fff;
+}
+
+
+/* ==========================================================================
+   10. Founder (3-col flex: side labels + portrait stack)
+   ========================================================================== */
+.founder {
+  padding: 120px 0;
+  background: #fff9f3;
+}
+
+.founder__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 115px;
+}
+
+/* — Side labels — */
+.founder__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+/* — Center column: title -> image -> description — */
+.founder__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.founder__title {
+  margin: 0;
+  margin-bottom: 66px;
+font-weight: 400;
+font-size: 76px;
+line-height: 98%;
+letter-spacing: -0.02em;
+text-align: center;
+color: #282828;
+}
+
+.founder__image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 66px;
+}
+
+.founder__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.founder__image-wrap::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 40%);
+  opacity: 0.55;
+}
+
+/* Caption pill on the photo */
+.founder__badge {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  border-radius: 3px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.17);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.founder__desc {
+  margin: 0;
+  max-width: 640px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  text-align: center;
+  color: #282828;
+}
+
+
+/* ==========================================================================
+   11. Results (full-bleed image + title + CTA)
+   Reuses .btn for the "View Gallery" button.
+   ========================================================================== */
+.results {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff9f3;
+}
+
+.results__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.results__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.results__title {
+  margin: 0 0 48px;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 1000px;
 }

@@ -39,6 +39,10 @@
   .systems-card {
     width: var(--systems-card-width);
   }
+
+  .foundation__title {
+    font-size: 48px;
+  }
 }
 
 
@@ -109,6 +113,50 @@
   .systems-card__arrow {
     width: 44px;
     height: 44px;
+  }
+
+  .foundation__title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .foundation__buttons {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 36px;
+  }
+
+  .foundation-btn {
+    min-width: 0;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .founder {
+    padding: 80px 0;
+  }
+
+  .founder__inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .founder__label {
+    order: 3;
+  }
+
+  .founder__title {
+    font-size: 40px;
+    margin-bottom: 32px;
+  }
+
+  .founder__desc {
+    font-size: 16px;
+  }
+
+  .results__title {
+    font-size: 40px;
+    margin-bottom: 32px;
   }
 }
 
