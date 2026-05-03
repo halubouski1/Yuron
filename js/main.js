@@ -23,9 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // ---------------------------------------------------------------
     new Swiper(".process__slider", {
       slidesPerView: "auto",
-      spaceBetween: 16,
+      spaceBetween: 10,
       grabCursor: true,
       speed: 500,
+    });
+  }
+
+  // ---------------------------------------------------------------
+  // FAQ accordion
+  // ---------------------------------------------------------------
+  if (typeof Accordion !== "undefined") {
+    new Accordion(".faq__list", {
+      duration: 300,
+      showMultiple: false,
+    });
+  }
+
+  // ---------------------------------------------------------------
+  // Footer "back to top"
+  // ---------------------------------------------------------------
+  const toTopBtn = document.querySelector(".footer__to-top");
+  if (toTopBtn) {
+    toTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 });

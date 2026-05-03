@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
   </head>
@@ -411,29 +415,7 @@
         <span class="founder__label founder__label--right">Regenerative Medicine Specialist</span>
       </div>
     </section>
-    <!-- =====================================================================
-         RESULTS (full-bleed image with title + "View Gallery" button)
-         ===================================================================== -->
-    <section class="results" id="results">
-      <img class="results__bg" src="assets/img/real.png" alt="" />
-
-      <div class="container results__inner">
-        <h2 class="results__title">
-          Real patients.<br />
-          Measurable outcomes.<br />
-          Before &amp; After
-        </h2>
-
-        <a href="#gallery" class="btn results__btn">
-          View Gallery
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.66602 2.66602V7.33268C2.66602 8.03993 2.94697 8.7182 3.44707 9.2183C3.94717 9.7184 4.62545 9.99935 5.33268 9.99935H13.332" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M9.99935 6.66602L13.3327 9.99935L9.99935 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-        </a>
-      </div>
-    </section>
-            <!-- =====================================================================
+        <!-- =====================================================================
          PROCESS (heading + dark CTA on top, 6-card slider on bottom)
          ===================================================================== -->
     <section class="process" id="process">
@@ -460,14 +442,16 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 4h13a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H8l-5 4V4Z" fill="#1A120B"/>
-                    <path d="M9.5 9.5h-2v-2M9.5 9.5h2v-2M9.5 9.5h-2v2M9.5 9.5h2v2" stroke="#fff" stroke-width="0.8"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1081 43.3319C22.2307 45.6348 26.1126 47 30.3198 47C33.0677 47 35.6772 46.4177 38.0268 45.3722L47.393 46.7616C47.7329 46.812 48.0503 46.6897 48.2644 46.4258C48.4784 46.1618 48.5286 45.8309 48.4021 45.5172L45.7665 38.9809C47.8067 36.0437 49 32.4952 49 28.6728C49 21.6138 44.9315 15.4882 38.9701 12.4268C41.033 15.5698 42.2303 19.3113 42.2303 23.3271C42.2303 34.4615 33.029 43.4888 21.6802 43.4888C20.8175 43.4889 19.9588 43.4363 19.1081 43.3319ZM21.6802 5C31.997 5 40.3604 13.2053 40.3604 23.3272C40.3604 33.449 31.997 41.6543 21.6802 41.6543C18.9323 41.6543 16.3228 41.072 13.9732 40.0265L4.60701 41.4159C4.26706 41.4664 3.94973 41.344 3.73563 41.0801C3.52152 40.8161 3.47141 40.4852 3.59791 40.1715L6.23346 33.6352C4.19329 30.6981 3 27.1495 3 23.3272C3 13.2053 11.3634 5 21.6802 5ZM24.4799 15.3009C24.7374 15.3009 24.9474 15.5069 24.9474 15.7595V20.1218H29.3937C29.6512 20.1218 29.8612 20.3278 29.8612 20.5804V26.0741C29.8612 26.3267 29.6512 26.5327 29.3937 26.5327H24.9474V30.895C24.9474 31.1476 24.7374 31.3536 24.4799 31.3536H18.8805C18.623 31.3536 18.413 31.1476 18.413 30.895V26.5327H13.9667C13.7092 26.5327 13.4992 26.3267 13.4992 26.0741V20.5804C13.4992 20.3278 13.7092 20.1218 13.9667 20.1218H18.413V15.7595C18.413 15.5069 18.623 15.3009 18.8805 15.3009H24.4799Z" fill="#282828" />
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">001</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">001</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -482,13 +466,17 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 2c3 4 6 8 6 11a6 6 0 0 1-12 0c0-3 3-7 6-11Z" fill="#1A120B"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="5" y="5" width="42" height="42" rx="4" fill="#282828" />
+                    <path d="M26 38C21.5888 38 18 34.4904 18 30.1766C18 26.5348 23.0885 19.0977 25.1619 16.1754C25.5668 15.6046 26.431 15.6084 26.8334 16.181C29.3765 19.8002 34 26.6165 34 30.1766C34 34.4904 30.4112 38 26 38Z" fill="#F0ECE8" />
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">002</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">002</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -503,15 +491,16 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="3" y="11" width="4" height="8" fill="#1A120B"/>
-                    <rect x="9" y="6" width="4" height="13" fill="#1A120B"/>
-                    <rect x="15" y="3" width="4" height="16" fill="#1A120B"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M42.3333 5H9.66667C7.1 5 5 7.1 5 9.66667V42.3333C5 44.9 7.1 47 9.66667 47H42.3333C44.9 47 47 44.9 47 42.3333V9.66667C47 7.1 44.9 5 42.3333 5ZM19 37.6667H14.3333V21.3333H19V37.6667ZM28.3333 37.6667H23.6667V14.3333H28.3333V37.6667ZM37.6667 37.6667H33V28.3333H37.6667V37.6667Z" fill="#282828" />
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">003</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">003</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -526,14 +515,25 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="2" y="9" width="18" height="4" rx="2" fill="#1A120B"/>
-                    <rect x="9" y="2" width="4" height="18" rx="2" fill="#1A120B"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_841_5560)">
+                      <path d="M10.8517 46.1092C9.93786 46.1092 9.07465 45.8887 8.3125 45.498V45.9254C8.3125 49.2751 11.0377 52.0003 14.3874 52.0003H37.6104C40.9601 52.0003 43.6853 49.2751 43.6853 45.9254V45.498C42.9231 45.8887 42.0599 46.1092 41.1462 46.1092H10.8517Z" fill="#282828" />
+                      <path d="M10.8518 43.0614H41.1462C42.5361 43.0614 43.6688 41.9389 43.6853 40.553V15.2996C43.6853 12.6134 41.9328 10.3289 39.5111 9.5293H12.4868C10.065 10.3289 8.3125 12.6134 8.3125 15.2996V40.553C8.32916 41.9389 9.46182 43.0614 10.8518 43.0614ZM37.622 30.2996L34.9999 30.0228C34.4579 31.6538 33.4755 33.1223 32.1524 34.2521C28.2505 37.7136 21.7452 37.101 18.5793 32.9406L20.9625 31.042C23.8705 34.8184 30.0152 34.0026 31.8667 29.6922L29.3033 29.4216L34.0586 24.2128L37.622 30.2996ZM19.8455 19.8201C23.7475 16.3586 30.2526 16.9711 33.4187 21.1316L31.0355 23.0302C28.1275 19.2536 21.9827 20.0697 20.1313 24.38L22.6949 24.6506L17.9393 29.8593L14.3759 23.7725L16.998 24.0493C17.5399 22.4183 18.5224 20.9499 19.8455 19.8201Z" fill="#282828" />
+                      <path d="M12.8633 0H39.1333V6.48266H12.8633V0Z" fill="#282828" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_841_5560">
+                        <rect width="52" height="52" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">004</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">004</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -548,14 +548,26 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="11" cy="11" r="8" stroke="#1A120B" stroke-width="2"/>
-                    <path d="M11 7v4l3 2" stroke="#1A120B" stroke-width="2" stroke-linecap="round"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_841_5575)">
+                      <path d="M17.4282 45.1474H34.5591C36.5529 45.1474 38.1749 43.5253 38.1749 41.5315V20.5566H13.8125V41.5316C13.8125 43.5254 15.4345 45.1474 17.4282 45.1474Z" fill="#282828" />
+                      <path d="M38.175 47.125C37.1328 47.8013 35.8916 48.1959 34.5592 48.1959H17.4283C16.096 48.1959 14.8548 47.8013 13.8125 47.125V52.0013H38.1749V47.125H38.175Z" fill="#282828" />
+                      <path d="M17.2383 13.7051H34.7484V17.5105H17.2383V13.7051Z" fill="#282828" />
+                      <path d="M20.6641 10.6578H31.3218V3.80545H36.2714C37.3205 3.80545 38.174 2.95191 38.174 1.90277C38.174 0.853633 37.3206 0 36.2715 0H20.6641V10.6578Z" fill="#282828" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_841_5575">
+                        <rect width="52" height="52" fill="white" />
+                      </clipPath>
+                    </defs>
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">005</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">005</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -570,13 +582,16 @@
           <div class="swiper-slide process-card">
             <div class="process-card__header">
               <div class="process-card__top">
-                <div class="process-card__icon">
-                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11 2l2.5 5.5 6 .5-4.5 4 1.5 6-5.5-3-5.5 3 1.5-6-4.5-4 6-.5L11 2Z" fill="#1A120B"/>
+                <div class="process-card__half">
+                  <div class="process-card__icon">
+                  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M45.3791 35.86L37.5792 30.3814C41.312 23.5286 40.272 14.7815 34.4963 9.00582C27.4391 1.94858 16.0363 1.94858 8.99773 9.00582C1.95909 16.0258 1.95909 27.4657 8.99773 34.4858C14.792 40.28 23.5392 41.32 30.3921 37.5686L35.8705 45.3872C38.3034 48.8414 43.2805 49.2871 46.2892 46.2972C49.2792 43.27 48.8335 38.2929 45.3791 35.86ZM16.1878 26.4002C16.1878 27.4258 15.3563 28.2573 14.3307 28.2573C13.3051 28.2573 12.4735 27.4258 12.4735 26.4002V24.514C12.4735 23.4884 13.3051 22.6569 14.3307 22.6569C15.3563 22.6569 16.1878 23.4884 16.1878 24.514V26.4002ZM23.6164 26.4002C23.6164 27.4258 22.7848 28.2573 21.7592 28.2573C20.7336 28.2573 19.9021 27.4258 19.9021 26.4002V20.7998C19.9021 19.7742 20.7336 18.9426 21.7592 18.9426C22.7848 18.9426 23.6164 19.7742 23.6164 20.7998V26.4002ZM31.045 26.4002C31.045 27.4258 30.2134 28.2573 29.1878 28.2573C28.1622 28.2573 27.3307 27.4258 27.3307 26.4002V17.0855C27.3307 16.0599 28.1622 15.2283 29.1878 15.2283C30.2134 15.2283 31.045 16.0599 31.045 17.0855V26.4002Z" fill="#282828" />
                   </svg>
+                  </div>
                 </div>
-                <span class="process-card__divider process-card__divider--mid"></span>
-                <span class="process-card__number">006</span>
+                <div class="process-card__half process-card__half--end">
+                  <span class="process-card__number">006</span>
+                </div>
               </div>
               <span class="process-card__divider process-card__divider--bottom"></span>
             </div>
@@ -590,7 +605,394 @@
         </div>
       </div>
     </section>
+        <!-- =====================================================================
+         RESULTS (full-bleed image with title + "View Gallery" button)
+         ===================================================================== -->
+    <section class="results" id="results">
+      <img class="results__bg" src="assets/img/real.png" alt="" />
+
+      <div class="container results__inner">
+        <h2 class="results__title">
+          Real patients.<br />
+          Measurable outcomes.<br />
+          Before &amp; After
+        </h2>
+
+        <a href="#gallery" class="btn results__btn">
+          View Gallery
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.66602 2.66602V7.33268C2.66602 8.03993 2.94697 8.7182 3.44707 9.2183C3.94717 9.7184 4.62545 9.99935 5.33268 9.99935H13.332" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M9.99935 6.66602L13.3327 9.99935L9.99935 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         NEWS (heading + dark CTA on top, 3-card grid on bottom)
+         ===================================================================== -->
+    <section class="news" id="news">
+      <div class="container">
+        <div class="news__head">
+          <h2 class="news__title">Latest news</h2>
+          <a href="#articles" class="btn btn--dark news__cta">
+            Read all articles
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="news__grid">
+          <!-- Card 1 -->
+          <article class="news-card">
+            <div class="news-card__media">
+              <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
+              <div class="news-card__tags">
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--yellow"></span>
+                  OPPORTUNITIES
+                </span>
+              </div>
+            </div>
+            <h3 class="news-card__title">Inside-out regeneration: merging functional medicine with bio &mdash; regenerative aesthetics</h3>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>Cambridge World Conference, Kings College, 2025 Cambridge, UK</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="news-card">
+            <div class="news-card__media">
+              <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
+              <div class="news-card__tags">
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
+              </div>
+            </div>
+            <h3 class="news-card__title">An update on exosomes application in aesthetic medicine</h3>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>3d Aesthetic Open congress, 2025 Dusseldorf, Germany</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="news-card">
+            <div class="news-card__media">
+              <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
+              <div class="news-card__tags">
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--yellow"></span>
+                  OPPORTUNITIES
+                </span>
+              </div>
+            </div>
+            <h3 class="news-card__title">The role of exosomes in combination treatments in medical aesthetics</h3>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>Aesthetic Medicine Live Conference, 2025 London, UK</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FAQ (left: heading + CTA, right: accordion of questions)
+         ===================================================================== -->
+    <section class="faq" id="faq">
+      <div class="container faq__inner">
+        <div class="faq__head">
+          <h2 class="faq__title">Frequently Asked Questions</h2>
+          <a href="#consultation" class="btn btn--dark faq__cta">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq__list accordion-container">
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">001</span>
+                <span class="faq__question">What role does DNA analysis play in choosing my treatment?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">002</span>
+                <span class="faq__question">How do you determine the best treatment for my needs?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">003</span>
+                <span class="faq__question">Do you provide membership options?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">004</span>
+                <span class="faq__question">How long does the initial consultation take?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">005</span>
+                <span class="faq__question">Are the treatments personalized for each client?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">006</span>
+                <span class="faq__question">How soon can I see results from the treatment?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">007</span>
+                <span class="faq__question">Are the treatments safe and medically supervised?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+
+          <div class="ac">
+            <h3 class="ac-header">
+              <button type="button" class="ac-trigger">
+                <span class="faq__num">008</span>
+                <span class="faq__question">What should I expect during my first visit?</span>
+                <span class="faq__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.6667 0V23.3333M0 11.6667H23.3333" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+                </span>
+              </button>
+            </h3>
+            <div class="ac-panel">
+              <p class="ac-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         NEEDS (full-bleed video card: top logo + side note, bottom title + CTA)
+         ===================================================================== -->
+    <section class="needs">
+      <div class="needs__inner">
+        <video
+          class="needs__video"
+          src="assets/vid/needs.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+
+        <!-- Top: logo (left) + side note (right) -->
+        <div class="needs__top">
+          <a href="#" class="needs__logo">Yuron Clinic</a>
+          <p class="needs__note">
+            We activate it through structured diagnostics, controlled protocols,
+            <br />and doctor-led precision. Never guesswork.
+          </p>
+        </div>
+
+        <!-- Bottom: heading + CTA -->
+        <div class="needs__bottom">
+          <h2 class="needs__title">
+            Only what your biology actually needs.
+          </h2>
+          <a href="#consultation" class="btn">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER (top: 4-column links / divider / bottom: arrow+email + meta)
+         ===================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Top: 4 columns -->
+        <div class="footer__top">
+          <div class="footer__col">
+            <h3 class="footer__heading">Navigation</h3>
+            <ul class="footer__list">
+              <li><a href="#concept">Problems We Help to Solve</a></li>
+              <li><a href="#founder">About Us</a></li>
+              <li><a href="#process">Services</a></li>
+              <li><a href="#process">Your Precise Health Journey</a></li>
+              <li><a href="#results">Transformation Cases</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Services</h3>
+            <ul class="footer__list">
+              <li><a href="#">Advanced screening &amp; diagnostics</a></li>
+              <li><a href="#">Regenerative aesthetic treatments</a></li>
+              <li><a href="#">Volume restoration (face &amp; body)</a></li>
+              <li><a href="#">Hair regenerative treatments</a></li>
+              <li><a href="#">Restorative facial massages</a></li>
+              <li><a href="#">Personalised YURON formulations</a></li>
+              <li><a href="#">Yuron signature protocols</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Information</h3>
+            <ul class="footer__list">
+              <li><a href="#news">News</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--end">
+            <h3 class="footer__heading">Social networks</h3>
+            <ul class="footer__list">
+              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <!-- Bottom: two stacked rows -->
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <button class="footer__to-top" type="button" aria-label="Back to top">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13V1M1 7l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="footer__email">
+              <span class="footer__email-label">
+                e-mail
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63375 0.0885314C4.64933 0.0361504 4.69761 0 4.75237 0C4.80713 0 4.85541 0.0361504 4.87099 0.0885314C4.87099 0.0885314 5.0881 0.816269 5.3208 1.59682C5.69159 2.84039 6.66436 3.81316 7.90792 4.18395C8.68848 4.41665 9.41621 4.63375 9.41621 4.63375C9.4686 4.64934 9.50474 4.69761 9.50474 4.75237C9.50474 4.80714 9.4686 4.85541 9.41621 4.871C9.41621 4.871 8.68848 5.0881 7.90792 5.3208C6.66436 5.69159 5.69159 6.66436 5.3208 7.90792C5.0881 8.68848 4.87099 9.41621 4.87099 9.41621C4.85541 9.4686 4.80713 9.50475 4.75237 9.50475C4.69761 9.50475 4.64933 9.4686 4.63375 9.41621C4.63375 9.41621 4.41664 8.68848 4.18395 7.90792C3.81316 6.66436 2.84038 5.69159 1.59682 5.3208C0.816269 5.0881 0.0885314 4.871 0.0885314 4.871C0.0361472 4.85541 0 4.80714 0 4.75237C0 4.69761 0.0361472 4.64934 0.0885314 4.63375C0.0885314 4.63375 0.816269 4.41665 1.59682 4.18395C2.84038 3.81316 3.81316 2.84039 4.18395 1.59682C4.41664 0.816269 4.63375 0.0885314 4.63375 0.0885314Z" fill="#413421" />
+                </svg>
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+            </div>
+          </div>
+
+          <div class="footer__bottom-meta">
+            <a href="#" class="footer__privacy">Privacy Policy</a>
+            <span class="footer__copyright">YURON Clinic &copy;2026. All rights reserved</span>
+            <a href="#" class="footer__cookie">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

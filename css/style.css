@@ -14,6 +14,10 @@
    10. Founder (3-col flex: side labels + portrait stack)
    11. Results (full-bleed image + title + CTA)
    12. Process (heading + dark CTA + 6-card slider)
+   13. News (heading + dark CTA + 3-card grid)
+   14. FAQ (left: heading + CTA, right: accordion)
+   15. Needs (full-bleed video card: top logo + note, bottom title + CTA)
+   16. Footer (4-col links + divider + meta row)
    ========================================================================== */
 
 
@@ -115,7 +119,6 @@ body {
   font-size: var(--fs-body);
   line-height: 1.5;
   color: var(--color-text-dark);
-  background: var(--color-bg-cream);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -805,7 +808,7 @@ color: #282828;
   align-items: flex-end;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 56px;
+  margin-bottom: 60px;
 }
 
 .process__title {
@@ -819,11 +822,7 @@ color: #282828;
 }
 
 .process__cta {
-  flex-shrink: 0;
-  font-size: 14px;
-  padding: 14px 18px;
-  gap: 24px;
-  border-radius: 8px;
+  gap: 32px;
 }
 
 /* — Slider — */
@@ -837,12 +836,12 @@ color: #282828;
 /* — Card — */
 .process-card {
   position: relative;
-  width: 540px;
-  aspect-ratio: 540 / 430;
+  width: 690px;
+  aspect-ratio: 690 / 480;
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
-  background: var(--color-bg-cream);
+  background: #f0ece8;
   color: var(--color-text-dark);
 }
 
@@ -852,15 +851,30 @@ color: #282828;
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 24px;
 }
 
 .process-card__top {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: stretch;
-  gap: 24px;
-  padding: 0 24px;
+}
+
+.process-card__half {
+  width: 50%;
+  padding-top: 44px;
+  padding-right: 44px;
+  padding-bottom: 20px;
+}
+
+.process-card__half:first-child {
+  border-right: 1px solid rgba(26, 18, 11, 0.18);
+  padding-left: 44px;
+  padding-right: 0;
+}
+
+.process-card__half--end {
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
 }
 
 .process-card__icon {
@@ -870,10 +884,12 @@ color: #282828;
 }
 
 .process-card__number {
-  align-self: center;
-  font-size: 13px;
-  letter-spacing: 0.05em;
-  color: rgba(26, 18, 11, 0.5);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  opacity: 0.5;
 }
 
 /* Dividers (dark hairlines on the cream cards) */
@@ -881,40 +897,511 @@ color: #282828;
   background: rgba(26, 18, 11, 0.18);
 }
 
-.process-card__divider--mid {
-  width: 1px;
-  justify-self: center;
-  align-self: stretch;
-}
-
 .process-card__divider--bottom {
   display: block;
   width: 100%;
   height: 1px;
-  margin-top: 16px;
 }
 
 /* Bottom: title + description, pinned to card bottom */
 .process-card__body {
   position: absolute;
-  left: 24px;
+  left: 44px;
   right: 24px;
-  bottom: 24px;
+  bottom: 44px;
 }
 
 .process-card__title {
-  margin: 0 0 12px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  letter-spacing: -0.01em;
-  color: var(--color-text-dark);
+  margin: 0 0 8px;
+font-weight: 500;
+font-size: 26px;
+line-height: 110%;
+color: #282828;
 }
 
 .process-card__desc {
   margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  max-width: 440px;
+}
+
+
+/* ==========================================================================
+   13. News (heading + dark CTA + 3-card grid)
+   ========================================================================== */
+.news {
+  padding: 120px 0;
+  background: #fff9f3;
+}
+
+/* — Top row: heading (left) + CTA (right) — */
+.news__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+.news__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.news__cta {
+  flex-shrink: 0;
+  align-self: center;
+  gap: 65px;
+}
+
+/* — Grid: 3 cards in a row, 12px gap — */
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* — Card — */
+.news-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image with overlaid tags */
+.news-card__media {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.news-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tag pills overlaid bottom-left of the image */
+.news-card__tags {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  display: flex;
+  gap: 3px;
+}
+
+.news-card__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-radius: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.news-card__dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.news-card__dot--green {
+  background: #6dba6d;
+}
+
+.news-card__dot--yellow {
+  background: #e3c44a;
+}
+
+/* Title under the image (truncated to 2 lines) */
+.news-card__title {
+  margin: 0 0 20px;
+font-weight: 500;
+max-width: 500px;
+font-size: 32px;
+line-height: 120%;
+color: #363636;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Pin icon + location text under the title */
+.news-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
   font-size: 14px;
-  line-height: 140%;
-  color: rgba(26, 18, 11, 0.65);
-  max-width: 90%;
+  line-height: 120%;
+  color: #363636;
+  opacity: 0.58;
+}
+
+.news-card__meta svg {
+  flex-shrink: 0;
+}
+
+
+/* ==========================================================================
+   14. FAQ (left: heading + CTA, right: accordion)
+   Built on accordion-js (CDN). Overrides the library's default visuals.
+   ========================================================================== */
+.faq {
+  padding: 120px 0;
+  background: #fff9f3;
+}
+
+.faq__inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* — Left: heading + CTA — */
+.faq__head {
+  flex-shrink: 0;
+}
+
+.faq__title {
+  max-width: 530px;
+  margin: 0 0 48px;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.faq__cta {
+  gap: 70px;
+}
+
+/* — Right: accordion list — */
+.faq__list {
+  max-width: 900px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* — Override accordion-js defaults — */
+.faq__list.accordion-container .ac {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(26, 18, 11, 0.15);
+  margin: 0;
+}
+
+.faq__list.accordion-container .ac:first-child {
+  border-top: 1px solid rgba(26, 18, 11, 0.15);
+}
+
+.faq__list .ac .ac-header {
+  margin: 0;
+  background: none;
+}
+
+.faq__list .ac .ac-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 28px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: var(--color-text-dark);
+}
+
+/* Hide accordion-js default trigger arrow */
+.faq__list .ac .ac-trigger::after {
+  content: none;
+  display: none;
+}
+
+.faq__num {
+  flex-shrink: 0;
+font-weight: 400;
+font-size: 16px;
+line-height: 110%;
+letter-spacing: -0.02em;
+color: #000;
+opacity: 0.5;
+}
+
+.faq__question {
+  flex: 1;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  color: #000;
+}
+
+.faq__icon {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 1px solid rgba(26, 18, 11, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-dark);
+  transition: transform var(--t-base), background-color var(--t-fast),
+    color var(--t-fast);
+}
+
+/* When the accordion item is open, rotate "+" into "x" and invert colours */
+.faq__list .ac.is-active .faq__icon {
+  transform: rotate(45deg);
+  background: var(--color-text-dark);
+  color: #fff9f3;
+  border-color: var(--color-text-dark);
+}
+
+.faq__list .ac .ac-panel {
+  padding: 0;
+}
+
+.faq__list .ac .ac-text {
+  margin: 0;
+  padding: 0 0 28px 64px;
+  font-size: 20px;
+  line-height: 150%;
+  color: rgba(26, 18, 11, 0.7);
+  max-width: 720px;
+}
+
+
+/* ==========================================================================
+   15. Needs (full-bleed video card: top logo + note, bottom title + CTA)
+   Same outer 16px padding pattern as the Foundation section.
+   ========================================================================== */
+.needs {
+  padding: 8px;
+  background: #fff9f3;
+}
+
+.needs__inner {
+  position: relative;
+  width: 100%;
+  min-height: 1200px;
+  border-radius: 12px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff9f3;
+}
+
+/* — Background video — */
+.needs__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* — Top row: logo (left) + side note (right) — */
+.needs__top {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.needs__logo {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+}
+
+.needs__note {
+  margin: 0;
+  max-width: 440px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  opacity: 0.6;
+  text-align: left;
+}
+
+/* — Bottom: heading stack + CTA — */
+.needs__bottom {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.needs__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 800px;
+}
+
+
+/* ==========================================================================
+   16. Footer (4-col links + divider + meta row)
+   ========================================================================== */
+.footer {
+  padding: 60px 0 40px;
+  background: #fff9f3;
+  color: var(--color-text-dark);
+}
+
+/* — Top: 4 link columns — */
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+.footer__col {
+  min-width: 0;
+}
+
+.footer__col--end {
+  text-align: right;
+}
+
+.footer__heading {
+  margin: 0 0 50px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  color: #413421;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer__list a {
+font-weight: 500;
+font-size: 15px;
+color: #413421;
+}
+
+.footer__list a:hover {
+  opacity: 0.6;
+}
+
+/* — Divider — */
+.footer__divider {
+  border: none;
+  border-top: 1px solid #413421;
+  margin: 0 0 36px;
+}
+
+/* — Bottom: arrow + email row, then meta row — */
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.footer__bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Round dark "back to top" button */
+.footer__to-top {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background: #413421;
+  color: #fff9f3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform var(--t-fast), background-color var(--t-fast);
+}
+
+.footer__to-top:hover {
+  transform: translateY(-2px);
+}
+
+/* Email block on the right */
+.footer__email {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.footer__email-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #413421;
+}
+
+.footer__email-link {
+  font-weight: 500;
+  font-size: 22px;
+  color: #413421;
+}
+
+.footer__email-link:hover {
+  opacity: 0.7;
+}
+
+/* Meta row: privacy / copyright / year */
+.footer__bottom-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__privacy, .footer__copyright, .footer__cookie {
+  font-weight: 400;
+  font-size: 16px;
+  color: #413421;
 }
