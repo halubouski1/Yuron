@@ -447,6 +447,8 @@
   }
   .header__burger {
     display: inline-flex;
+    height: 30px;
+    width: 30px;
   }
 
   .mobile-menu__cta {
