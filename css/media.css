@@ -749,6 +749,10 @@
       padding-bottom: 60px;
   }
 
+  .systems__track {
+    gap: 10px;
+  }
+
   .systems__title {
     font-size: 28px;
     max-width: 186px;

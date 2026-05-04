@@ -519,22 +519,45 @@ body.menu-open .mobile-menu {
   max-width: 500px;
 }
 
-/* — Slider wrapper — */
+/* — Slider wrapper —
+   Native horizontal scroll container. Has the same horizontal padding as
+   .container so the slider visually aligns with the rest of the page.
+   Cards are sized so 3 fit inside the padded area (with 2 gaps), and the
+   initial scroll position centers cards 1, 2, 3 with padding visible at
+   the edges. Drag-to-scroll is wired in JS. */
 .systems__slider {
   --systems-slider-gap: 16px;
-  /* Card width: 3 fit in viewport. Combined with the negative
-     slidesOffsetBefore set in JS, this gives "half + 2 full + half" centered. */
   --systems-card-width: calc(
-    (100vw - (var(--systems-slider-gap) * 3)) / 3
+    (100vw - (var(--container-pad) * 2) - (var(--systems-slider-gap) * 2)) / 3
   );
   width: 100%;
-  overflow: visible;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-inline: var(--container-pad);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.systems__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.systems__slider.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.systems__track {
+  display: flex;
+  gap: var(--systems-slider-gap);
+  width: max-content;
 }
 
 /* — Card — */
 .systems-card {
   position: relative;
-  width: 640px;
+  width: var(--systems-card-width);
   aspect-ratio: 640 / 800;
   border-radius: 12px;
   overflow: hidden;

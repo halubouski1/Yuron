@@ -41,40 +41,56 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------
-  // Systems slider
+  // Systems slider — native CSS overflow scroll + drag-to-scroll.
+  // Initial scrollLeft is set to half-card + half-gap so the layout opens
+  // with: half-card-cropped + 2 full + half-card-cropped. Native scroll
+  // handles bounds, so drag works to both ends without any clamp issues.
   // ---------------------------------------------------------------
-  if (typeof Swiper !== "undefined") {
-    // Compute a negative offset equal to half a card + half a gap so the
-    // slider opens with: half-card-cropped + 2 full + half-card-cropped.
-    const systemsSlider = new Swiper(".systems__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      grabCursor: true,
-      speed: 500,
-      breakpoints: {
-        0: { spaceBetween: 12 },
-        768: { spaceBetween: 14 },
-        1200: { spaceBetween: 16 },
-      },
+  const systemsSlider = document.querySelector(".systems__slider");
+  if (systemsSlider) {
+    const track = systemsSlider.querySelector(".systems__track");
+    const firstCard = systemsSlider.querySelector(".systems-card");
+
+    const setInitialScroll = () => {
+      // Open at the start of the scroll content so the left container
+      // padding is visible alongside cards 1, 2, 3.
+      systemsSlider.scrollLeft = 0;
+    };
+
+    setInitialScroll();
+    window.addEventListener("load", setInitialScroll);
+
+    // Mouse drag-to-scroll
+    let isDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+
+    systemsSlider.addEventListener("mousedown", (e) => {
+      isDown = true;
+      systemsSlider.classList.add("is-dragging");
+      startX = e.pageX;
+      startScrollLeft = systemsSlider.scrollLeft;
     });
 
-    function updateSystemsOffset() {
-      const firstSlide = document.querySelector(
-        ".systems__slider .systems-card"
-      );
-      if (!firstSlide || !systemsSlider) return;
-      const gap = systemsSlider.params.spaceBetween || 0;
-      const offset = -(firstSlide.offsetWidth + gap) / 2;
-      systemsSlider.params.slidesOffsetBefore = offset;
-      systemsSlider.update();
-    }
+    const endDrag = () => {
+      isDown = false;
+      systemsSlider.classList.remove("is-dragging");
+    };
+    systemsSlider.addEventListener("mouseup", endDrag);
+    systemsSlider.addEventListener("mouseleave", endDrag);
 
-    updateSystemsOffset();
-    window.addEventListener("resize", updateSystemsOffset);
+    systemsSlider.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const dx = e.pageX - startX;
+      systemsSlider.scrollLeft = startScrollLeft - dx;
+    });
+  }
 
-    // ---------------------------------------------------------------
-    // Process slider
-    // ---------------------------------------------------------------
+  // ---------------------------------------------------------------
+  // Process slider
+  // ---------------------------------------------------------------
+  if (typeof Swiper !== "undefined") {
     new Swiper(".process__slider", {
       slidesPerView: "auto",
       spaceBetween: 10,
