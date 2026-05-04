@@ -265,9 +265,7 @@ svg {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin-right: -13px;
+  padding: 0;
   color: #fff7f0;
 }
 
@@ -304,7 +302,7 @@ svg {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 68px;
+  margin-bottom: 100px;
 }
 
 .mobile-menu__logo {
