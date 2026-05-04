@@ -173,30 +173,29 @@ svg {
   color: #282828;
   justify-content: center;
   background: #fff;
-  padding: 22px 16px;
-  gap: 90px;
+  padding: 20px 16px;
+  gap: 91px;
   border-radius: 5px;
   white-space: nowrap;
   transition: background-color var(--t-fast), color var(--t-fast),
     transform var(--t-fast);
 }
 
+.btn svg {
+    transition: transform var(--t-fast);
+}
+
+.btn:hover svg {
+  transform: translateX(-4px);
+}
+
 .btn--dark {
   border-radius: 10px;
   background: #000;
-  padding: 20px;
+  padding: 16px 15px;
   color: #fff9f3;
   gap: 50px;
 }
-
-.btn--dark:hover {
-  background: var(--color-text-light);
-}
-
-.btn--dark:hover {
-  background: #2a1f18;
-}
-
 
 /* ==========================================================================
    6. Header
@@ -243,7 +242,12 @@ svg {
   flex-shrink: 0;
 }
 
-.header__nav a {
+.header__nav {
+  display: flex;
+  gap: 220px;
+}
+
+.header__nav-item--link {
   position: relative;
   font-weight: 400;
   font-size: 16px;
@@ -253,8 +257,116 @@ svg {
   transition: opacity var(--t-fast);
 }
 
-.header__nav a:hover {
+.header__nav-item--link:hover {
   opacity: 0.7;
+}
+
+.header__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -13px;
+  color: #fff7f0;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--t-base), visibility var(--t-base);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 28px 24px 32px;
+  color: #282828;
+  background: #fff7f0;
+  border-left: 1px solid rgba(40, 40, 40, 0.12);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform var(--t-base), visibility var(--t-base);
+}
+
+.mobile-menu__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 68px;
+}
+
+.mobile-menu__logo {
+  color: #282828;
+}
+
+.mobile-menu__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-top: -5px;
+  margin-right: -3px;
+  color: #282828;
+}
+
+.mobile-menu__nav {
+  margin-bottom: 29px;
+}
+
+.mobile-menu__list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 60px;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.16);
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.mobile-menu__list li:last-child a {
+  border-bottom: none;
+}
+
+.mobile-menu__list span {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.mobile-menu__cta {
+  width: 100%;
+  min-height: 51px;
+  border-radius: 5px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 14px;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+body.menu-open .mobile-menu-overlay {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+body.menu-open .mobile-menu {
+  transform: translateX(0);
+  visibility: visible;
 }
 
 
@@ -412,14 +524,19 @@ svg {
 /* — Slider wrapper — */
 .systems__slider {
   --systems-slider-gap: 16px;
-  --systems-card-width: calc((100vw - (var(--systems-slider-gap) * 3)) / 3);
+  /* Card width: 3 fit in viewport. Combined with the negative
+     slidesOffsetBefore set in JS, this gives "half + 2 full + half" centered. */
+  --systems-card-width: calc(
+    (100vw - (var(--systems-slider-gap) * 3)) / 3
+  );
   width: 100%;
+  overflow: visible;
 }
 
 /* — Card — */
 .systems-card {
   position: relative;
-  width: var(--systems-card-width);
+  width: 640px;
   aspect-ratio: 640 / 800;
   border-radius: 12px;
   overflow: hidden;
@@ -435,6 +552,16 @@ svg {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+.systems-card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(360deg, #000 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.3;
 }
 
 /* — Header (absolute): top row + edge-to-edge bottom divider — */
@@ -503,6 +630,7 @@ svg {
   align-items: flex-end;
   justify-content: space-between;
   gap: 16px;
+  z-index: 1;
 }
 
 .systems-card__tags {
@@ -536,7 +664,7 @@ svg {
   transition: transform var(--t-fast);
 }
 
-.systems-card__arrow:hover {
+.systems-card:hover .systems-card__arrow {
   transform: translate(2px, -2px);
 }
 
@@ -547,7 +675,8 @@ svg {
    column: title -> buttons row -> description.
    ========================================================================== */
 .foundation {
-  padding: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
   background: #fff9f3
 }
 
@@ -558,6 +687,17 @@ svg {
   overflow: hidden;
   isolation: isolate;
   color: #fff9f3;
+}
+
+.foundation__inner::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.3;
 }
 
 /* — Background video — */
@@ -596,7 +736,6 @@ svg {
 .foundation__buttons {
   display: flex;
   gap: 12px;
-  margin-bottom: 110px;
 }
 
 .foundation-btn {
@@ -646,12 +785,20 @@ svg {
   color: #fff;
 }
 
+.foundation-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 110px;
+}
+
 
 /* ==========================================================================
    10. Founder (3-col flex: side labels + portrait stack)
    ========================================================================== */
 .founder {
   padding: 120px 0;
+  padding-bottom: 0;
   background: #fff9f3;
 }
 
@@ -716,10 +863,20 @@ color: #282828;
 }
 
 /* Caption pill on the photo */
-.founder__badge {
+.founder__badges {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   position: absolute;
   left: 18px;
   bottom: 18px;
+}
+
+.founder__badge--mobile {
+  display: none;
+}
+
+.founder__badge {
   border-radius: 3px;
   padding: 14px;
   background: rgba(255, 255, 255, 0.17);
@@ -929,12 +1086,16 @@ color: #282828;
   max-width: 440px;
 }
 
+.process__cta--mobile {
+  display: none;
+}
 
 /* ==========================================================================
    13. News (heading + dark CTA + 3-card grid)
    ========================================================================== */
 .news {
   padding: 120px 0;
+  padding-bottom: 0;
   background: #fff9f3;
 }
 
@@ -1062,6 +1223,9 @@ color: #363636;
   flex-shrink: 0;
 }
 
+.news__cta--mobile {
+  display: none;
+}
 
 /* ==========================================================================
    14. FAQ (left: heading + CTA, right: accordion)
@@ -1111,10 +1275,6 @@ color: #363636;
   border: none;
   border-bottom: 1px solid rgba(26, 18, 11, 0.15);
   margin: 0;
-}
-
-.faq__list.accordion-container .ac:first-child {
-  border-top: 1px solid rgba(26, 18, 11, 0.15);
 }
 
 .faq__list .ac .ac-header {
@@ -1188,20 +1348,24 @@ opacity: 0.5;
 
 .faq__list .ac .ac-text {
   margin: 0;
-  padding: 0 0 28px 64px;
+  padding: 0 0 28px 54px;
   font-size: 20px;
   line-height: 150%;
   color: rgba(26, 18, 11, 0.7);
   max-width: 720px;
 }
 
+.faq__cta--mobile {
+  display: none;
+}
 
 /* ==========================================================================
    15. Needs (full-bleed video card: top logo + note, bottom title + CTA)
    Same outer 16px padding pattern as the Foundation section.
    ========================================================================== */
 .needs {
-  padding: 8px;
+  padding-right: 8px;
+  padding-left: 8px;
   background: #fff9f3;
 }
 
@@ -1228,7 +1392,7 @@ opacity: 0.5;
 /* — Top row: logo (left) + side note (right) — */
 .needs__top {
   position: absolute;
-  top: 50px;
+  top: 42px;
   left: 50px;
   right: 50px;
   display: flex;
@@ -1260,7 +1424,7 @@ opacity: 0.5;
 /* — Bottom: heading stack + CTA — */
 .needs__bottom {
   position: absolute;
-  left: 50px;
+  left: 42px;
   bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -1278,7 +1442,9 @@ opacity: 0.5;
   max-width: 800px;
 }
 
-
+.needs__text-mobile {
+  display: none;
+}
 /* ==========================================================================
    16. Footer (4-col links + divider + meta row)
    ========================================================================== */
@@ -1298,6 +1464,10 @@ opacity: 0.5;
 
 .footer__col {
   min-width: 0;
+}
+
+.footer__col--mobile {
+  display: none;
 }
 
 .footer__col--end {
@@ -1322,6 +1492,7 @@ opacity: 0.5;
 font-weight: 500;
 font-size: 15px;
 color: #413421;
+transition: opacity var(--t-fast);
 }
 
 .footer__list a:hover {
@@ -1388,6 +1559,7 @@ color: #413421;
   font-weight: 500;
   font-size: 22px;
   color: #413421;
+  transition: opacity var(--t-fast);
 }
 
 .footer__email-link:hover {
