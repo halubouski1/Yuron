@@ -13,7 +13,7 @@
 /* ==========================================================================
    <= 1440px
    ========================================================================== */
-@media (max-width: 1600px) {
+@media (max-width: 1919px) {
   :root {
     --container-pad: 32px;
   }
@@ -92,7 +92,7 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1918px) {
   /* common */
   .btn {
     font-size: 14px !important;
@@ -778,6 +778,11 @@
   }
 
   /* foundation */
+  .foundation {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .foundation__content {
     padding-top: 20px;
     padding-left: 5px;
@@ -793,11 +798,34 @@
     gap: 8px;
   }
 
+  .foundation-bottom-wrapper {
+    gap: 20px;
+  }
+
   .foundation-btn {
     width: 100%;
+    min-width: auto;
   }
 
   .foundation__desc {
     max-width: 320px;
+  }
+
+  /* founder */
+  .founder__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .founder__image-wrap {
+    max-width: 100%;
+  }
+
+  .founder__badges {
+    gap: 2px;
+  }
+
+  .founder__badge {
+    padding: 8px;
   }
 }
