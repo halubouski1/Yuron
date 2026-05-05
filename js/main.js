@@ -23,6 +23,27 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------
+  // AOS (animate on scroll) — section reveal animations
+  // ---------------------------------------------------------------
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: "ease-out-cubic",
+      offset: 80,
+      anchorPlacement: "top-bottom",
+    });
+
+    // Lenis hijacks scroll, so notify AOS on every Lenis scroll tick.
+    if (lenis) {
+      lenis.on("scroll", () => AOS.refresh());
+    }
+
+    // Also refresh after fonts/images load (heights may shift).
+    window.addEventListener("load", () => AOS.refresh());
+  }
+
+  // ---------------------------------------------------------------
   // Mobile offcanvas menu
   // ---------------------------------------------------------------
   const burgerBtn = document.querySelector(".header__burger");
