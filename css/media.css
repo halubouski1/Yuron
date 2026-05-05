@@ -96,7 +96,7 @@
   /* common */
   .btn {
     font-size: 14px !important;
-    padding: 16px 12px;
+    padding: 16px;
     gap: 70px;
   }
   /* hero */
@@ -177,7 +177,8 @@
   }
 
   .foundation__desc {
-    font-size: 16px;
+    font-size: 14px;
+    max-width: 500px;
   }
 
   /* founder */
@@ -200,7 +201,7 @@
 
   .founder__desc {
     font-size: 16px;
-    max-width: 400px;
+    max-width: 420px;
   }
 
   .founder__label  {
@@ -228,6 +229,7 @@
 
   .process-card__desc {
     font-size: 14px;
+    max-width: 316px;
   }
 
   /* results */
@@ -235,8 +237,12 @@
     min-height: 100vh;
   }
 
+  .results__btn {
+    gap: 145px;
+  }
+
   .results__title {
-    font-size: 62px;
+    font-size: 52px;
   }
 
   /* news */
@@ -321,6 +327,10 @@
 
   .footer__privacy, .footer__copyright, .footer__cookie {
     font-size: 12px;
+  }
+
+  .footer__list {
+    gap: 20px;
   }
 }
 
@@ -805,13 +815,19 @@
 
   .foundation__content {
     padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     padding-bottom: 20px;
   }
 
   .foundation__title {
+    display: none;
+  }
+
+  .foundation__title--mobile {
     font-size: 28px;
+    display: block;
+    max-width: 318px;
   }
 
   .foundation__buttons {
@@ -930,6 +946,17 @@
   .news {
     padding-top: 120px;
     padding-bottom: 60px;
+  }
+
+  .news-card__dot {
+    width: 18px;
+    height: 18px;
+  }
+
+  .news-card__tag {
+    gap: 7px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 
   .news__head {

@@ -190,7 +190,7 @@ svg {
 }
 
 .btn--dark {
-  border-radius: 10px;
+  border-radius: 7px;
   background: #000;
   padding: 16px 15px;
   color: #fff9f3;
@@ -559,7 +559,7 @@ body.menu-open .mobile-menu {
   position: relative;
   width: var(--systems-card-width);
   aspect-ratio: 640 / 800;
-  border-radius: 12px;
+  border-radius: 7px;
   overflow: hidden;
   flex-shrink: 0;
   isolation: isolate;
@@ -721,6 +721,10 @@ body.menu-open .mobile-menu {
   opacity: 0.3;
 }
 
+.foundation__title--mobile {
+  display: none;
+}
+
 /* — Background video — */
 .foundation__video {
   position: absolute;
@@ -875,6 +879,7 @@ color: #282828;
 .founder__image-wrap::before {
   content: '';
   position: absolute;
+  border-radius: 7px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1016,7 +1021,7 @@ color: #282828;
   position: relative;
   width: 690px;
   aspect-ratio: 690 / 480;
-  border-radius: 12px;
+  border-radius: 7px;
   overflow: hidden;
   flex-shrink: 0;
   background: #f0ece8;
@@ -1161,7 +1166,7 @@ color: #282828;
 .news-card__media {
   position: relative;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 7px;
   overflow: hidden;
   margin-bottom: 20px;
 }
