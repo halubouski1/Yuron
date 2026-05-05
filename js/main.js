@@ -2,6 +2,27 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------------
+  // Lenis smooth scroll
+  // Hijacks vertical scroll on the page; horizontal scroll containers
+  // (e.g. .systems__slider) are opted out via [data-lenis-prevent].
+  // ---------------------------------------------------------------
+  let lenis = null;
+  if (typeof Lenis !== "undefined") {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // ---------------------------------------------------------------
   // Mobile offcanvas menu
   // ---------------------------------------------------------------
   const burgerBtn = document.querySelector(".header__burger");
@@ -41,56 +62,38 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------
-  // Systems slider — native CSS overflow scroll + drag-to-scroll.
-  // Initial scrollLeft is set to half-card + half-gap so the layout opens
-  // with: half-card-cropped + 2 full + half-card-cropped. Native scroll
-  // handles bounds, so drag works to both ends without any clamp issues.
-  // ---------------------------------------------------------------
-  const systemsSlider = document.querySelector(".systems__slider");
-  if (systemsSlider) {
-    const track = systemsSlider.querySelector(".systems__track");
-    const firstCard = systemsSlider.querySelector(".systems-card");
-
-    const setInitialScroll = () => {
-      // Open at the start of the scroll content so the left container
-      // padding is visible alongside cards 1, 2, 3.
-      systemsSlider.scrollLeft = 0;
-    };
-
-    setInitialScroll();
-    window.addEventListener("load", setInitialScroll);
-
-    // Mouse drag-to-scroll
-    let isDown = false;
-    let startX = 0;
-    let startScrollLeft = 0;
-
-    systemsSlider.addEventListener("mousedown", (e) => {
-      isDown = true;
-      systemsSlider.classList.add("is-dragging");
-      startX = e.pageX;
-      startScrollLeft = systemsSlider.scrollLeft;
-    });
-
-    const endDrag = () => {
-      isDown = false;
-      systemsSlider.classList.remove("is-dragging");
-    };
-    systemsSlider.addEventListener("mouseup", endDrag);
-    systemsSlider.addEventListener("mouseleave", endDrag);
-
-    systemsSlider.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const dx = e.pageX - startX;
-      systemsSlider.scrollLeft = startScrollLeft - dx;
-    });
-  }
-
-  // ---------------------------------------------------------------
-  // Process slider
+  // Sliders (Swiper)
   // ---------------------------------------------------------------
   if (typeof Swiper !== "undefined") {
+    // Read --container-pad from CSS so Swiper's offsets stay in sync with
+    // the .container padding across breakpoints.
+    const getContainerPad = () =>
+      parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--container-pad"
+        )
+      ) || 50;
+
+    // Systems slider — same layout as before (3 cards visible inside the
+    // padded area, drag scrolls through all 6).
+    const systemsSwiper = new Swiper(".systems__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      slidesOffsetBefore: getContainerPad(),
+      slidesOffsetAfter: getContainerPad(),
+      grabCursor: true,
+      speed: 500,
+    });
+
+    // Keep offsets in sync with --container-pad on resize.
+    window.addEventListener("resize", () => {
+      const pad = getContainerPad();
+      systemsSwiper.params.slidesOffsetBefore = pad;
+      systemsSwiper.params.slidesOffsetAfter = pad;
+      systemsSwiper.update();
+    });
+
+    // Process slider
     new Swiper(".process__slider", {
       slidesPerView: "auto",
       spaceBetween: 10,
@@ -110,12 +113,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------
-  // Footer "back to top"
+  // Footer "back to top" (uses Lenis when available)
   // ---------------------------------------------------------------
   const toTopBtn = document.querySelector(".footer__to-top");
   if (toTopBtn) {
     toTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (lenis) {
+        lenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     });
   }
 });
