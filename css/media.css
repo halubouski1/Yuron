@@ -255,6 +255,11 @@
     font-size: 12px;
   }
 
+  .news-card__dot {
+    width: 18px;
+    height: 18px;
+  }
+
   .news-card__tags {
     left: 15px;
     bottom: 15px;
