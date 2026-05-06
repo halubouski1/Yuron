@@ -137,6 +137,7 @@ body {
   font-size: var(--fs-body);
   line-height: 1.5;
   color: var(--color-text-dark);
+  background: #fff9f3;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -549,6 +550,10 @@ body.menu-open .mobile-menu {
   );
   width: 100%;
   overflow: visible;
+}
+
+.systems__slider .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
 /* — Card — */
@@ -1011,6 +1016,10 @@ color: #282828;
   padding-left: var(--container-pad);
   padding-right: var(--container-pad);
     overflow: hidden;
+}
+
+.process__slider .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
 
 /* — Card — */

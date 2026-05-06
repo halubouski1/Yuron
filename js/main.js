@@ -103,7 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesOffsetBefore: getContainerPad(),
       slidesOffsetAfter: getContainerPad(),
       grabCursor: true,
-      speed: 500,
+      loop: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
     });
 
     // Keep offsets in sync with --container-pad on resize.
@@ -119,7 +125,13 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: "auto",
       spaceBetween: 10,
       grabCursor: true,
-      speed: 500,
+      loop: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
     });
   }
 
