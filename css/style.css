@@ -1179,6 +1179,25 @@ color: #282828;
   margin-bottom: 20px;
 }
 
+.news-card__media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40%;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 25%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 25%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.news-card__tags {
+  z-index: 2;
+}
+
 .news-card__image {
   position: relative;
   width: 100%;
