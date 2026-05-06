@@ -965,7 +965,6 @@
   /* news */
   .news {
     padding-top: 120px;
-    padding-bottom: 60px;
   }
 
   .news-card__dot {
@@ -1077,6 +1076,7 @@
   /* footer */
   .footer {
     padding-top: 34px;
+    padding-bottom: 34px;
   }
 
   .footer__heading {
