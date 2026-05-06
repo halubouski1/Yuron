@@ -523,13 +523,13 @@ body.menu-open .mobile-menu {
    ========================================================================== */
 .systems {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 160px;
   background: #fff9f3;
   overflow: hidden;
 }
 
 .systems__title {
-  margin: 0 0 56px;
+  margin: 0 0 70px;
   font-weight: 400;
   font-size: 76px;
   line-height: 98%;
@@ -824,8 +824,8 @@ body.menu-open .mobile-menu {
    10. Founder (3-col flex: side labels + portrait stack)
    ========================================================================== */
 .founder {
-  padding: 120px 0;
-  padding-bottom: 0;
+  padding: 150px 0;
+  padding-bottom: 120px;
   background: #fff9f3;
 }
 
@@ -984,6 +984,7 @@ color: #282828;
    ========================================================================== */
 .process {
   padding: 120px 0;
+  padding-bottom: 100px;
   background: #fff9f3;
 }
 
@@ -1127,6 +1128,7 @@ color: #282828;
    ========================================================================== */
 .news {
   padding: 120px 0;
+  padding-top: 170px;
   padding-bottom: 0;
   background: #fff9f3;
 }
@@ -1137,7 +1139,7 @@ color: #282828;
   align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
-  margin-bottom: 56px;
+  margin-bottom: 60px;
 }
 
 .news__title {
@@ -1264,7 +1266,8 @@ color: #363636;
    Built on accordion-js (CDN). Overrides the library's default visuals.
    ========================================================================== */
 .faq {
-  padding: 120px 0;
+  padding: 130px 0;
+  padding-top: 170px;
   background: #fff9f3;
 }
 
@@ -1481,7 +1484,7 @@ opacity: 0.5;
    16. Footer (4-col links + divider + meta row)
    ========================================================================== */
 .footer {
-  padding: 60px 0 40px;
+  padding: 60px 0;
   background: #fff9f3;
   color: var(--color-text-dark);
 }
