@@ -1,0 +1,226 @@
+/* ==========================================================================
+   YURON CLINIC — Contacts Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero layout: two-column row
+   -------------------------------------------------------------------------- */
+.hero__inner--contacts {
+  flex-direction: row;
+  justify-content: flex-start;
+  min-height: auto;
+  gap: 68px;
+  padding-top: 170px;
+  padding-bottom: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   Left column — flex column, space-between (top content / bottom info)
+   -------------------------------------------------------------------------- */
+.contacts-hero__left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.contacts-hero__top {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumb */
+.contacts-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+}
+
+.contacts-breadcrumb__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #fff9f3;
+  text-decoration: none;
+  opacity: 0.44;
+}
+
+.contacts-breadcrumb__link--active {
+    opacity: 1;
+}
+
+.contacts-breadcrumb__link:hover {
+  text-decoration: underline;
+}
+
+/* Heading */
+.contacts-hero__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 76px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  margin-bottom: 40px;
+}
+
+/* Description */
+.contacts-hero__desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 128%;
+  color: #fff9f3;
+  opacity: 0.82;
+  max-width: 340px;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom info row (space-between pushes it to the bottom of left column)
+   -------------------------------------------------------------------------- */
+.contacts-info {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.contacts-info__col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contacts-info__label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  opacity: 0.5;
+}
+
+.contacts__info-col-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-right: 80px;
+}
+
+.contacts-info__value {
+  max-width: 217px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff9f3;
+  font-style: normal;
+}
+
+.contacts-info__value:hover {
+  opacity: 0.75;
+}
+
+.contacts-info__social {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 7px;
+  background: #fff5ed;
+  transition: opacity var(--t-fast);
+}
+
+.contacts-info__col-social {
+  gap: 14px;
+  padding-right: 66px;
+}
+
+.contacts-info__social:hover {
+  opacity: 0.75;
+}
+
+/* --------------------------------------------------------------------------
+   Right column — form card (flex column)
+   -------------------------------------------------------------------------- */
+.contacts-form-card {
+  flex-shrink: 0;
+  background: #fff5ed;
+  border-radius: 16px;
+  padding: 32px;
+  width: 49%;
+}
+
+.contacts-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Form layout
+   -------------------------------------------------------------------------- */
+.contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.contacts-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.contacts-form__group--grow {
+  flex: 1;
+}
+
+.contacts-form__label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.03em;
+  color: #282828;
+}
+
+.contacts-form__input,
+.contacts-form__textarea {
+  width: 100%;
+  border: 1px solid rgba(40, 40, 40, 0.2);
+  border-radius: 4px;
+  padding: 14px 14px 14px 24px;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #fff5ed;
+  color: var(--color-text-dark);
+  transition: border-color var(--t-fast), background var(--t-fast);
+  box-sizing: border-box;
+}
+
+.contacts-form__input::placeholder,
+.contacts-form__textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: -0.03em;
+  opacity: 0.38;
+  color: #282828;
+}
+
+.contacts-form__input:focus,
+.contacts-form__textarea:focus {
+  border-color: rgba(26, 18, 11, 0.35);
+  background: rgba(26, 18, 11, 0.02);
+}
+
+.contacts-form__textarea {
+  min-height: 209px;
+  resize: none;
+}
+
+.contacts-form__submit {
+  align-self: flex-start;
+  gap: 80px;
+  padding: 20px 24px;
+}
