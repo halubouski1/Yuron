@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuron Clinic — Signature Protocols</title>
+    <meta
+      name="description"
+      content="Yuron Clinic — Signature Protocols"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/signature-protocols.css" />
+    <link rel="stylesheet" href="css/media-signature-protocols.css" />
+  </head>
+  <body>
+    <!-- =====================================================================
+         HERO (wraps the header)
+         ===================================================================== -->
+    <section class="hero">
+      <!-- Background image -->
+      <img class="hero__video" src="assets/img/signature-protocols.png" alt="" />
+
+      <!-- Dark overlay for text legibility -->
+      <div class="hero__overlay"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="container header__inner">
+          <a href="/" class="header__logo">Yuron Clinic</a>
+
+          <nav class="header__nav" aria-label="Primary">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#concept">Concept</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#founder">Founder</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#process">Process</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#news">News</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#faq">FAQ</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+            </ul>
+            <a href="#consultation" class="btn btn--dark">
+              Book the consultation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+          </nav>
+
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="5" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="10" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+            </svg>
+          </button>
+
+        </div>
+      </header>
+
+      <div class="mobile-menu-overlay" data-menu-close></div>
+
+      <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__top">
+          <a href="#" class="mobile-menu__logo header__logo" data-menu-close>Yuron Clinic</a>
+          <button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mobile-menu__nav" aria-label="Mobile primary">
+          <ul class="mobile-menu__list">
+            <li>
+              <a href="#concept" data-menu-close>
+                Concept
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+              </a>
+          </li>
+            <li><a href="#founder" data-menu-close>Founder 
+                  <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#process" data-menu-close>Process 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#news" data-menu-close>News 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#faq" data-menu-close>FAQ 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+          </ul>
+        </nav>
+
+        <a href="#consultation" class="mobile-menu__cta btn btn--dark" data-menu-close>
+          Book the consultation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </aside>
+
+      <!-- Hero content -->
+      <div class="container hero__inner hero__inner--sp">
+
+        <!-- Top: breadcrumb + title -->
+        <div class="sp-hero__top">
+          <nav class="contacts-breadcrumb" aria-label="Breadcrumb">
+            <a href="/" class="contacts-breadcrumb__link">Home</a>
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle opacity="0.44" cx="3.5" cy="3.5" r="3.5" fill="#FFF9F3" />
+            </svg>
+            <span class="contacts-breadcrumb__link contacts-breadcrumb__link--active">YURON Signature Protocols</span>
+          </nav>
+
+          <h1 class="sp-hero__title">YURON Signature Protocols</h1>
+        </div>
+
+        <!-- Bottom: divider + 3-col row -->
+        <div class="sp-hero__bottom">
+          <hr class="sp-hero__divider" />
+          <div class="sp-hero__row">
+            <div class="sp-hero__row-wrapper">
+              <div class="sp-hero__col sp-hero__col--desc">
+                <p class="sp-hero__desc">YURON signature protocols are personalised medical pathways, not standard packages. Each protocol is developed around the patient's biology, concerns, goals, and long-term health.</p>
+              </div>
+  
+              <div class="sp-hero__col sp-hero__col--list">
+                <span class="sp-hero__list-label">They combine:</span>
+                <ul class="sp-hero__list">
+                  <li>targeted screening</li>
+                  <li>a personalised treatment plan</li>
+                  <li>internal health optimisation</li>
+                  <li>a maintenance plan</li>
+                  <li>ongoing guidance from a multidisciplinary team</li>
+                </ul>
+              </div>
+            </div>
+
+              <a href="#consultation" class="btn btn-hover-reverse sp-hero__btn">
+                Book the consultation
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2.66602 2.66602V7.33268C2.66602 8.03993 2.94697 8.7182 3.44707 9.2183C3.94717 9.7184 4.62545 9.99935 5.33268 9.99935H13.332" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M9.99935 6.66602L13.3327 9.99935L9.99935 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER (top: 4-column links / divider / bottom: arrow+email + meta)
+         ===================================================================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <!-- Top: 4 columns -->
+        <div class="footer__top">
+          <div class="footer__col">
+            <h3 class="footer__heading">Navigation</h3>
+            <ul class="footer__list">
+              <li><a href="#concept">Problems We Help to Solve</a></li>
+              <li><a href="#founder">About Us</a></li>
+              <li><a href="#process">Services</a></li>
+              <li><a href="#process">Your Precise Health Journey</a></li>
+              <li><a href="#results">Transformation Cases</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Services</h3>
+            <ul class="footer__list">
+              <li><a href="#">Advanced screening &amp; diagnostics</a></li>
+              <li><a href="#">Regenerative aesthetic treatments</a></li>
+              <li><a href="#">Volume restoration (face &amp; body)</a></li>
+              <li><a href="#">Hair regenerative treatments</a></li>
+              <li><a href="#">Restorative facial massages</a></li>
+              <li><a href="#">Personalised YURON formulations</a></li>
+              <li><a href="#">Yuron signature protocols</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Information</h3>
+            <ul class="footer__list">
+              <li><a href="#news">News</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--end">
+            <h3 class="footer__heading">Social networks</h3>
+            <ul class="footer__list">
+              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--mobile">
+              <span class="footer__email-label">
+                Email
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+          </div>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <!-- Bottom: two stacked rows -->
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <button class="footer__to-top" type="button" aria-label="Back to top">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13V1M1 7l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="footer__email footer__email--mobile">
+              <span class="footer__email-label">
+                e-mail
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63375 0.0885314C4.64933 0.0361504 4.69761 0 4.75237 0C4.80713 0 4.85541 0.0361504 4.87099 0.0885314C4.87099 0.0885314 5.0881 0.816269 5.3208 1.59682C5.69159 2.84039 6.66436 3.81316 7.90792 4.18395C8.68848 4.41665 9.41621 4.63375 9.41621 4.63375C9.4686 4.64934 9.50474 4.69761 9.50474 4.75237C9.50474 4.80714 9.4686 4.85541 9.41621 4.871C9.41621 4.871 8.68848 5.0881 7.90792 5.3208C6.66436 5.69159 5.69159 6.66436 5.3208 7.90792C5.0881 8.68848 4.87099 9.41621 4.87099 9.41621C4.85541 9.4686 4.80713 9.50475 4.75237 9.50475C4.69761 9.50475 4.64933 9.4686 4.63375 9.41621C4.63375 9.41621 4.41664 8.68848 4.18395 7.90792C3.81316 6.66436 2.84038 5.69159 1.59682 5.3208C0.816269 5.0881 0.0885314 4.871 0.0885314 4.871C0.0361472 4.85541 0 4.80714 0 4.75237C0 4.69761 0.0361472 4.64934 0.0885314 4.63375C0.0885314 4.63375 0.816269 4.41665 1.59682 4.18395C2.84038 3.81316 3.81316 2.84039 4.18395 1.59682C4.41664 0.816269 4.63375 0.0885314 4.63375 0.0885314Z" fill="#413421" />
+                </svg>
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+            </div>
+          </div>
+
+          <div class="footer__bottom-meta">
+            <a href="#" class="footer__privacy">Privacy Policy</a>
+            <span class="footer__copyright">YURON Clinic &copy;2026. All rights reserved</span>
+            <a href="#" class="footer__cookie">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
