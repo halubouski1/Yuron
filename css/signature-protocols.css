@@ -236,6 +236,7 @@
   letter-spacing: -0.02em;
   color: #000;
   max-width: 621px;
+  opacity: 0.8;
 }
 
 .protocols__card-list {
