@@ -352,6 +352,10 @@
   .footer__list {
     gap: 20px;
   }
+
+  .footer__inner {
+    padding: 25px;
+  }
 }
 
 
@@ -678,7 +682,7 @@
   .footer__bottom-row {
     width: fit-content;
     position: absolute;
-    right: 10px;
+    right: 20px;
   }
 
   .footer__col {
@@ -1075,8 +1079,15 @@
 
   /* footer */
   .footer {
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  .footer__inner {
+    padding: 24px 0 24px 0;
+    border-radius: 8px;
   }
 
   .footer__heading {

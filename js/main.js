@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------------
   // FAQ accordion
   // ---------------------------------------------------------------
-  if (typeof Accordion !== "undefined") {
+  if (typeof Accordion !== "undefined" && document.querySelector(".faq__list")) {
     new Accordion(".faq__list", {
       duration: 300,
       showMultiple: false,
