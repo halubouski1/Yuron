@@ -1,0 +1,282 @@
+@media (max-width: 1919px) {
+    /* hero */
+
+    .sp-hero__title {
+        font-size: 60px;
+    }
+
+    .contacts-breadcrumb__link {
+        font-size: 12px;
+    }
+
+    .hero__inner--sp {
+        padding-bottom: 80px;
+    }
+
+    .sp-hero__desc {
+        font-size: 18px;
+        max-width: 325px;
+    }
+
+    .sp-hero__list li {
+    font-size: 18px;
+    }
+
+    .sp-hero__list-label {
+        font-size: 14px;
+    }
+
+    .sp-hero__list {
+        gap: 6px;
+    }
+
+    /* protocols */
+    .protocols {
+        padding-top: 80px;
+        padding-bottom: 65px;
+    }
+
+    .protocols__card {
+        gap: 15px;
+        min-height: 400px;
+    }
+
+    .protocols__list {
+        gap: 20px;
+    }
+
+    .protocols__card-title {
+    font-size: 34px;
+    max-width: 85%;
+    }
+
+    .protocols__card-desc {
+        font-size: 16px;
+        max-width: 549px;
+    }
+
+    .protocols__card-list li {
+    font-size: 14px;
+    }
+
+    .protocols__card-list {
+        gap: 6px;
+    }
+
+    .protocols__card-head {
+        margin-bottom: 26px;
+    }
+
+    .protocols__card-body {
+        padding: 25px;
+    }
+
+    .protocols__card-divider {
+        margin: 0px -25px 24px;
+        width: calc(100% + 50px);
+    }
+
+    .protocols__card-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .sp-hero__title {
+        font-size: 52px;
+        max-width: 569px;
+    }
+
+    .sp-hero__desc {
+        font-size: 16px;
+        max-width: 286px;
+    }
+    
+    .sp-hero__list li {
+        font-size: 16px;
+    }
+
+    .sp-hero__list-label {
+        font-size: 12px;
+    }
+
+    .sp-hero__list {
+        gap: 4px;
+    }
+
+    /* protocols */
+    .protocols__card {
+        gap: 10px;
+        min-height: 380px;
+    }
+
+    .protocols__list {
+        gap: 15px;
+    }
+
+    .protocols__card-title {
+    font-size: 28px;
+    max-width: 85%;
+    }
+
+    .protocols__card-desc {
+        font-size: 14px;
+        max-width: 486px;
+    }
+
+    .protocols__card-list li {
+    font-size: 12px;
+    }
+
+    .protocols__card-list {
+        gap: 4px;
+    }
+
+    .protocols__card-img {
+        height: 380px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .sp-hero__row {
+        gap: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__inner--sp {
+        padding-bottom: 45px;
+    }
+
+    .sp-hero__row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .sp-hero__row-wrapper {
+        flex-direction: column;
+    }
+
+    .hero__inner--sp {
+    justify-content: space-between;
+    gap: 40px;
+    }
+
+    .sp-hero__divider {
+        display: none;
+    }
+
+    .sp-hero__desc {
+        display: none;
+    }
+
+    .sp-hero__desc--mobile {
+        display: block;
+    }
+
+    /* protocols */
+    .protocols {
+        padding-bottom: 80px;
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 850px) {
+        /* protocols */
+    .protocols__card {
+        flex-direction: column;
+        min-height: 380px;
+    }
+
+    .protocols__card-img {
+        height: 380px;
+        flex: none;
+    }
+
+    .protocols__card-body {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero__inner--sp {
+        padding-top: 80px;
+        padding-bottom: 16px;
+    }
+
+    .sp-hero__top {
+        gap: 14px;
+    }
+
+    .sp-hero__title {
+        padding-top: 10px;
+        font-size: 32px;
+        max-width: 360px;
+    }
+
+    .sp-hero__desc--mobile {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .sp-hero__list li {
+        font-size: 15px;
+        gap: 8px;
+    }
+
+    .sp-hero__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* protocols */
+     .protocols {
+        padding-bottom: 120px;
+     }
+
+    .protocols__card-img {
+        height: 227px;
+        border-radius: 8px;
+    }
+
+    .protocols__card {
+        gap: 8px;
+    }
+
+    .protocols__card-body {
+        padding: 20px;
+        min-height: 478px;
+    }
+
+    .protocols__card-divider {
+        margin: 0px -20px 18px;
+        width: calc(100% + 40px);
+    }
+
+    .protocols__card-title {
+        font-size: 24px;
+        max-width: 295px;
+        line-height: 130%;
+    }
+
+    .protocols__card-head {
+        margin-bottom: 18px;
+    }
+
+    .protocols__card-desc {
+        font-size: 15px;
+    }
+
+    .protocols__card-list li {
+        font-size: 13px;
+        line-height: 140%;
+    }
+
+    .protocols__card-list {
+        gap: 8px;
+    }
+
+    .protocols__list {
+        gap: 20px;
+    }
+}
