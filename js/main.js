@@ -146,6 +146,73 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ---------------------------------------------------------------
+  // Screening cards — inline "read more / read less" at end of line 3
+  // ---------------------------------------------------------------
+  document.querySelectorAll(".screening__card-desc").forEach((desc) => {
+    const fullText = desc.textContent.trim();
+    const cardWidth = desc.getBoundingClientRect().width;
+
+    function makeClone() {
+      const c = desc.cloneNode(false);
+      Object.assign(c.style, {
+        position: "fixed", top: "-9999px", left: "0",
+        visibility: "hidden", width: cardWidth + "px",
+        flex: "none", height: "auto", maxHeight: "none", overflow: "visible",
+      });
+      document.body.appendChild(c);
+      return c;
+    }
+
+    // Measure natural height to check if text overflows 3 lines
+    const probe = makeClone();
+    probe.textContent = fullText;
+    const lineH = parseFloat(getComputedStyle(probe).lineHeight) ||
+                  parseFloat(getComputedStyle(probe).fontSize) * 1.2;
+    const maxH = lineH * 3;
+    const overflows = probe.scrollHeight > maxH + 2;
+    document.body.removeChild(probe);
+
+    if (!overflows) return;
+
+    // Binary search: find how many chars fit in 3 lines alongside "... read more"
+    const ruler = makeClone();
+    let lo = 0, hi = fullText.length;
+    while (lo < hi - 1) {
+      const mid = Math.floor((lo + hi) / 2);
+      ruler.textContent = fullText.slice(0, mid) + "... read more";
+      ruler.scrollHeight <= maxH + 2 ? (lo = mid) : (hi = mid);
+    }
+    document.body.removeChild(ruler);
+    const truncLen = lo;
+
+    let expanded = false;
+
+    function buildLink(label) {
+      const a = document.createElement("a");
+      a.href = "#";
+      a.className = "screening__card-more";
+      a.textContent = label;
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        expanded = !expanded;
+        render();
+      });
+      return a;
+    }
+
+    function render() {
+      desc.innerHTML = "";
+      if (expanded) {
+        desc.append(fullText + " ", buildLink("read less"));
+      } else {
+        desc.append(fullText.slice(0, truncLen) + "... ", buildLink("read more"));
+      }
+    }
+
+    render();
+  });
+
+  // ---------------------------------------------------------------
   // Footer "back to top" (uses Lenis when available)
   // ---------------------------------------------------------------
   const toTopBtn = document.querySelector(".footer__to-top");

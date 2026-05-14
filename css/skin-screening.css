@@ -1,0 +1,203 @@
+/* ==========================================================================
+   YURON CLINIC — Skin Screening Page
+   ========================================================================== */
+
+/* Breadcrumb — reuses .contacts-breadcrumb from signature-protocols.css */
+.contacts-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-breadcrumb__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #fff9f3;
+  text-decoration: none;
+  opacity: 0.44;
+}
+
+.contacts-breadcrumb__link--active {
+    opacity: 1;
+}
+
+.contacts-breadcrumb__link:hover {
+  text-decoration: underline;
+}
+/* --------------------------------------------------------------------------
+   Hero inner override
+   -------------------------------------------------------------------------- */
+.hero__inner--ss {
+  justify-content: space-between;
+  padding-top: 156px;
+  padding-bottom: 90px;
+}
+
+/* --------------------------------------------------------------------------
+   Top block: breadcrumb + title + subtitle
+   -------------------------------------------------------------------------- */
+.ss-hero__top {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.ss-hero__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ss-hero__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 82px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+}
+
+.ss-hero__subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  color: #fff9f3;
+  opacity: 0.47;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom block: desc (left) + button (right)
+   -------------------------------------------------------------------------- */
+.ss-hero__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ss-hero__desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 156%;
+  color: #fff9f3;
+  max-width: 585px;
+}
+
+.ss-hero__btn {
+  flex-shrink: 0;
+  /* gap: 80px;
+  padding: 20px; */
+}
+
+/* ==========================================================================
+   Screening Section
+   ========================================================================== */
+
+.screening {
+  background: #fff9f3;
+  padding-top: 120px;
+  padding-bottom: 142px;
+}
+
+.screening__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.screening__card {
+  background: #f0ece7;
+  border-radius: 8px;
+  padding: 20px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.screening__card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.screening__card-num {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #282828;
+  opacity: 0.6;
+}
+
+.screening__card-divider {
+  margin: 0 -28px 35px;
+  width: calc(100% + 56px);
+  border: none;
+  border-top: 1px solid rgba(40, 40, 40, 0.12);
+}
+
+.screening__card-title {
+  margin: 0 0 13px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 110%;
+  color: #282828;
+}
+
+.screening__card-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  opacity: 0.8;
+  flex: 1;
+  margin-bottom: 106px;
+}
+
+.screening__card-more {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 2px;
+}
+
+.screening__card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.screening__card-note {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 116%;
+  color: #282828;
+  opacity: 0.8;
+  max-width: 301px;
+}
+
+.screening__card-price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+  color: #282828;
+  white-space: nowrap;
+}
+
+.screening__card-img {
+  height: 297px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.screening__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
