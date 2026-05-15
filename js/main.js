@@ -133,6 +133,47 @@ document.addEventListener("DOMContentLoaded", () => {
         pauseOnMouseEnter: true,
       },
     });
+
+    // Before & After slider
+    new Swiper(".before-after__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      grabCursor: true,
+      noSwiping: true,
+      noSwipingSelector: "img-comparison-slider",
+      navigation: {
+        nextEl: ".before-after__btn--next",
+        prevEl: ".before-after__btn--prev",
+      },
+    });
+
+    // Reviews slider
+    new Swiper(".reviews__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      grabCursor: true,
+      loop: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    // Benefits slider
+    new Swiper(".benefits__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      grabCursor: true,
+      loop: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
   }
 
   // ---------------------------------------------------------------
