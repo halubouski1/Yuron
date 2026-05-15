@@ -95,85 +95,93 @@ document.addEventListener("DOMContentLoaded", () => {
         )
       ) || 50;
 
-    // Systems slider — same layout as before (3 cards visible inside the
-    // padded area, drag scrolls through all 6).
-    const systemsSwiper = new Swiper(".systems__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      slidesOffsetBefore: getContainerPad(),
-      slidesOffsetAfter: getContainerPad(),
-      grabCursor: true,
-      loop: true,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-    });
+    // Systems slider
+    if (document.querySelector(".systems__slider")) {
+      const systemsSwiper = new Swiper(".systems__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        slidesOffsetBefore: getContainerPad(),
+        slidesOffsetAfter: getContainerPad(),
+        grabCursor: true,
+        loop: true,
+        speed: 6000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
 
-    // Keep offsets in sync with --container-pad on resize.
-    window.addEventListener("resize", () => {
-      const pad = getContainerPad();
-      systemsSwiper.params.slidesOffsetBefore = pad;
-      systemsSwiper.params.slidesOffsetAfter = pad;
-      systemsSwiper.update();
-    });
+      window.addEventListener("resize", () => {
+        const pad = getContainerPad();
+        systemsSwiper.params.slidesOffsetBefore = pad;
+        systemsSwiper.params.slidesOffsetAfter = pad;
+        systemsSwiper.update();
+      });
+    }
 
     // Process slider
-    new Swiper(".process__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 10,
-      grabCursor: true,
-      loop: true,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-    });
+    if (document.querySelector(".process__slider")) {
+      new Swiper(".process__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        grabCursor: true,
+        loop: true,
+        speed: 6000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+    }
 
     // Before & After slider
-    new Swiper(".before-after__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      grabCursor: true,
-      noSwiping: true,
-      noSwipingSelector: "img-comparison-slider",
-      navigation: {
-        nextEl: ".before-after__btn--next",
-        prevEl: ".before-after__btn--prev",
-      },
-    });
+    if (document.querySelector(".before-after__slider")) {
+      new Swiper(".before-after__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        grabCursor: true,
+        noSwiping: true,
+        noSwipingSelector: "img-comparison-slider",
+        navigation: {
+          nextEl: ".before-after__btn--next",
+          prevEl: ".before-after__btn--prev",
+        },
+      });
+    }
 
     // Reviews slider
-    new Swiper(".reviews__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 12,
-      grabCursor: true,
-      loop: true,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-    });
+    if (document.querySelector(".reviews__slider")) {
+      new Swiper(".reviews__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        grabCursor: true,
+        loop: true,
+        speed: 6000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+    }
 
     // Benefits slider
-    new Swiper(".benefits__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 12,
-      grabCursor: true,
-      loop: true,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-    });
+    if (document.querySelector(".benefits__slider")) {
+      new Swiper(".benefits__slider", {
+        slidesPerView: "auto",
+        spaceBetween: 12,
+        grabCursor: true,
+        loop: true,
+        speed: 6000,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+      });
+    }
   }
 
   // ---------------------------------------------------------------
