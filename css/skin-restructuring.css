@@ -330,7 +330,7 @@ body {
 .benefits-card {
   position: relative;
   width: 541px;
-  aspect-ratio: 690 / 480;
+  height: 340px;
   border-radius: 7px;
   overflow: hidden;
   flex-shrink: 0;
@@ -395,10 +395,10 @@ body {
 .areas__title {
   margin: 0 0 73px;
   font-weight: 400;
-  font-size: 70px;
+  font-size: 64px;
   line-height: 91%;
   color: #000;
-  max-width: 500px;
+  max-width: 450px;
 }
 
 .areas__grid {
@@ -543,7 +543,7 @@ body {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fff;
-  max-width: 605px;
+  max-width: 576px;
 }
 
 .foundation-bottom-wrapper {
@@ -598,6 +598,7 @@ body {
 
 .before-after__slider {
   padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
   overflow: hidden;
 }
 
