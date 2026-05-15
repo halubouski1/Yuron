@@ -59,6 +59,11 @@
         padding: 65px 0; 
     }
 
+    .areas-card__icon {
+        width: 20px;
+        height: 20px;
+    }
+
     .areas__title {
         font-size: 52px;
         max-width: 350px;
@@ -170,6 +175,11 @@
     .before-after__btn {
         width: 81px;
         height: 81px;
+    }
+
+    .before-after__btn svg {
+        width: 16px;
+        height: 12px;
     }
 
     .ba-handle {
@@ -307,11 +317,6 @@
         padding-top: 5px;
     }
 
-    .areas-card__icon {
-        width: 16px;
-        height: 16px;
-    }
-
     /* how-works */
     .how-works__title {
         font-size: 42px;
@@ -371,6 +376,11 @@
     .before-after__btn {
         width: 50px;
         height: 50px;
+    }
+
+    .before-after__btn svg {
+        width: 14px;
+        height: 10px;
     }
 
     .ba-handle {
@@ -462,6 +472,16 @@
     .sp-hero__row {
         gap: 70px;
     }
+
+    /* .areas*/
+    .areas__grid  {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* .before-after */
+    .before-after-card {
+        height: 391px;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -495,38 +515,111 @@
         display: block;
     }
 
-    /* protocols */
-    .protocols {
-        padding-bottom: 80px;
-        padding-top: 40px;
+    /* .how-works */
+    .how-works__inner {
+        flex-direction: column;
+    }
+
+    .how-works__list {
+        max-width: 100%;
+    }
+
+    .how-works__title {
+        max-width: 100%;
+    }
+
+    .how-works__desc {
+        max-width: 67%;
+    }
+
+    /* faq */
+    .faq__list {
+        max-width: 100%;
+    }
+
+    /* mobile CTA buttons */
+    .benefits__cta,
+    .before-after__cta,
+    .reviews__cta {
+        display: none;
+    }
+
+    .benefits__cta--mobile,
+    .before-after__cta--mobile,
+    .reviews__cta--mobile {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
     }
 }
 
-@media (max-width: 850px) {
-        /* protocols */
-    .protocols__card {
-        flex-direction: column;
-        min-height: 380px;
-    }
-
-    .protocols__card-img {
-        height: 380px;
-        flex: none;
-    }
-
-    .protocols__card-body {
-        min-height: 380px;
+@media (max-width: 895px) {
+    img-comparison-slider.rendered [slot='second'] {
+        height: 391px;
     }
 }
 
 @media (max-width: 560px) {
+    /* before-after pagination */
+    .before-after__pagination.swiper-pagination-bullets {
+        display: flex;
+    }
+
+    /* common */
+    .contacts-breadcrumb {
+        gap: 8px;
+    }
+
+    .benefits__cta--mobile, .before-after__cta--mobile, .reviews__cta--mobile {
+        margin-top: 24px;
+        padding: 17px;
+    }
+
+    /* hero */
     .hero__inner--sp {
         padding-top: 80px;
         padding-bottom: 16px;
     }
 
+    .sp-hero__divider {
+        display: block;
+    }
+
+    .sp-hero__bottom {
+        gap: 18px;
+    }
+
+    .sp__hero-item-wrapper--mobile {
+        display: flex;
+    }
+
     .sp-hero__top {
         gap: 14px;
+    }
+
+    .sr-hero__price {
+        display: none;
+    }
+
+    .sp__hero-item-wrapper {
+        gap: 4px;
+    }
+
+     .sp-hero__item-descr {
+        font-size: 13px;
+        line-height: 110%;
+        align-items: center;
+        gap: 8px;
+        max-width: 100%;
+     }
+
+    .sp-hero__item-descr svg {
+        margin-top: 0;
+    }
+
+    .sp-hero__col--list {
+        gap: 12px;
     }
 
     .sp-hero__title {
@@ -536,68 +629,261 @@
     }
 
     .sp-hero__desc--mobile {
-        font-size: 15px;
+        font-size: 13px;
+        line-height: 140%;
+        opacity: 1;
         max-width: 100%;
     }
 
-    .sp-hero__list li {
-        font-size: 15px;
-        gap: 8px;
-    }
-
     .sp-hero__row {
-        flex-direction: column;
         gap: 20px;
     }
 
-    /* protocols */
-     .protocols {
-        padding-bottom: 120px;
-     }
-
-    .protocols__card-img {
-        height: 227px;
-        border-radius: 8px;
+    .mobile-br {
+        display: none;
     }
 
-    .protocols__card {
-        gap: 8px;
+    /* benefits */
+    .benefits {
+        padding: 60px 0;
     }
 
-    .protocols__card-body {
+    .benefits__title {
+        font-size: 32px;
+    }
+
+    .benefits-card {
+        width: 343px;
+        height: 240px;
+        border-radius: 5px;
+    }
+
+    .benefits-card__title {
+        font-size: 18px;
+    }
+
+    .benefits-card__top {
         padding: 20px;
-        min-height: 478px;
     }
 
-    .protocols__card-divider {
-        margin: 0px -20px 18px;
-        width: calc(100% + 40px);
+    .benefits-card__top svg {
+        width: 8px;
+        height: 8px;
     }
 
-    .protocols__card-title {
-        font-size: 24px;
-        max-width: 295px;
-        line-height: 130%;
+    .benefits-card__body {
+        left: 20px;
+        bottom: 20px;
+        right: 20px;
     }
 
-    .protocols__card-head {
-        margin-bottom: 18px;
+    /* areas */
+    .areas {
+        padding: 60px 0;
     }
 
-    .protocols__card-desc {
+    .areas__title {
+        font-size: 14px;
+        line-height: 140%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .areas__title span {
+        font-size: 32px;
+        line-height: 110%;
+    }
+
+    .areas__grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 12px;
+        column-gap: 7px;
+    }
+
+    .areas-card__label {
+        font-size: 16px;
+    }
+
+    .areas-card__bottom {
+        padding: 18px 20px;
+    }
+
+    .areas-card__top {
+        padding: 11px 16px;
+    }
+
+    .areas-card__divider {
+        display: none;
+    }
+
+    .areas-card {
+        height: 153px;
+    }
+
+    /* how-works  */
+    .how-works {
+        padding-top: 60px;
+    }
+
+    .how-works__title {
+        font-size: 32px;
+    }
+
+    .how-works__desc {
+        max-width: 100%;
         font-size: 15px;
     }
 
-    .protocols__card-list li {
-        font-size: 13px;
+    .how-works__inner {
+        gap: 52px;
+    }
+
+    .how-works__item p {
+        font-size: 15px;
         line-height: 140%;
     }
 
-    .protocols__card-list {
-        gap: 8px;
+    /* foundation */
+    .foundation {
+        padding-top: 30px;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-bottom: 60px;
     }
 
-    .protocols__list {
-        gap: 20px;
+    .foundation__inner {
+        min-height: 675px;
+    }
+
+    .foundation__content {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .foundation__title {
+        font-size: 28px;
+        line-height: 98%;
+        max-width: 319px;
+    }
+
+    .foundation-btn__icon {
+        width: 12px;
+    }
+
+    .foundation-bottom-wrapper {
+        gap: 17px;
+    }
+
+    .foundation__desc {
+        font-weight: 500;
+        max-width: 300px;
+    }
+
+    .before-after__title {
+        font-size: 32px;
+    }
+
+    .before-after-card {
+        width: 100%;
+        border-radius: 5px;
+        height: 370px;
+    }
+
+    .before-after__btn {
+        display: none;
+    }
+
+    img-comparison-slider.rendered [slot='second'] {
+        height: 370px;
+    }
+
+    .ba-handle svg {
+        height: 6px;
+    }
+
+    .ba-handle {
+        gap: 0px;
+    }
+
+    .ba-slider {
+        --divider-width: 1px;
+    }
+
+    /* reviews */
+    .reviews__title {
+        font-size: 32px;
+    }
+
+    .reviews__head {
+        margin-bottom: 40px;
+    }
+
+    .reviews-card {
+        border-radius: 5px;
+        padding: 20px;
+        width: 343px;
+        min-height: 370px;
+    }
+
+    .reviews-card__title {
+        font-size: 18px;
+    }
+
+    .reviews-card__top {
+        gap: 24px;
+    }
+
+    .reviews-card__text p {
+        font-size: 13px;
+    }
+
+    .reviews-card__text {
+        gap: 16px;
+    }
+
+    .reviews-card__avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reviews-card__name {
+        font-size: 16px;
+    }
+
+    .reviews-card__role {
+        font-size: 13px;
+    }
+
+    .reviews-card__author {
+        gap: 4px;
+    }
+
+    /* faq */
+    .faq__title {
+        font-size: 28px;
+        max-width: 195px;
+    }
+
+    .faq__inner {
+        gap: 36px;
+    }
+
+    .faq__question {
+        font-size: 16px;
+    }
+
+    .faq__list .ac .ac-trigger {
+        gap: 14px;
+        padding: 13px 0;
+    }
+
+    .faq__num {
+        font-size: 12px;
+        padding-top: 0;
+    }
+
+    .faq__num-line {
+        padding-top: 12px;
     }
 }

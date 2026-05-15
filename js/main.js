@@ -144,9 +144,18 @@ document.addEventListener("DOMContentLoaded", () => {
         grabCursor: true,
         noSwiping: true,
         noSwipingSelector: "img-comparison-slider",
+        breakpoints: {
+          0: { spaceBetween: 6 },
+          561: { spaceBetween: 20 },
+        },
         navigation: {
           nextEl: ".before-after__btn--next",
           prevEl: ".before-after__btn--prev",
+        },
+        pagination: {
+          el: ".before-after__pagination",
+          type: "bullets",
+          clickable: true,
         },
       });
     }
