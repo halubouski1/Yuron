@@ -678,7 +678,8 @@ body {
   position: static;
   gap: 0px;
   padding: 0 var(--container-pad);
-  margin-top: 16px;
+  padding-top: 16px;
+  padding-bottom: 24px;
   justify-content: flex-start;
 }
 

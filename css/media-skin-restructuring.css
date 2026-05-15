@@ -794,6 +794,10 @@
         display: none;
     }
 
+    .before-after__cta--mobile {
+        margin-top: 0;
+    }
+
     img-comparison-slider.rendered [slot='second'] {
         height: 370px;
     }
