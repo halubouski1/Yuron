@@ -138,13 +138,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Before & After slider
     if (document.querySelector(".before-after__slider")) {
-      const isMobileBA = () => window.innerWidth <= 560;
-
-      const baSwiper = new Swiper(".before-after__slider", {
+      new Swiper(".before-after__slider", {
         slidesPerView: "auto",
         spaceBetween: 20,
         grabCursor: true,
-        noSwiping: !isMobileBA(),
+        noSwiping: true,
         noSwipingSelector: "img-comparison-slider",
         breakpoints: {
           0: { spaceBetween: 6 },
@@ -159,11 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
           type: "bullets",
           clickable: true,
         },
-      });
-
-      window.addEventListener("resize", () => {
-        baSwiper.params.noSwiping = !isMobileBA();
-        baSwiper.update();
       });
     }
 
