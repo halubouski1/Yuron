@@ -1,7 +1,10 @@
 /* ==========================================================================
    YURON CLINIC — News Page
    ========================================================================== */
-/* Breadcrumb */
+body{
+    background: #fff5ed;
+}
+   /* Breadcrumb */
 .contacts-breadcrumb {
   display: flex;
   align-items: center;
