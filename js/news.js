@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Core render ──────────────────────────────────────────────────────────
-  function render() {
+  function render(scrollToTop = false) {
     // 1. Filter
     let filtered = allCards.filter((card) => {
       if (!activeCategory) return true;
@@ -104,6 +104,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 5. Render pagination
     renderPagination(totalPages);
+
+    if (scrollToTop) {
+      const target = document.querySelector(".news-filters") || grid;
+      if (window.__lenis) {
+        window.__lenis.scrollTo(target, { offset: -40 });
+      } else {
+        const y = target.getBoundingClientRect().top + window.scrollY - 40;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
   }
 
   // ── Pagination UI ────────────────────────────────────────────────────────
@@ -114,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (total <= 1) return;
 
     // Prev button
-    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 8.5L7.5 12.5L11.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 8.5L12.5 12.5L16.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage--; render(); }, currentPage === 1));
+    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 8.5L7.5 12.5L11.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 8.5L12.5 12.5L16.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage--; render(true); }, currentPage === 1));
 
     // Page numbers: always show first 3, last 3, and ±1 around current
     const pages = buildPageList(currentPage, total);
@@ -129,13 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = document.createElement("button");
         btn.className = "news-pagination__page" + (p === currentPage ? " news-pagination__page--active" : "");
         btn.textContent = p;
-        btn.addEventListener("click", () => { currentPage = p; render(); });
+        btn.addEventListener("click", () => { currentPage = p; render(true); });
         paginationEl.appendChild(btn);
       }
     });
 
     // Next button
-    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 16.5L11.5 12.5L7.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 16.5L16.5 12.5L12.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage++; render(); }, currentPage === total));
+    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 16.5L11.5 12.5L7.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 16.5L16.5 12.5L12.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage++; render(true); }, currentPage === total));
   }
 
   function buildPageList(current, total) {

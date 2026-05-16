@@ -61,6 +61,7 @@ body{
 }
 
 .hero__descr {
+    margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
@@ -72,6 +73,10 @@ body{
 .news {
     padding-bottom: 100px;
     padding-top: 0;
+}
+
+.news-card--featured .news-card__title {
+  -webkit-line-clamp: 1;
 }
 
 .news__grid {
