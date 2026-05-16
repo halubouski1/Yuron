@@ -1,0 +1,278 @@
+/* ==========================================================================
+   YURON CLINIC — News Page
+   ========================================================================== */
+/* Breadcrumb */
+.contacts-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-breadcrumb__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #282828;
+  text-decoration: none;
+  opacity: 0.44;
+}
+
+.contacts-breadcrumb__link--active {
+    color: #282828;
+    opacity: 1;
+}
+
+.contacts-breadcrumb__link:hover {
+  text-decoration: underline;
+}
+
+/* hero */
+.header__logo, .header__nav-item--link {
+    color: #282828;
+}
+
+.hero__inner {
+    min-height: 0;
+    padding-top: 170px;
+    padding-bottom: 60px;
+    gap: 44px;
+}
+
+.hero {
+    min-height: 0;
+    background: #fff5ed;
+}
+
+.news-hero__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.hero__title {
+    font-weight: 500;
+    font-size: 130px;
+    line-height: 98%;
+    letter-spacing: -0.02em;
+    color: #282828;
+}
+
+.hero__descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #282828;
+    max-width: 361px;
+}
+/* news */
+
+.news {
+    padding-bottom: 100px;
+    padding-top: 0;
+}
+
+.news__grid {
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 12px;
+  row-gap: 80px;
+}
+
+.news-card__title {
+  margin-bottom: 12px;
+}
+
+/* Regular cards — 1/3 width */
+.news__grid .news-card {
+  grid-column: span 2;
+}
+
+/* Featured (first 2 visible) — 1/2 width, taller image */
+.news__grid .news-card--featured {
+  grid-column: span 3;
+}
+
+.news__grid .news-card--featured .news-card__media {
+  height: 480px;
+}
+
+.news__grid .news-card--featured .news-card__title {
+  max-width: 850px;
+}
+
+.news-card__date {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #363636;
+  opacity: 0.48;
+}
+
+/* Extra dot colors */
+.news-card__dot--blue   { background: #4a90d9; }
+.news-card__dot--orange { background: #e07a2f; }
+.news-card__dot--purple { background: #9b6bbf; }
+
+/* ==========================================================================
+   Filters
+   ========================================================================== */
+
+.news-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.news-filter {
+  position: relative;
+  width: 223px;
+}
+
+.news {
+    background: #fff5ed;
+}
+
+.news-filter__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background: #f0ece7;
+  border: none;
+  border-radius: 5px;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #282828;
+  white-space: nowrap;
+}
+
+.news-filter--open .news-filter__btn {
+  background: #e8e3dc;
+}
+
+.news-filter__arrow {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.news-filter--open .news-filter__arrow {
+  transform: rotate(180deg);
+}
+
+.news-filter__dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 223px;
+  background: #fff;
+  border: 1px solid rgba(40, 40, 40, 0.15);
+  border-radius: 5px;
+  padding: 6px;
+  list-style: none;
+  margin: 0;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.news-filter--open .news-filter__dropdown {
+  display: block;
+}
+
+.news-filter__option {
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #282828;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.news-filter__option:hover {
+  background: #f0ece7;
+}
+
+.news-filter__option--active {
+  font-weight: 500;
+  background: #f0ece7;
+}
+
+/* ==========================================================================
+   Card entrance animation
+   ========================================================================== */
+
+@keyframes news-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-card--animate {
+  animation: news-card-in 0.45s ease both;
+}
+
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.news-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 60px;
+}
+
+.news-pagination__btn,
+.news-pagination__page,
+.news-pagination__ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #282828;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.news-pagination__btn:hover,
+.news-pagination__page:hover {
+  background: #f0ece7;
+}
+
+.news-pagination__page--active {
+background: #f0ece7;
+}
+
+.news-pagination__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.news-pagination__btn:disabled:hover {
+  background: transparent;
+}
+
+.news-pagination__ellipsis {
+  cursor: default;
+  color: rgba(40, 40, 40, 0.45);
+}
