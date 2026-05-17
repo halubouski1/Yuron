@@ -106,11 +106,11 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPagination(totalPages);
 
     if (scrollToTop) {
-      const target = document.querySelector(".news-filters") || grid;
+      const target = pageCards[0] || grid;
       if (window.__lenis) {
-        window.__lenis.scrollTo(target, { offset: -40 });
+        window.__lenis.scrollTo(target, { offset: -20 });
       } else {
-        const y = target.getBoundingClientRect().top + window.scrollY - 40;
+        const y = target.getBoundingClientRect().top + window.scrollY - 20;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     }
