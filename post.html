@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css/news.css" />
-    <link rel="stylesheet" href="css/media-news.css" />
+    <link rel="stylesheet" href="css/post.css" />
+    <link rel="stylesheet" href="css/media-post.css" />
   </head>
   <body>
     <!-- =====================================================================
@@ -142,251 +142,171 @@
 
       <!-- Hero content -->
       <div class="container hero__inner">
-          <nav class="contacts-breadcrumb" aria-label="Breadcrumb">
-            <a href="index.html" class="contacts-breadcrumb__link">Home</a>
-              <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle opacity="0.44" cx="3.5" cy="3.5" r="3.5" fill="#282828" />
-              </svg>
-            <a href="/contacts.html" class="contacts-breadcrumb__link contacts-breadcrumb__link--active">Latest News</a>
-        </nav>
-        <div class="news-hero__wrapper">
+        <div class="post-hero__wrapper">
+          <div class="hero__tags">
+              <span class="hero__tag">
+                <span class="hero-tag__dot hero-tag__dot--green"></span>
+                  DAY NEWS
+              </span>
+              <span class="hero__tag">
+                <span class="hero-tag__dot hero-tag__dot--yellow"></span>
+                  DAY NEWS
+              </span>
+          </div>
           <h1 class="hero__title">
-            Latest News
+            Lorem ipsum dolor sit amet consectetur. <br class="hidden-mobile"> Tortor praesent auctor curabitur pretium 
           </h1>
-          <p class="hero__descr">
-            Lorem ipsum dolor sit amet consectetur. Ridiculus felis enim non vitae pharetra sollicitudin. Urna nam tristique neque suspendisse. Urna lectus in nec leo.
-          </p>
         </div>
+        <div class="hero__descr-wrapper">
+          <p class="hero__descr">
+            Successful partnerships are all about people and, at Cinven, our people are
+            passionate about building strong relationships across the investment cycle          </p>
+          <span class="hero__date">
+            03/05/2025
+          </span>
+        </div>
+        <img class="hero__image" src="assets/img/post-hero-img.jpg" alt="Hero Image">
       </div>
     </section>
 
     <!-- =====================================================================
+         POST INTRO (title + tags + text left / image right)
+         ===================================================================== -->
+    <section class="post-intro" data-aos="fade-up" data-aos-delay="100">
+      <div class="container post-intro__inner">
+        <div class="post-intro__left">
+          <h2 class="post-intro__title">A best-in-class B2B energy transition business</h2>
+          <div class="post-intro__tags">
+            <span class="hero__tag">
+              <span class="hero-tag__dot hero-tag__dot--green"></span>
+              DAY NEWS
+            </span>
+            <span class="hero__tag">
+              <span class="hero-tag__dot hero-tag__dot--yellow"></span>
+              OPPORTUNITIES
+            </span>
+          </div>
+          <div class="post-intro__text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in ultrices justo. Curabitur a venenatis enim. Proin ullamcorper efficitur commodo. Sed sit amet ex magna. In euismod commodo ullamcorper. Nulla convallis ex lorem, a placerat mi vehicula in. Morbi in urna varius, lobortis eros quis, sodales ipsum. Praesent hendrerit mauris sit amet imperdiet sagittis.</p>
+            <p>Praesent vitae cursus lorem. Donec eget feugiat mi. Vivamus faucibus malesuada dignissim. Etiam eget est imperdiet, aliquet massa nec, fringilla ante. Vivamus a dolor quis mi vestibulum consequat. Aliquam erat volutpat. Proin interdum elementum pretium. Donec condimentum velit eget ex elementum facilisis. Sed eu nunc id nibh sagittis tincidunt vel vel erat.</p>
+          </div>
+        </div>
+        <div class="post-intro__right">
+          <img class="post-intro__image" src="assets/img/post-img-1.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================================
+         POST ARTICLE (large title + text body, 1038px container)
+         ===================================================================== -->
+    <section class="post-article" data-aos="fade-up" data-aos-delay="100">
+      <div class="post-article__container">
+        <h2 class="post-article__title">Lorem ipsum dolor sit amet dolor sit amet</h2>
+        <div class="post-article__body">
+          <p>What makes a great board of directors? <br> A good board of directors has never been more important to corporate success. Not only because of the new responsibilities they shoulder — think risk, ethics, transparency and stakeholders — but also because businesses now face unprecedented disruption from all directions. A governing board that provides strategic direction and expert advice, which anticipates risks and challenges and has the trust of management can be instrumental in helping a company to achieve its goals.</p>
+          <p>This is why it pays to invest some time in thinking about the composition of the governing board, particularly when a company comes under new ownership as it often happens in PE or M&amp;A situations. How you assemble an effective and experienced board of directors matters to the outcomes you want to achieve. Here are some factors to bear in mind.</p>
+          <img data-aos="fade-up" data-aos-delay="100" class="post-article__image" src="assets/img/post-img-1.jpg" alt="">
+          <ol class="post-article__list">
+            <li>Context matters. Ask yourself "what is this board here to do?" Think of the strategy, positioning of the business, the specific industry, the shareholder structure and the phase it is in. A start-up will have very different needs from a growing or mature business, or one that is undergoing market or technological disruption or a private equity portfolio. Ask what is critical for the company now or might be in the future, then seek directors with the relevant experience for its needs. It is a special context, for example, when ownership changes, the cultural fit becomes important, too. The new board must share the values, style and ambition of the company's new owners.</li>
+            <li>There is value in continuity. New owners often want to make a clean sweep of things, but they must remember that there is sometimes value in retaining board members who know the company well and who can advise on what went on before. A hybrid board that brings together the new proprietary directors, a historic member and outside expertise is a good model.</li>
+            <li>Keep the board small. This is particularly important for portfolio companies in private hands. Four or five people is more than enough. Each member should make a unique contribution, whether it's direct industry expertise, financial acumen or big-picture strategic talents. Together, they must span the breadth of expertise a company needs to accomplish what it has set out to do. All must be financially literate, and some previous board experience is preferable, too. For new companies in private equity portfolios, it might be useful to appoint a director who has experience of the entire private equity lifecycle, from acquisition to divestment. From time to time, you may want to reach out to external advisers to address particular topics, but there is no need to give them a permanent seat at the table.</li>
+          </ol>
+          <img data-aos="fade-up" data-aos-delay="100" class="post-article__image" src="assets/img/post-img-2.jpg" alt="">
+          <ol class="post-article__list" start="4">
+            <li>Technological know-how is essential. Every company today is being disrupted by new technologies and many Private equity investors are keen to have tech businesses in their portfolio. This makes it more important than ever to have real technological expertise on the board. But you don't need a geek. Go for someone with a broader background — someone who has run a technology business, for example, who understands technology but also the commercial side of things.</li>
+            <li>Aim for good dynamics. While you will need to have a good understanding of individual's style and motivations, you will also need to consider how the board's dynamics would potentially turn out; consider how they will get on together. Striking the right balance in the composition of a board is as important as the individual talents within it.</li>
+            <li>A diverse board is more effective. Aim for diversity — of thought, experience, style. Diverse boards are more dynamic — in their understanding of issues, in their points of view and in the way they come to decisions. A board should seek to reflect the entire business, including its employees, customers and markets, and not just the ownership structure. For private equity owners, remember that there will be an exit at some point; a diverse board will bring a more agile mindset to the task.</li>
+            <li>The role of the chair is crucial. A good chair knows how to establish constructive relationships across several constituencies: with the CEO, with shareholders, with fellow members of the board. Chairs must have the trust of management and stakeholders in the company. They don't have to know everything, but they must be able to ask the right questions of the right people and give others an opportunity to contribute. Particularly in private equity context, the Chair can play a very effective role in handling tricky situations between shareholders and the owners.</li>
+          </ol>
+          <img data-aos="fade-up" data-aos-delay="100" class="post-article__image" src="assets/img/post-img-3.jpg" alt="">
+          <ol class="post-article__list" start="8">
+            <li>Schedule regular health checks. Once a year, the board should reflect on its own performance. They should ask themselves: How are we getting on together? What contribution are we making to the company's success? Could we do better, and if so, how? Do we have the right balance of expertise? Are we trusted by management? Is our dialogue with executives' fluid? What have we learned and how do we change? In my experience, very few boards — even in big, listed companies — take time out for self-reflection. They would be immensely more effective if they did. It is about have a real conversation about how the board and individuals are doing.</li>
+            <li>Encourage regular management reviews and offsites. Boards often hesitate to make the tough calls when everything points to a problem with management. Regular conversations with and about management can help. How is the CEO doing? How is management working together as a team? Offsites are another good opportunity to deepen the dialogue with management and debate the bigger picture. Even the best-laid plans should be revisited from time to time.</li>
+            <li>Find the right balance with management. Boards today are expected to know a lot more about the businesses they oversee and to work more closely with management. There are tensions here: how to remain objective and independent while also building a constructive and trusted relationship with management; how to impart advice without meddling in day-to-day operations. It's all about finding the right balance. Creating a working relationship based on trust helps to give each other feedback when there is tension.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+        <!-- =====================================================================
          NEWS (heading + dark CTA on top, 3-card grid on bottom)
          ===================================================================== -->
     <section data-aos="fade-up" data-aos-delay="100" class="news" id="news">
       <div class="container">
-
-        <!-- Filters -->
-        <div class="news-filters">
-          <!-- Category dropdown -->
-          <div class="news-filter" id="filter-category">
-            <button class="news-filter__btn" aria-expanded="false" aria-haspopup="listbox">
-              <span class="news-filter__label">Category</span>
-              <svg class="news-filter__arrow" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.91 -0.00016065L12.97 1.06084L7.193 6.83984C7.10043 6.93299 6.99036 7.00692 6.86911 7.05737C6.74786 7.10782 6.61783 7.13379 6.4865 7.13379C6.35517 7.13379 6.22514 7.10782 6.10389 7.05737C5.98264 7.00692 5.87257 6.93299 5.78 6.83984L2.65457e-07 1.06084L1.06 0.000838803L6.485 5.42484L11.91 -0.00016065Z" fill="black" />
-              </svg>
-            </button>
-            <ul class="news-filter__dropdown" role="listbox">
-              <li class="news-filter__option news-filter__option--active" data-value="">All</li>
-              <li class="news-filter__option" data-value="day-news">Day News</li>
-              <li class="news-filter__option" data-value="opportunities">Opportunities</li>
-              <li class="news-filter__option" data-value="research">Research</li>
-              <li class="news-filter__option" data-value="events">Events</li>
-              <li class="news-filter__option" data-value="treatments">Treatments</li>
-            </ul>
-          </div>
-
-          <!-- Recency dropdown -->
-          <div class="news-filter" id="filter-recency">
-            <button class="news-filter__btn" aria-expanded="false" aria-haspopup="listbox">
-              <span class="news-filter__label">By recency</span>
-              <svg class="news-filter__arrow" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.91 -0.00016065L12.97 1.06084L7.193 6.83984C7.10043 6.93299 6.99036 7.00692 6.86911 7.05737C6.74786 7.10782 6.61783 7.13379 6.4865 7.13379C6.35517 7.13379 6.22514 7.10782 6.10389 7.05737C5.98264 7.00692 5.87257 6.93299 5.78 6.83984L2.65457e-07 1.06084L1.06 0.000838803L6.485 5.42484L11.91 -0.00016065Z" fill="black" />
-              </svg>
-            </button>
-            <ul class="news-filter__dropdown" role="listbox">
-              <li class="news-filter__option news-filter__option--active" data-value="newest">Newest first</li>
-              <li class="news-filter__option" data-value="oldest">Oldest first</li>
-            </ul>
-          </div>
-        </div>
-
         <div class="news__grid">
-          <article class="news-card" data-categories="day-news opportunities" data-date="2026-02-20">
+          <!-- Card 1 -->
+          <article class="news-card">
             <div class="news-card__media">
               <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
               <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--yellow"></span>OPPORTUNITIES</span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--yellow"></span>
+                  OPPORTUNITIES
+                </span>
               </div>
             </div>
             <h3 class="news-card__title">Inside-out regeneration: merging functional medicine with bio &mdash; regenerative aesthetics</h3>
-            <span class="news-card__date">February 20, 2026</span>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>Cambridge World Conference, Kings College, 2025 Cambridge, UK</span>
+            </div>
           </article>
 
-          <article class="news-card" data-categories="day-news research" data-date="2026-02-16">
+          <!-- Card 2 -->
+          <article class="news-card">
             <div class="news-card__media">
               <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
               <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--blue"></span>RESEARCH</span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
               </div>
             </div>
             <h3 class="news-card__title">An update on exosomes application in aesthetic medicine</h3>
-            <span class="news-card__date">February 16, 2026</span>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>3d Aesthetic Open congress, 2025 Dusseldorf, Germany</span>
+            </div>
           </article>
 
-          <article class="news-card" data-categories="day-news treatments" data-date="2026-02-10">
+          <!-- Card 3 -->
+          <article class="news-card">
             <div class="news-card__media">
               <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
               <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--orange"></span>TREATMENTS</span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--green"></span>
+                  DAY NEWS
+                </span>
+                <span class="news-card__tag">
+                  <span class="news-card__dot news-card__dot--yellow"></span>
+                  OPPORTUNITIES
+                </span>
               </div>
             </div>
             <h3 class="news-card__title">The role of exosomes in combination treatments in medical aesthetics</h3>
-            <span class="news-card__date">February 10, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="events research" data-date="2026-02-08">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--purple"></span>EVENTS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--blue"></span>RESEARCH</span>
-              </div>
+            <div class="news-card__meta">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.58625 16.3582C8.04075 16.7332 8.51475 17.076 9 17.4105C9.4863 17.0804 9.95799 16.7293 10.4137 16.3582C11.1735 15.7344 11.8885 15.058 12.5535 14.334C14.0865 12.6577 15.75 10.2277 15.75 7.5C15.75 6.61358 15.5754 5.73583 15.2362 4.91689C14.897 4.09794 14.3998 3.35382 13.773 2.72703C13.1462 2.10023 12.4021 1.60303 11.5831 1.26381C10.7642 0.924594 9.88642 0.75 9 0.75C8.11358 0.75 7.23583 0.924594 6.41689 1.26381C5.59794 1.60303 4.85382 2.10023 4.22703 2.72703C3.60023 3.35382 3.10303 4.09794 2.76381 4.91689C2.42459 5.73583 2.25 6.61358 2.25 7.5C2.25 10.2277 3.9135 12.657 5.4465 14.334C6.11146 15.0583 6.82647 15.7342 7.58625 16.3582ZM9 9.9375C8.35353 9.9375 7.73355 9.68069 7.27643 9.22357C6.81931 8.76645 6.5625 8.14646 6.5625 7.5C6.5625 6.85353 6.81931 6.23355 7.27643 5.77643C7.73355 5.31931 8.35353 5.0625 9 5.0625C9.64647 5.0625 10.2665 5.31931 10.7236 5.77643C11.1807 6.23355 11.4375 6.85353 11.4375 7.5C11.4375 8.14646 11.1807 8.76645 10.7236 9.22357C10.2665 9.68069 9.64647 9.9375 9 9.9375Z" fill="black" />
+              </svg>
+              <span>Aesthetic Medicine Live Conference, 2025 London, UK</span>
             </div>
-            <h3 class="news-card__title">Inside-out regeneration: merging functional medicine with bio &mdash; regenerative aesthetics</h3>
-            <span class="news-card__date">February 8, 2026</span>
           </article>
-
-          <article class="news-card" data-categories="day-news events" data-date="2026-02-05">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--purple"></span>EVENTS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">An update on exosomes application in aesthetic medicine</h3>
-            <span class="news-card__date">February 5, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="opportunities treatments" data-date="2026-01-28">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--yellow"></span>OPPORTUNITIES</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--orange"></span>TREATMENTS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">The role of exosomes in combination treatments in medical aesthetics</h3>
-            <span class="news-card__date">January 28, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="research treatments" data-date="2026-01-20">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--blue"></span>RESEARCH</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--orange"></span>TREATMENTS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Biomarker-driven protocols in regenerative skin therapy</h3>
-            <span class="news-card__date">January 20, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="day-news" data-date="2026-01-15">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">New clinical findings on peptide-based skin restructuring</h3>
-            <span class="news-card__date">January 15, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="events opportunities" data-date="2026-01-10">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--purple"></span>EVENTS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--yellow"></span>OPPORTUNITIES</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">International aesthetics congress 2026 — key takeaways</h3>
-            <span class="news-card__date">January 10, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="research" data-date="2026-01-05">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--blue"></span>RESEARCH</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Stem cell activation in non-invasive facial rejuvenation</h3>
-            <span class="news-card__date">January 5, 2026</span>
-          </article>
-
-          <article class="news-card" data-categories="day-news opportunities" data-date="2025-12-28">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--yellow"></span>OPPORTUNITIES</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Yuron Clinic expands its regenerative medicine program</h3>
-            <span class="news-card__date">December 28, 2025</span>
-          </article>
-
-          <article class="news-card" data-categories="treatments events" data-date="2025-12-20">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--orange"></span>TREATMENTS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--purple"></span>EVENTS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Advanced injection techniques: live workshop recap</h3>
-            <span class="news-card__date">December 20, 2025</span>
-          </article>
-
-          <article class="news-card" data-categories="day-news research" data-date="2025-12-12">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-1.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--green"></span>DAY NEWS</span>
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--blue"></span>RESEARCH</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Collagen induction therapy — updated evidence review</h3>
-            <span class="news-card__date">December 12, 2025</span>
-          </article>
-
-          <article class="news-card" data-categories="opportunities" data-date="2025-12-05">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-2.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--yellow"></span>OPPORTUNITIES</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">Fellowship positions open at Yuron regenerative clinic</h3>
-            <span class="news-card__date">December 5, 2025</span>
-          </article>
-
-          <article class="news-card" data-categories="events" data-date="2025-11-28">
-            <div class="news-card__media">
-              <img class="news-card__image" src="assets/img/news-card-3.jpg" alt="" />
-              <div class="news-card__tags">
-                <span class="news-card__tag"><span class="news-card__dot news-card__dot--purple"></span>EVENTS</span>
-              </div>
-            </div>
-            <h3 class="news-card__title">European aesthetic medicine summit — Yuron highlights</h3>
-            <span class="news-card__date">November 28, 2025</span>
-          </article>
-
         </div>
-
-        <!-- Pagination -->
-        <nav class="news-pagination" aria-label="News pages"></nav>
-
       </div>
     </section>
-
-    <!-- =====================================================================
+        <!-- =====================================================================
          NEEDS (full-bleed video card: top logo + side note, bottom title + CTA)
          ===================================================================== -->
     <section data-aos="fade-up" data-aos-delay="100" class="needs">
@@ -516,6 +436,5 @@
     <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script src="js/news.js" defer></script>
   </body>
 </html>

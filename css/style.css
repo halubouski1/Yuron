@@ -72,6 +72,16 @@
 
 @font-face {
   font-family: "Neue Montreal";
+  src: local("Neue Montreal"), local("NeueMontreal-Light"),
+    url("../assets/fonts/NeueMontreal-Light.woff2") format("woff2"),
+    url("../assets/fonts/NeueMontreal-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
   src: local("Neue Montreal"), local("NeueMontreal-Regular"),
     url("../assets/fonts/NeueMontreal-Regular.woff2") format("woff2"),
     url("../assets/fonts/NeueMontreal-Regular.woff") format("woff");
