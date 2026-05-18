@@ -94,6 +94,10 @@
 } 
 
 @media (max-width: 560px) {
+    .hero {
+        min-height: auto;
+    }
+
     .hero__inner {
         padding-top: 80px;
         padding-bottom: 28px;
