@@ -13,6 +13,11 @@
     gap: 18px;
 }
 
+.hero {
+  height: var(--fixed-vh, 100vh);
+  min-height: var(--fixed-vh, 100vh);
+}
+
 .hero__inner {
     padding-bottom: 55px;
     padding-top: 200px;
