@@ -143,10 +143,13 @@
       <!-- Hero content -->
       <div class="container hero__inner">
           <h1 class="hero__title">
-              YURON functions as a multidisciplinary clinical system
+              YURON functions <br class="mobile-hidden"> as a multidisciplinary clinical system
           </h1>
         </div>
-        <img src="/assets/img/team.jpg" alt="Yuron Team">
+        <picture>
+        <source media="(max-width: 560px)" srcset="assets/img/team-mobile.jpg" />
+        <img src="assets/img/team.jpg" alt="" />
+      </picture>
     </section>
 
     <!-- =====================================================================
@@ -155,6 +158,193 @@
     <section class="text-reveal">
       <div class="container">
         <p class="text-reveal__text">Regenerative aesthetic doctors, plastic surgeons, dermatologists, functional therapists, endocrinologists, and nutritionists <br> operate within a single coordinated framework — governed by one principle: long-term tissue integrity and biological control.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         TEAM MEMBERS GRID
+         ===================================================================== -->
+    <section class="team-members" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
+        <div class="team-members__grid">
+
+          <!-- Card 1: col 1 row 1 — Anna Reca -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-1.jpg" alt="Anna Reca" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Anna Reca</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Plastic Surgeon &amp; Regenerative Medicine Specialist</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>MD</li>
+                <li>MSc</li>
+                <li>PhD</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Anna Reca">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: col 3 row 1 — Dr Jigna Patel -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-2.jpg" alt="Dr Jigna Patel" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Dr Jigna Patel</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Regenerative &amp; Functional Aesthetic Doctor</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>BSc</li>
+                <li>MBBS (Hons)</li>
+                <li>MRCGP</li>
+                <li>DCH</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Dr Jigna Patel">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: col 1 row 2 — Dr Tatiana Antonova -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-3.jpg" alt="Dr Tatiana Antonova" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Dr Tatiana Antonova</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Reconstructive surgery and advanced aesthetic medicine</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>MD</li>
+                <li>MSc (Aesthetic Medicine)</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Dr Tatiana Antonova">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: col 2 row 2 — Tetyana Tumakova -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-4.jpg" alt="Tetyana Tumakova" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Tetyana Tumakova</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Skin Therapist</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>BSc in Biology and Rehabilitology</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Tetyana Tumakova">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: col 2 row 3 — Julie Dime -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-5.jpg" alt="Julie Dime" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Julie Dime</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Functional Medicine Practitioner &amp; Naturopath &amp; Nutritional Therapist</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>DipCNM</li>
+                <li>mANP</li>
+                <li>rGNC</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Julie Dime">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 6: col 3 row 3 — Sascha Landskron -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-6.jpg" alt="Sascha Landskron" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Sascha Landskron</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Registered Dietitian &amp; Performance &amp; Genomic Nutrition Specialist</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags">
+                <li>BSc (Hons)</li>
+                <li>MSc</li>
+                <li>RD (HCPC)</li>
+              </ul>
+              <a href="#" class="systems-card__arrow" aria-label="Sascha Landskron">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 7: col 1 row 4 — Anna Gulevskaja -->
+          <div class="systems-card">
+            <img src="assets/img/team-card-7.jpg" alt="Anna Gulevskaja" class="systems-card__bg" />
+            <div class="systems-card__header">
+              <div class="systems-card__half">
+                <h3 class="systems-card__title">Anna Gulevskaja</h3>
+              </div>
+              <div class="systems-card__half systems-card__half--end">
+                <p class="systems-card__desc">Operations Manager</p>
+              </div>
+            </div>
+            <div class="systems-card__bottom">
+              <ul class="systems-card__tags"></ul>
+              <a href="#" class="systems-card__arrow" aria-label="Anna Gulevskaja">
+                <svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.40195 9.4043V25.8615C9.40195 28.3556 10.3927 30.7476 12.1564 32.5112C13.92 34.2748 16.3119 35.2656 18.8061 35.2656H47.0184" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M35.2632 23.5098L47.0184 35.2649L35.2632 47.02" stroke="#FFF9F3" stroke-width="2.0898" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
 

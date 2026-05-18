@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .map((w) => `<span class="text-reveal__word">${w}</span>`)
         .join(" ")
     )
-    .join("<br>");
+    .join("<br> ");
 
   const words = Array.from(el.querySelectorAll(".text-reveal__word"));
 
