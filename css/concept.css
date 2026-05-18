@@ -21,6 +21,8 @@
 .hero__inner {
     padding-bottom: 55px;
     padding-top: 200px;
+    height: var(--fixed-vh, 100vh);
+    min-height: var(--fixed-vh, 100vh);
 }
 
 .hero__bottom-descr {
