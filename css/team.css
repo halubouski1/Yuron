@@ -1,0 +1,48 @@
+.header__logo, .header__nav-item--link {
+    color: #282828;
+}
+
+.hero__title {
+    font-weight: 500;
+    font-size: 130px;
+    line-height: 94%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #282828;
+    max-width: 100%;
+}
+
+.hero__inner {
+    align-items: center;
+    min-height: auto;
+    padding-top: 240px;
+    padding-bottom: 50px;
+}
+
+/* ==========================================================================
+   Text Reveal
+   ========================================================================== */
+
+.text-reveal {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.text-reveal__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 63px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  max-width: 1658px;
+}
+
+.text-reveal__word {
+  color: rgba(40, 40, 40, 0.4);
+  transition: color 0.25s ease;
+  display: inline;
+}
+
+.text-reveal__word--filled {
+  color: #282828;
+}
