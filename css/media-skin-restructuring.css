@@ -790,10 +790,6 @@
         height: 370px;
     }
 
-    .before-after__btn {
-        display: none;
-    }
-
     .before-after__cta--mobile {
         margin-top: 0;
     }
@@ -801,6 +797,16 @@
     img-comparison-slider.rendered [slot='second'] {
         height: 370px;
     }
+
+    .before-after__btn {
+        top: 185px;
+    }
+
+    .before-after__btn--prev {
+        left: 21px;
+    }
+
+    .before-after__btn--next {right: 21px;}
 
     .ba-handle svg {
         height: 6px;
