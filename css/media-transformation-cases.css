@@ -32,7 +32,7 @@
     }
 
     .before-after-card img {
-        height: 100%;
+        /* height: 100%; */
     }
 
     .before-after__btn {
@@ -282,6 +282,10 @@
     img-comparison-slider.rendered [slot='second'] {
         height: 391px;
     }
+
+    img-comparison-slider.rendered [slot='first'] {
+        height: 391px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -344,6 +348,10 @@
     }
 
     img-comparison-slider.rendered [slot='second'] {
+        height: 370px;
+    }
+
+    img-comparison-slider.rendered [slot='first'] {
         height: 370px;
     }
 
@@ -418,6 +426,14 @@
     /* stories */
     .stories__nav {
         display: none;
+    }
+
+    .stories__title {
+        font-size: 32px;
+    }
+
+    .stories__head {
+        margin-bottom: 24px;
     }
 
     .stories__nav--mobile {
