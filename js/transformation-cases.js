@@ -65,6 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.add("stories-modal--active");
       modal.setAttribute("aria-hidden", "false");
       modalVideo.play();
+      if (window.__lenis) {
+        window.__lenis.stop();
+      } else {
+        document.body.style.overflow = "hidden";
+      }
     }
 
     function closeModal() {
@@ -72,6 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.setAttribute("aria-hidden", "true");
       modalVideo.pause();
       modalVideo.src = "";
+      if (window.__lenis) {
+        window.__lenis.start();
+      } else {
+        document.body.style.overflow = "";
+      }
     }
 
     document.querySelectorAll(".stories-card").forEach((card) => {

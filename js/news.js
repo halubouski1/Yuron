@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPagination(totalPages);
 
     if (scrollToTop) {
-      const target = grid.closest("section") || grid;
+      const target = document.querySelector(".news-filters") || grid.closest("section") || grid;
       setTimeout(() => {
         if (window.__lenis) {
           window.__lenis.scrollTo(target, { offset: -20 });

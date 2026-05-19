@@ -361,6 +361,10 @@
 
     /* .reviews-showcase */
 
+    .reviews-showcase-card__img {
+        object-fit: initial;
+    }
+
     .reviews-showcase {
         padding-bottom: 24px;
     }
