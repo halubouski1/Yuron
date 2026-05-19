@@ -1,0 +1,292 @@
+/* ==========================================================================
+   YURON CLINIC — Signature Protocols Page
+   ========================================================================== */
+body {
+  background: #fff5ed;
+}
+/* --------------------------------------------------------------------------
+   Hero: inherits column + space-between from base .hero__inner
+   -------------------------------------------------------------------------- */
+.hero__inner--sp {
+  justify-content: space-between;
+  padding-top: 150px;
+  padding-bottom: 70px;
+}
+
+/* Breadcrumb */
+.contacts-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contacts-breadcrumb__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  color: #fff9f3;
+  text-decoration: none;
+  opacity: 0.44;
+}
+
+.contacts-breadcrumb__link--active {
+    opacity: 1;
+}
+
+.contacts-breadcrumb__link:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Top block: breadcrumb + title
+   -------------------------------------------------------------------------- */
+.sp-hero__top {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.hero__top-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sp-hero__desc--mobile {
+  display: none;
+}
+
+.sp-hero__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 76px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 600px;
+}
+
+.sp-hero__desc--top {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 110%;
+  color: #fff9f3;
+  opacity: 0.47;
+}
+
+.sr-hero__col--desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   Bottom block: divider + row
+   -------------------------------------------------------------------------- */
+.sp-hero__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.sp-hero__divider {
+  margin: 0 calc(-1 * var(--container-pad));
+  width: calc(100% + 2 * var(--container-pad));
+  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+.sp-hero__row-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sp-hero__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 444px;
+}
+
+.sp-hero__btn {
+    flex-shrink: 0;
+}
+
+/* Left: description text */
+
+.sp-hero__desc {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 156%;
+    letter-spacing: -0.02em;
+    color: #fff5ed;
+    max-width: 564px;
+}
+
+/* Middle: "They combine" list */
+.sp-hero__col--list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sp-hero__list-label {
+    font-weight: 400;
+    opacity: 0.53;
+    font-size: 16px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    color: #fff9f3;
+}
+
+.sp-hero__item-descr {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 333px;
+}
+
+.sp-hero__item-descr svg {
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.sp__hero-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sp__hero-item-wrapper--mobile {
+  display: none;
+}
+
+.sp-hero__list li svg {
+  flex-shrink: 0;
+}
+
+/* Right: CTA button */
+.sp-hero__col--cta {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* ==========================================================================
+   Screening Section
+   ========================================================================== */
+
+.screening {
+  background: #fff9f3;
+  padding-top: 75px;
+  padding-bottom: 150px;
+}
+
+.screening__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 11px;
+}
+
+.screening__card {
+  background: #f0ece7;
+  border-radius: 8px;
+  padding: 20px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.screening__card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.screening__card-num {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #282828;
+  opacity: 0.6;
+}
+
+.screening__card-divider {
+  margin: 0 -28px 35px;
+  width: calc(100% + 56px);
+  border: none;
+  border-top: 1px solid rgba(40, 40, 40, 0.12);
+}
+
+.screening__card-title {
+  margin: 0 0 13px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 110%;
+  color: #282828;
+  max-width: 432px;
+}
+
+.screening__card-desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 121%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  opacity: 0.8;
+  flex: 1;
+  margin-bottom: 106px;
+}
+
+.screening__card-more {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 2px;
+}
+
+.screening__card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.screening__card-note {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 116%;
+  color: #282828;
+  opacity: 0.8;
+  max-width: 301px;
+}
+
+.screening__card-price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 116%;
+  color: #282828;
+  white-space: nowrap;
+}
+
+.screening__card-img {
+  height: 297px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.screening__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
