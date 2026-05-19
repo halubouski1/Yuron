@@ -244,6 +244,7 @@ body{
 
 .reviews-showcase__slider {
   padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
   overflow: hidden;
 }
 
@@ -532,7 +533,7 @@ body{
   left: 0;
   width: 100%;
   height: 192px;
-  background: linear-gradient(to top, #000000, transparent);
+  background: linear-gradient(to top, #00000070, transparent);
   pointer-events: none;
 }
 
