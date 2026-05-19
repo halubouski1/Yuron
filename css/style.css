@@ -404,7 +404,7 @@ body.menu-open .mobile-menu {
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: var(--fixed-vh, 100vh);
   overflow: hidden;
   color: var(--color-text-on-dark);
   isolation: isolate;
@@ -440,7 +440,7 @@ body.menu-open .mobile-menu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 100vh;
+  min-height: var(--fixed-vh, 100vh);
   padding-top: 140px;
   padding-bottom: 64px;
 }
