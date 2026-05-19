@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuron Clinic —  Your Precise Health Journey with YURON</title>
+    <meta
+      name="description"
+      content="Yuron Clinic — Your Precise Health Journey with YURON. A clinical system for long-term tissue quality. Never temporary correction. Book the consultation."
+    />
+    <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/health-journey.css" />
+    <link rel="stylesheet" href="css/media-health-journey.css" />
+  </head>
+  <body>
+    <!-- =====================================================================
+         HERO (wraps the header)
+         ===================================================================== -->
+    <section class="hero">
+      <picture>
+        <source media="(max-width: 1016px)" srcset="assets/img/health-journey-mobile.png" />
+        <img class="hero__video" src="assets/img/health-journey.png" alt="" />
+      </picture>
+
+      <!-- Dark overlay for text legibility -->
+      <div class="hero__overlay"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="container header__inner">
+          <a href="#" class="header__logo">Yuron Clinic</a>
+
+          <nav class="header__nav" aria-label="Primary">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#concept">Concept</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#founder">Founder</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#process">Process</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#news">News</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#faq">FAQ</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+            </ul>
+            <a href="#consultation" class="btn btn--dark">
+              Book the consultation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+          </nav>
+
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="5" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="10" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+            </svg>
+          </button>
+
+        </div>
+      </header>
+
+      <div class="mobile-menu-overlay" data-menu-close></div>
+
+      <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__top">
+          <a href="#" class="mobile-menu__logo header__logo" data-menu-close>Yuron Clinic</a>
+          <button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mobile-menu__nav" aria-label="Mobile primary">
+          <ul class="mobile-menu__list">
+            <li>
+              <a href="#concept" data-menu-close>
+                Concept
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+              </a>
+          </li>
+            <li><a href="#founder" data-menu-close>Founder 
+                  <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#process" data-menu-close>Process 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#news" data-menu-close>News 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#faq" data-menu-close>FAQ 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+          </ul>
+        </nav>
+
+        <a href="#consultation" class="mobile-menu__cta btn btn--dark" data-menu-close>
+          Book the consultation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </aside>
+
+      <!-- Hero content -->
+      <div class="container hero__inner">
+        <h1 class="hero__title">
+            Your Precise Health Journey with YURON
+        </h1>
+
+        <div class="hero__bottom">
+            <p class="hero__bottom-descr">
+              Lorem ipsum dolor sit amet consectetur. Nisl cras est sit pretium eget nibh sapien. Eu ac elementum adipiscing viverra non. Nulla commodo ultrices.           
+            </p>
+            <a href="#consultation" class="btn">
+              Book the consultation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         JOURNEY (sticky copy + progress timeline + cards)
+         ===================================================================== -->
+    <section class="journey" id="process">
+      <div class="container journey__inner">
+        <div class="journey__left" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="journey__title">Your Precise Health Journey with YURON</h2>
+          <p class="journey__text">
+            Lorem ipsum dolor sit amet consectetur. Sit arcu id leo faucibus semper senectus nunc at in. Volutpat curabitur nunc sed a non. Pharetra cras amet tincidunt dignissim. 
+          </p>
+        </div>
+
+        <div class="journey__items" aria-label="YURON health journey steps">
+          <div class="journey__line" aria-hidden="true">
+            <span class="journey__line-fill"></span>
+          </div>
+
+          <article class="journey-card journey__item" data-step="1">
+            <div class="journey__marker" aria-hidden="true">1</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">001</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Assessment</h3>
+                <p class="journey-card__text">
+                  We begin with an in-depth clinical assessment of your skin, hair, and underlying <br class="hidden">
+                  biology to identify what truly drives your results.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-1.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-card journey__item" data-step="2">
+            <div class="journey__marker" aria-hidden="true">2</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">002</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Advanced Screening</h3>
+                <p class="journey-card__text">
+                  Targeted laboratory and genetic testing to identify <br class="hidden"> root causes—never guesswork.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-2.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-card journey__item" data-step="3">
+            <div class="journey__marker" aria-hidden="true">3</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">003</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Personalised Plan</h3>
+                <p class="journey-card__text">
+                  A science-led roadmap based on your results, including targeted supplementation <br class="hidden"> where appropriate—supporting skin, hair, and ageing at a biological level.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-3.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-card journey__item" data-step="4">
+            <div class="journey__marker" aria-hidden="true">4</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">004</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Regenerative Treatment</h3>
+                <p class="journey-card__text">
+                  Precision-selected therapies designed to improve tissue quality safely and long term <br class="hidden"> — not short-term effects.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-4.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-card journey__item" data-step="5">
+            <div class="journey__marker" aria-hidden="true">5</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">005</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Bespoke Skincare & Haircare</h3>
+                <p class="journey-card__text">
+                  Precision formulations tailored to your biology, guided by your lab and DNA results — <br class="hidden"> no generic creams or serums, only what your skin and hair truly require.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-5.jpg" alt="">
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-card journey__item" data-step="6">
+            <div class="journey__marker" aria-hidden="true">6</div>
+            <div class="journey-card__body">
+              <div class="journey-card__top">
+                <span class="journey-card__num">006</span>
+                <span class="journey-card__dot"></span>
+              </div>
+              <div class="journey-card__content">
+                <h3 class="journey-card__title">Continuous Optimisation</h3>
+                <p class="journey-card__text">
+                  Ongoing clinical review and refinement—ensuring results are maintained and <br class="hidden"> continue to improve over time.
+                </p>
+                <img class="journey-card__img" src="assets/img/journey-card-6.jpg" alt="">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         NEEDS (full-bleed video card: top logo + side note, bottom title + CTA)
+         ===================================================================== -->
+    <section data-aos="fade-up" data-aos-delay="100" class="needs">
+      <div class="needs__inner">
+        <video
+          class="needs__video"
+          src="assets/vid/needs.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+
+        <!-- Top: logo (left) + side note (right) -->
+        <div class="needs__top">
+          <span class="needs__logo">Yuron Clinic</span>
+          <span class="needs__logo needs__text-mobile">Regenarative medicine</span>
+          <p class="needs__note">
+            We activate it through structured diagnostics, controlled protocols,
+            <br />and doctor-led precision. Never guesswork.
+          </p>
+          <span class="needs__note needs__text-mobile">Yuron 10-year rule</span>
+        </div>
+
+        <!-- Bottom: heading + CTA -->
+        <div class="needs__bottom">
+          <h2 class="needs__title">
+            Only what your biology actually needs.
+          </h2>
+          <a href="#consultation" class="btn">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FOOTER (top: 4-column links / divider / bottom: arrow+email + meta)
+         ===================================================================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <!-- Top: 4 columns -->
+        <div class="footer__top">
+          <div class="footer__col">
+            <h3 class="footer__heading">Navigation</h3>
+            <ul class="footer__list">
+              <li><a href="#concept">Problems We Help to Solve</a></li>
+              <li><a href="#founder">About Us</a></li>
+              <li><a href="#process">Services</a></li>
+              <li><a href="#process">Your Precise Health Journey</a></li>
+              <li><a href="#results">Transformation Cases</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Services</h3>
+            <ul class="footer__list">
+              <li><a href="#">Advanced screening &amp; diagnostics</a></li>
+              <li><a href="#">Regenerative aesthetic treatments</a></li>
+              <li><a href="#">Volume restoration (face &amp; body)</a></li>
+              <li><a href="#">Hair regenerative treatments</a></li>
+              <li><a href="#">Restorative facial massages</a></li>
+              <li><a href="#">Personalised YURON formulations</a></li>
+              <li><a href="#">Yuron signature protocols</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Information</h3>
+            <ul class="footer__list">
+              <li><a href="#news">News</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--end">
+            <h3 class="footer__heading">Social networks</h3>
+            <ul class="footer__list">
+              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--mobile">
+              <span class="footer__email-label">
+                Email
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+          </div>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <!-- Bottom: two stacked rows -->
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <button class="footer__to-top" type="button" aria-label="Back to top">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13V1M1 7l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="footer__email footer__email--mobile">
+              <span class="footer__email-label">
+                e-mail
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63375 0.0885314C4.64933 0.0361504 4.69761 0 4.75237 0C4.80713 0 4.85541 0.0361504 4.87099 0.0885314C4.87099 0.0885314 5.0881 0.816269 5.3208 1.59682C5.69159 2.84039 6.66436 3.81316 7.90792 4.18395C8.68848 4.41665 9.41621 4.63375 9.41621 4.63375C9.4686 4.64934 9.50474 4.69761 9.50474 4.75237C9.50474 4.80714 9.4686 4.85541 9.41621 4.871C9.41621 4.871 8.68848 5.0881 7.90792 5.3208C6.66436 5.69159 5.69159 6.66436 5.3208 7.90792C5.0881 8.68848 4.87099 9.41621 4.87099 9.41621C4.85541 9.4686 4.80713 9.50475 4.75237 9.50475C4.69761 9.50475 4.64933 9.4686 4.63375 9.41621C4.63375 9.41621 4.41664 8.68848 4.18395 7.90792C3.81316 6.66436 2.84038 5.69159 1.59682 5.3208C0.816269 5.0881 0.0885314 4.871 0.0885314 4.871C0.0361472 4.85541 0 4.80714 0 4.75237C0 4.69761 0.0361472 4.64934 0.0885314 4.63375C0.0885314 4.63375 0.816269 4.41665 1.59682 4.18395C2.84038 3.81316 3.81316 2.84039 4.18395 1.59682C4.41664 0.816269 4.63375 0.0885314 4.63375 0.0885314Z" fill="#413421" />
+                </svg>
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+            </div>
+          </div>
+
+          <div class="footer__bottom-meta">
+            <a href="#" class="footer__privacy">Privacy Policy</a>
+            <span class="footer__copyright">YURON Clinic &copy;2026. All rights reserved</span>
+            <a href="#" class="footer__cookie">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/concept.js" defer></script>
+    <script src="js/health-journey.js" defer></script>
+  </body>
+</html>

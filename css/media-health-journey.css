@@ -1,0 +1,275 @@
+@media (max-width: 1919px) {
+    .hero__inner {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .hero__title {
+        font-size: 52px;
+        max-width: 550px;
+    }
+
+    /* journey */
+    .journey {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+
+    .journey__title {
+        font-size: 52px;
+        max-width: 560px;
+    }
+
+    .journey-card__img {
+        height: 300px;
+    }
+
+    .journey__text {
+        font-size: 12px;
+        max-width: 414px;
+    }
+
+    .journey__left {
+        gap: 16px;
+    }
+
+    .journey__marker {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .journey__item {
+        gap: 40px;
+    }
+
+    .journey-card__title {
+        font-size: 24px;
+    }
+
+    .journey-card__text {
+        font-size: 14px;
+    }
+
+    .journey-card__body {
+        max-width: 700px;
+    }
+
+    .journey-card__content {
+        padding: 20px 20px 20px;
+    }
+
+    .journey__line {
+        left: 17px;
+        height: calc(100% - 500px);
+    }
+}
+
+@media (max-width: 1520px) {
+    .hero__title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width:1250px) {
+    .hidden {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .hero__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    /* journey */
+
+    .journey__title {
+        max-width: 100%;
+    }
+
+    .journey__text {
+        max-width: 100%;
+    }
+
+    .journey__inner {
+        gap: 60px;
+    }
+
+    .journey__left {
+        position: static;
+        padding-top: 0;
+    }
+
+    .journey__inner {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 760px) {
+    .journey {
+        padding: 72px 0;
+    }
+
+    .journey__inner {
+        gap: 38px;
+    }
+
+    .journey__title {
+        font-size: 42px;
+    }
+
+    .journey__text {
+        font-size: 15px;
+    }
+
+    .journey__items {
+        gap: 22px;
+    }
+
+    .journey__item {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .journey__line {
+        left: 18px;
+        height: calc(100% - 380px);
+    }
+
+    .journey__marker {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .journey-card__top {
+        min-height: 48px;
+        padding: 0 16px;
+    }
+
+    .journey-card__num {
+        font-size: 13px;
+    }
+
+    .journey-card__dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .journey-card__content {
+        padding: 22px 16px 16px;
+    }
+
+    .journey-card__title {
+        font-size: 22px;
+    }
+
+    .journey-card__text {
+        margin-bottom: 24px;
+        font-size: 13px;
+    }
+
+    .journey-card__img {
+        height: 220px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero__inner {
+        padding-top: 100px;
+        padding-bottom: 16px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+        line-height: 90%;
+        max-width: 300px;
+    }
+
+    .hero__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .hero__bottom-descr {
+        max-width: 100%;
+        font-size: 13px;
+        line-height: 140%;
+    }
+
+    /* journey */
+
+    .journey {
+        padding-top: 60px;
+        padding-bottom: 110px;
+    }
+
+    .journey__title {
+        font-size: 32px;
+        line-height: 90%;
+        max-width: 300px;
+    }
+
+    .journey__item {
+        gap: 12px;
+    }
+
+    .journey__text {
+        font-size: 13px;
+        line-height: 140%;
+    }
+
+    .journey__inner {
+        gap: 36px;
+    }
+
+    .journey__marker {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+
+    .journey__line {
+        left: 16px;
+    }
+
+    .journey-card__top {
+        min-height: 56px;
+    }
+
+    .journey-card__content {
+        padding: 16px;
+    }
+
+    .journey-card__title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .journey-card__text {
+        margin-bottom: 30px;
+    }
+
+    .journey-card__img {
+        height: 170px;
+        border-radius: 3px;
+    }
+
+    .journey__items {
+        gap: 16px;
+    }
+
+    .journey-card__body {
+        border-radius: 5px;
+    }
+
+    .journey-card__num {
+        font-size: 12px;
+    }
+}
