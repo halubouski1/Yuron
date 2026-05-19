@@ -287,6 +287,7 @@ body.contact-popup-open {
     flex-direction: column;
     max-height: none;
     height: auto;
+    margin: auto;
   }
 
   .contact-popup__form {
