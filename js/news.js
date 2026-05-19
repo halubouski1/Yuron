@@ -106,13 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPagination(totalPages);
 
     if (scrollToTop) {
-      const target = pageCards[0] || grid;
-      if (window.__lenis) {
-        window.__lenis.scrollTo(target, { offset: -20 });
-      } else {
-        const y = target.getBoundingClientRect().top + window.scrollY - 20;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
+      const target = grid.closest("section") || grid;
+      setTimeout(() => {
+        if (window.__lenis) {
+          window.__lenis.scrollTo(target, { offset: -20 });
+        } else {
+          const y = target.getBoundingClientRect().top + window.scrollY - 20;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      }, 0);
     }
   }
 

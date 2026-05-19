@@ -1,0 +1,473 @@
+@media (max-width: 1919px) {
+    .contacts-breadcrumb__link {
+        font-size: 12px;
+    }
+
+    .hero__title {
+        font-size: 52px;
+        max-width: 500px;
+    }
+
+    .hero__inner {
+        padding-bottom: 50px;
+    }
+
+    /* before-after */
+    .before-after {
+        padding-top: 60px;
+        padding-bottom: 120px;
+    }
+
+    .before-after__title {
+        font-size: 52px;
+    }
+
+    .before-after__cta {
+        padding: 16px;
+        gap: 70px;
+    }
+
+    .before-after-card {
+        height: 691px;
+    }
+
+    .before-after-card img {
+        height: 100%;
+    }
+
+    .before-after__btn {
+        width: 81px;
+        height: 81px;
+    }
+
+    .before-after__btn svg {
+        width: 16px;
+        height: 12px;
+    }
+
+    .ba-handle {
+        width: 50px;
+        height: 50px;
+        gap: 10px;
+    }
+
+    /* .reviews-showcase */
+    .reviews-showcase__head {
+        padding-top: 660px;
+        padding-bottom: 40px;
+    }
+
+    .reviews-showcase__title {
+        font-size: 52px;
+    }
+
+    .reviews-showcase__cta {
+        font-size: 14px;
+        padding: 16px;
+        gap: 70px;
+    }
+
+    .reviews-showcase-card {
+        width: 494px;
+        height: 653px;
+    }
+
+    .reviews-showcase-card__avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reviews-showcase-card__plaque {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .reviews-showcase-card__name {
+        font-size: 18px;
+    }
+
+    .reviews-showcase-card__service {
+        font-size: 12px;
+    }
+
+    .reviews-showcase-card__info {
+        gap: 4px;
+    }
+
+    /* stories */
+    .stories {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+
+    .stories__title {
+        font-size: 52px;
+    }
+
+    .stories__btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stories__btn svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .stories__nav {
+        gap: 5px;
+    }
+
+    .stories__head {
+        margin-bottom: 40px;
+    }
+
+    .stories-card {
+        width: 494px;
+        height: 653px;
+    }
+
+    .stories-card__avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stories-card__plaque {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .stories-card__name {
+        font-size: 18px;
+    }
+
+    .stories-card__service {
+        font-size: 12px;
+    }
+
+    .stories-card__info {
+        gap: 4px;
+    }
+
+    .stories-modal__inner {
+        width: 428px;
+        height: 748px;
+    }
+
+    .stories-modal__close svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .stories-modal__close {
+        top: 25px; 
+        right: 20px;
+    }
+
+    .stories-card__play {
+        width: 80px;
+        height: 80px;
+    }
+
+    .stories-card__play svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 1520px) {
+    /* .before-after */
+    .before-after__title {
+        font-size: 42px;
+    }
+
+    .before-after-card {
+        height: 591px;
+    }
+
+    .before-after__btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .before-after__btn svg {
+        width: 14px;
+        height: 10px;
+    }
+
+    .ba-handle {
+        width: 40px;
+        height: 40px;
+        gap: 6px;
+    }
+
+    .ba-handle svg {
+        height: 10px;
+    }
+
+    .before-after__btn--prev {
+    left: calc(var(--container-pad) + 10px);
+    }
+
+    .before-after__btn--next {
+        right: 90px;
+    }
+
+    /* reviews-showcase */
+
+    .reviews-showcase-card {
+        width: 394px;
+        height: 500px;
+    }
+
+    /* stories */
+    .stories-card {
+        width: 394px;
+        height: 500px;
+    }
+
+    .stories__btn svg {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 1305px) {
+    /* .before-after */
+    .before-after-card {
+        height: 391px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__bottom {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    /* before-after */
+    .before-after__cta {
+        display: none;
+    }
+
+    .before-after__cta--mobile {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 24px;
+        background: #282828;
+    }
+
+    /* reviews-showcase */
+    .reviews-showcase__head {
+        padding-top: 400px;
+    }
+
+    .reviews-showcase__cta {
+        display: none;
+    }
+
+    .reviews-showcase__cta--mobile {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 24px;
+        position: relative;
+        background: #282828;
+        z-index: 2;
+    }
+}
+
+@media (max-width: 895px) {
+    img-comparison-slider.rendered [slot='second'] {
+        height: 391px;
+    }
+}
+
+@media (max-width: 560px) {
+    .before-after__pagination.swiper-pagination-bullets {
+        display: flex;
+    }
+
+    .stories__nav--mobile {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .hero__inner {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+
+    .hero__title {
+        font-size: 32px;
+        line-height: 90%;
+        max-width: 309px;
+    }
+
+    .hero__bottom {
+        margin-top: 0;
+        gap: 18px;
+    }
+
+    .hero__desc {
+        font-size: 13px;
+        line-height: 140%;
+        max-width: 100%;
+    }
+
+    /* before-after */
+    .before-after-card {
+        width: 100%;
+        border-radius: 5px;
+        height: 370px;
+    }
+
+    .before-after__title {
+        font-size: 32px;
+    }
+
+    .before-after__btn {
+        top: 185px;
+    }
+
+    .before-after__btn--prev {
+        left: 21px;
+    }
+
+    .before-after__btn--next {
+        right: 21px;
+    }
+
+    .before-after__cta--mobile {
+        margin-top: 0;
+    }
+
+    img-comparison-slider.rendered [slot='second'] {
+        height: 370px;
+    }
+
+    .ba-handle svg {
+        height: 6px;
+    }
+
+    .ba-handle {
+        gap: 0px;
+    }
+
+    .ba-slider {
+        --divider-width: 1px;
+    }
+
+    /* .reviews-showcase */
+
+    .reviews-showcase {
+        padding-bottom: 24px;
+    }
+
+    .reviews-showcase__head {
+        padding-top: 335px;
+        padding-bottom: 24px;
+    }
+
+    .reviews-showcase__title {
+        font-size: 32px;
+        line-height: 90%;
+        color: #282828;
+    }
+
+    .reviews-showcase-card {
+        width: 343px;
+        height: 492px;
+    }
+
+    .reviews-showcase-card__plaque {
+        padding: 12px;
+    }
+
+    .reviews-showcase-card__avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reviews-showcase-card__name {
+        font-size: 16px;
+    }
+
+    .reviews-showcase-card__service {
+        font-size: 13px;
+    }
+
+    .reviews-showcase::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 215px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ff8904 100%);
+        mix-blend-mode: lighten;
+        opacity: 0.44;
+        pointer-events: none;
+    }
+
+    /* stories */
+    .stories__nav {
+        display: none;
+    }
+
+    .stories__nav--mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .stories__pagination.swiper-pagination-bullets {
+        display: flex;
+        padding-top: 20px;
+    }
+
+    .stories-card {
+        width: 343px;
+        height: 492px;
+    }
+
+    .stories-card-card__plaque {
+        padding: 12px;
+    }
+
+    .stories-card-card__avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stories-card-card__name {
+        font-size: 16px;
+    }
+
+    .stories-card-card__service {
+        font-size: 13px;
+    }
+
+    .stories__btn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .stories-modal__inner {
+        width: 347px;
+        height: 622px;
+    }
+
+    .stories-modal__close svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .stories-modal__close {
+        top: 20px;
+        right: 20px;
+    } 
+}

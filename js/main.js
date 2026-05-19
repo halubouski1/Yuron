@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Before & After slider
-    if (document.querySelector(".before-after__slider")) {
+    if (document.querySelector(".before-after__slider") && !document.querySelector(".before-after__slider").classList.contains("swiper-initialized")) {
       new Swiper(".before-after__slider", {
         slidesPerView: "auto",
         spaceBetween: 20,

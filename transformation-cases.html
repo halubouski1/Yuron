@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yuron Clinic — Transformation Cases</title>
+    <meta
+      name="description"
+      content="Yuron Clinic — Transformation Cases"
+    />
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/transformation-cases.css" />
+    <link rel="stylesheet" href="css/media-transformation-cases.css" />
+  </head>
+  <body>
+    <!-- =====================================================================
+         HERO (wraps the header)
+         ===================================================================== -->
+    <section class="hero">
+      <!-- Background image -->
+      <picture>
+        <source media="(max-width: 1024px)" srcset="assets/img/transformation-cases-mobile.png" />
+        <img class="hero__video" src="assets/img/transformation-cases.png" alt="" />
+      </picture>
+
+      <!-- Dark overlay for text legibility -->
+      <div class="hero__overlay"></div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="container header__inner">
+          <a href="/" class="header__logo">Yuron Clinic</a>
+
+          <nav class="header__nav" aria-label="Primary">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#concept">Concept</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#founder">Founder</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#process">Process</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#news">News</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-item--link" href="#faq">FAQ</a>
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#FFF5ED" />
+                </svg>
+              </li>
+            </ul>
+            <a href="#consultation" class="btn btn--dark">
+              Book the consultation
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            </a>
+          </nav>
+
+          <button
+            class="header__burger"
+            type="button"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="5" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+              <rect y="10" width="18" height="1" rx="0.5" fill="#FFF7F0" />
+            </svg>
+          </button>
+
+        </div>
+      </header>
+
+      <div class="mobile-menu-overlay" data-menu-close></div>
+
+      <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu__top">
+          <a href="#" class="mobile-menu__logo header__logo" data-menu-close>Yuron Clinic</a>
+          <button class="mobile-menu__close" type="button" aria-label="Close menu" data-menu-close>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mobile-menu__nav" aria-label="Mobile primary">
+          <ul class="mobile-menu__list">
+            <li>
+              <a href="#concept" data-menu-close>
+                Concept
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+              </a>
+          </li>
+            <li><a href="#founder" data-menu-close>Founder 
+                  <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#process" data-menu-close>Process 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#news" data-menu-close>News 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+            <li><a href="#faq" data-menu-close>FAQ 
+                <svg class="header__nav-dot" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="2" cy="2" r="2" fill="#000" />
+                </svg>
+            </a></li>
+          </ul>
+        </nav>
+
+        <a href="#consultation" class="mobile-menu__cta btn btn--dark" data-menu-close>
+          Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </a>
+      </aside>
+
+      <!-- Hero content -->
+      <div class="container hero__inner hero__inner--ss">
+
+        <!-- Top: breadcrumb + title + subtitle -->
+        <div class="hero__top">
+          <nav class="contacts-breadcrumb" aria-label="Breadcrumb">
+            <a href="/" class="contacts-breadcrumb__link">Home</a>
+            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle opacity="0.44" cx="3.5" cy="3.5" r="3.5" fill="#FFF9F3" />
+            </svg>
+            <span class="contacts-breadcrumb__link contacts-breadcrumb__link--active">Transformation Cases</span>
+          </nav>
+          <div class="hero__text-wrapper">
+            <h1 class="hero__title">Real patients. Measurable outcomes.</h1>
+          </div>
+        </div>
+
+        <!-- Bottom: desc (left) + button (right) -->
+        <div class="hero__bottom">
+          <p class="hero__desc">Lorem ipsum dolor sit amet consectetur. Nisl cras est sit pretium eget nibh sapien. Eu ac elementum adipiscing viverra non. </p>
+          <a href="#consultation" class="btn hero__btn">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         BEFORE AND AFTER
+         ===================================================================== -->
+    <section class="before-after" data-aos="fade-up">
+      <div class="container">
+        <div class="before-after__head">
+          <h2 class="before-after__title">Before and After</h2>
+          <a href="#consultation" class="btn btn--dark before-after__cta">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="before-after__wrap">
+        <div class="before-after__slider swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide before-after-card">
+              <img-comparison-slider class="ba-slider">
+                <img slot="first" src="assets/img/before-after-card-1-left.jpg" alt="Before" />
+                <img slot="second" src="assets/img/before-after-card-1-right.jpg" alt="After" />
+                <div slot="handle" class="ba-handle">
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.57125 1.82125L7.75 0L0 7.75L7.75 15.5L9.57125 13.6787L3.65542 7.75L9.57125 1.82125Z" fill="#282828" /></svg>
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.86707e-05 1.82125L1.82129 0L9.57129 7.75L1.82129 15.5L3.86707e-05 13.6787L5.91587 7.75L3.86707e-05 1.82125Z" fill="#282828" /></svg>
+                </div>
+              </img-comparison-slider>
+            </div>
+
+            <div class="swiper-slide before-after-card">
+              <img-comparison-slider class="ba-slider">
+                <img slot="first" src="assets/img/before-after-card-1-left.jpg" alt="Before" />
+                <img slot="second" src="assets/img/before-after-card-1-right.jpg" alt="After" />
+                <div slot="handle" class="ba-handle">
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.57125 1.82125L7.75 0L0 7.75L7.75 15.5L9.57125 13.6787L3.65542 7.75L9.57125 1.82125Z" fill="#282828" /></svg>
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.86707e-05 1.82125L1.82129 0L9.57129 7.75L1.82129 15.5L3.86707e-05 13.6787L5.91587 7.75L3.86707e-05 1.82125Z" fill="#282828" /></svg>
+                </div>
+              </img-comparison-slider>
+            </div>
+
+            <div class="swiper-slide before-after-card">
+              <img-comparison-slider class="ba-slider">
+                <img slot="first" src="assets/img/before-after-card-1-left.jpg" alt="Before" />
+                <img slot="second" src="assets/img/before-after-card-1-right.jpg" alt="After" />
+                <div slot="handle" class="ba-handle">
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.57125 1.82125L7.75 0L0 7.75L7.75 15.5L9.57125 13.6787L3.65542 7.75L9.57125 1.82125Z" fill="#282828" /></svg>
+                  <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.86707e-05 1.82125L1.82129 0L9.57129 7.75L1.82129 15.5L3.86707e-05 13.6787L5.91587 7.75L3.86707e-05 1.82125Z" fill="#282828" /></svg>
+                </div>
+              </img-comparison-slider>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="before-after__pagination swiper-pagination"></div>
+
+        <button class="before-after__btn before-after__btn--prev" aria-label="Previous slide">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L9.4 1.4L3.8 7H20V9H3.8L9.4 14.6L8 16L0 8L8 0Z" fill="#282828" />
+          </svg>
+        </button>
+
+        <button class="before-after__btn before-after__btn--next" aria-label="Next slide">
+          <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0L10.6 1.4L16.2 7H0V9H16.2L10.6 14.6L12 16L20 8L12 0Z" fill="#282828" />
+          </svg>
+        </button>
+
+      </div>
+      <div class="container">
+        <a href="#consultation" class="btn btn--dark before-after__cta--mobile">
+          Book the consultation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         PATIENT REVIEWS
+         ===================================================================== -->
+    <section class="reviews-showcase">
+      <picture>
+        <source media="(max-width: 560px)" srcset="assets/img/reviews-mobile.png" />
+        <img class="reviews-showcase__bg" src="assets/img/reviews.png" alt="" />
+      </picture>
+
+      <div class="reviews-showcase__head container">
+        <h2 class="reviews-showcase__title">Patient Reviews</h2>
+        <a href="#consultation" class="btn btn--dark reviews-showcase__cta">
+          Book the consultation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="reviews-showcase__slider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide reviews-showcase-card">
+            <img class="reviews-showcase-card__img" src="assets/img/review-card-1.jpg" alt="" />
+            <div class="reviews-showcase-card__plaque">
+              <img class="reviews-showcase-card__avatar" src="assets/img/showcase-avatar-1.png" alt="Christine" />
+              <div class="reviews-showcase-card__info">
+                <span class="reviews-showcase-card__name">Christine</span>
+                <span class="reviews-showcase-card__service">About Skin Restructuring Injections</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews-showcase-card">
+            <img class="reviews-showcase-card__img" src="assets/img/review-card-2.jpg" alt="" />
+            <div class="reviews-showcase-card__plaque">
+              <img class="reviews-showcase-card__avatar" src="assets/img/showcase-avatar-2.png" alt="John" />
+              <div class="reviews-showcase-card__info">
+                <span class="reviews-showcase-card__name">John</span>
+                <span class="reviews-showcase-card__service">About Regenerative Hair Treatments</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews-showcase-card">
+            <img class="reviews-showcase-card__img" src="assets/img/review-card-3.jpg" alt="" />
+            <div class="reviews-showcase-card__plaque">
+              <img class="reviews-showcase-card__avatar" src="assets/img/showcase-avatar-3.png" alt="Lena" />
+              <div class="reviews-showcase-card__info">
+                <span class="reviews-showcase-card__name">Lena</span>
+                <span class="reviews-showcase-card__service">About Skin Restructuring Injections</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews-showcase-card">
+            <img class="reviews-showcase-card__img" src="assets/img/review-card-4.jpg" alt="" />
+            <div class="reviews-showcase-card__plaque">
+              <img class="reviews-showcase-card__avatar" src="assets/img/showcase-avatar-4.png" alt="Patient" />
+              <div class="reviews-showcase-card__info">
+                <span class="reviews-showcase-card__name">Patient</span>
+                <span class="reviews-showcase-card__service">About Regenerative Aesthetic Treatments</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide reviews-showcase-card">
+            <img class="reviews-showcase-card__img" src="assets/img/review-card-5.jpg" alt="" />
+            <div class="reviews-showcase-card__plaque">
+              <img class="reviews-showcase-card__avatar" src="assets/img/showcase-avatar-2.png" alt="Patient" />
+              <div class="reviews-showcase-card__info">
+                <span class="reviews-showcase-card__name">Patient</span>
+                <span class="reviews-showcase-card__service">About Hair Regenerative Treatments</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="container">
+        <a href="#consultation" class="btn btn--dark reviews-showcase__cta--mobile">
+          Book the consultation
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#FFF9F3" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         VIDEO STORIES
+         ===================================================================== -->
+    <section class="stories">
+      <div class="container stories__head">
+        <h2 class="stories__title">Video Stories</h2>
+        <div class="stories__nav">
+          <button class="stories__btn stories__btn--prev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2L9.4 3.4L3.8 9H20V11H3.8L9.4 16.6L8 18L0 10L8 2Z" fill="black" />
+            </svg>
+          </button>
+          <button class="stories__btn stories__btn--next" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L10.6 3.4L16.2 9H0V11H16.2L10.6 16.6L12 18L20 10L12 2Z" fill="black" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="stories__slider swiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide stories-card">
+            <img class="stories-card__preview" src="assets/img/stories-preview-1.jpg" alt="" />
+            <button class="stories-card__play" data-src="assets/vid/review-video-1.mp4" aria-label="Play video">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.409 7.35331C17.8893 7.60872 18.291 7.99 18.5712 8.45629C18.8514 8.92259 18.9994 9.45632 18.9994 10.0003C18.9994 10.5443 18.8514 11.078 18.5712 11.5443C18.291 12.0106 17.8893 12.3919 17.409 12.6473L4.597 19.6143C2.534 20.7373 0 19.2773 0 16.9683V3.03331C0 0.723308 2.534 -0.735693 4.597 0.385307L17.409 7.35331Z" fill="#FFF9F3" />
+              </svg>
+            </button>
+            <div class="stories-card__plaque">
+              <img class="stories-card__avatar" src="assets/img/showcase-avatar-1.png" alt="Anna" />
+              <div class="stories-card__info">
+                <span class="stories-card__name">Anna</span>
+                <span class="stories-card__service">About Skin Restructuring Injections</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide stories-card">
+            <img class="stories-card__preview" src="assets/img/stories-preview-2.jpg" alt="" />
+            <button class="stories-card__play" data-src="assets/vid/review-video-2.mp4" aria-label="Play video">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.409 7.35331C17.8893 7.60872 18.291 7.99 18.5712 8.45629C18.8514 8.92259 18.9994 9.45632 18.9994 10.0003C18.9994 10.5443 18.8514 11.078 18.5712 11.5443C18.291 12.0106 17.8893 12.3919 17.409 12.6473L4.597 19.6143C2.534 20.7373 0 19.2773 0 16.9683V3.03331C0 0.723308 2.534 -0.735693 4.597 0.385307L17.409 7.35331Z" fill="#FFF9F3" />
+              </svg>
+            </button>
+            <div class="stories-card__plaque">
+              <img class="stories-card__avatar" src="assets/img/showcase-avatar-2.png" alt="Kate" />
+              <div class="stories-card__info">
+                <span class="stories-card__name">Kate</span>
+                <span class="stories-card__service">About Skin Restructuring Injections</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide stories-card">
+            <img class="stories-card__preview" src="assets/img/stories-preview-1.jpg" alt="" />
+            <button class="stories-card__play" data-src="assets/vid/review-video-1.mp4" aria-label="Play video">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.409 7.35331C17.8893 7.60872 18.291 7.99 18.5712 8.45629C18.8514 8.92259 18.9994 9.45632 18.9994 10.0003C18.9994 10.5443 18.8514 11.078 18.5712 11.5443C18.291 12.0106 17.8893 12.3919 17.409 12.6473L4.597 19.6143C2.534 20.7373 0 19.2773 0 16.9683V3.03331C0 0.723308 2.534 -0.735693 4.597 0.385307L17.409 7.35331Z" fill="#FFF9F3" />
+              </svg>
+            </button>
+            <div class="stories-card__plaque">
+              <img class="stories-card__avatar" src="assets/img/showcase-avatar-3.png" alt="Lena" />
+              <div class="stories-card__info">
+                <span class="stories-card__name">Lena</span>
+                <span class="stories-card__service">About Skin Restructuring Injections</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide stories-card">
+            <img class="stories-card__preview" src="assets/img/stories-preview-2.jpg" alt="" />
+            <button class="stories-card__play" data-src="assets/vid/review-video-2.mp4" aria-label="Play video">
+              <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.409 7.35331C17.8893 7.60872 18.291 7.99 18.5712 8.45629C18.8514 8.92259 18.9994 9.45632 18.9994 10.0003C18.9994 10.5443 18.8514 11.078 18.5712 11.5443C18.291 12.0106 17.8893 12.3919 17.409 12.6473L4.597 19.6143C2.534 20.7373 0 19.2773 0 16.9683V3.03331C0 0.723308 2.534 -0.735693 4.597 0.385307L17.409 7.35331Z" fill="#FFF9F3" />
+              </svg>
+            </button>
+            <div class="stories-card__plaque">
+              <img class="stories-card__avatar" src="assets/img/showcase-avatar-4.png" alt="Patient" />
+              <div class="stories-card__info">
+                <span class="stories-card__name">Patient</span>
+                <span class="stories-card__service">About Regenerative Hair Treatments</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stories__pagination swiper-pagination"></div>
+        <div class="stories__nav--mobile">
+          <button class="stories__btn stories__btn--prev" aria-label="Previous">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2L9.4 3.4L3.8 9H20V11H3.8L9.4 16.6L8 18L0 10L8 2Z" fill="black" />
+            </svg>
+          </button>
+          <button class="stories__btn stories__btn--next" aria-label="Next">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L10.6 3.4L16.2 9H0V11H16.2L10.6 16.6L12 18L20 10L12 2Z" fill="black" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100" class="needs">
+      <div class="needs__inner">
+        <video
+          class="needs__video"
+          src="assets/vid/needs.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+        ></video>
+
+        <!-- Top: logo (left) + side note (right) -->
+        <div class="needs__top">
+          <span class="needs__logo">Yuron Clinic</span>
+          <span class="needs__logo needs__text-mobile">Regenarative medicine</span>
+          <p class="needs__note">
+            We activate it through structured diagnostics, controlled protocols,
+            <br />and doctor-led precision. Never guesswork.
+          </p>
+          <span class="needs__note needs__text-mobile">Yuron 10-year rule</span>
+        </div>
+
+        <!-- Bottom: heading + CTA -->
+        <div class="needs__bottom">
+          <h2 class="needs__title">
+            Only what your biology actually needs.
+          </h2>
+          <a href="#consultation" class="btn">
+            Book the consultation
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.3346 2.66602V7.33268C13.3346 8.03993 13.0537 8.7182 12.5536 9.2183C12.0535 9.7184 11.3752 9.99935 10.668 9.99935H2.66797" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M6.0013 6.66602L2.66797 9.99935L6.0013 13.3327" stroke="#282828" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================================================
+         FOOTER (top: 4-column links / divider / bottom: arrow+email + meta)
+         ===================================================================== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <!-- Top: 4 columns -->
+        <div class="footer__top">
+          <div class="footer__col">
+            <h3 class="footer__heading">Navigation</h3>
+            <ul class="footer__list">
+              <li><a href="#concept">Problems We Help to Solve</a></li>
+              <li><a href="#founder">About Us</a></li>
+              <li><a href="#process">Services</a></li>
+              <li><a href="#process">Your Precise Health Journey</a></li>
+              <li><a href="#results">Transformation Cases</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Services</h3>
+            <ul class="footer__list">
+              <li><a href="#">Advanced screening &amp; diagnostics</a></li>
+              <li><a href="#">Regenerative aesthetic treatments</a></li>
+              <li><a href="#">Volume restoration (face &amp; body)</a></li>
+              <li><a href="#">Hair regenerative treatments</a></li>
+              <li><a href="#">Restorative facial massages</a></li>
+              <li><a href="#">Personalised YURON formulations</a></li>
+              <li><a href="#">Yuron signature protocols</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Information</h3>
+            <ul class="footer__list">
+              <li><a href="#news">News</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--end">
+            <h3 class="footer__heading">Social networks</h3>
+            <ul class="footer__list">
+              <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a href="https://t.me" target="_blank" rel="noopener">Telegram</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col footer__col--mobile">
+              <span class="footer__email-label">
+                Email
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+          </div>
+        </div>
+
+        <hr class="footer__divider" />
+
+        <!-- Bottom: two stacked rows -->
+        <div class="footer__bottom">
+          <div class="footer__bottom-row">
+            <button class="footer__to-top" type="button" aria-label="Back to top">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 13V1M1 7l6-6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <div class="footer__email footer__email--mobile">
+              <span class="footer__email-label">
+                e-mail
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63375 0.0885314C4.64933 0.0361504 4.69761 0 4.75237 0C4.80713 0 4.85541 0.0361504 4.87099 0.0885314C4.87099 0.0885314 5.0881 0.816269 5.3208 1.59682C5.69159 2.84039 6.66436 3.81316 7.90792 4.18395C8.68848 4.41665 9.41621 4.63375 9.41621 4.63375C9.4686 4.64934 9.50474 4.69761 9.50474 4.75237C9.50474 4.80714 9.4686 4.85541 9.41621 4.871C9.41621 4.871 8.68848 5.0881 7.90792 5.3208C6.66436 5.69159 5.69159 6.66436 5.3208 7.90792C5.0881 8.68848 4.87099 9.41621 4.87099 9.41621C4.85541 9.4686 4.80713 9.50475 4.75237 9.50475C4.69761 9.50475 4.64933 9.4686 4.63375 9.41621C4.63375 9.41621 4.41664 8.68848 4.18395 7.90792C3.81316 6.66436 2.84038 5.69159 1.59682 5.3208C0.816269 5.0881 0.0885314 4.871 0.0885314 4.871C0.0361472 4.85541 0 4.80714 0 4.75237C0 4.69761 0.0361472 4.64934 0.0885314 4.63375C0.0885314 4.63375 0.816269 4.41665 1.59682 4.18395C2.84038 3.81316 3.81316 2.84039 4.18395 1.59682C4.41664 0.816269 4.63375 0.0885314 4.63375 0.0885314Z" fill="#413421" />
+                </svg>
+              </span>
+              <a href="mailto:care@yuron.co.uk" class="footer__email-link">care@yuron.co.uk</a>
+            </div>
+          </div>
+
+          <div class="footer__bottom-meta">
+            <a href="#" class="footer__privacy">Privacy Policy</a>
+            <span class="footer__copyright">YURON Clinic &copy;2026. All rights reserved</span>
+            <a href="#" class="footer__cookie">Cookie policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Video Stories Modal -->
+    <div class="stories-modal" id="stories-modal" aria-hidden="true">
+      <div class="stories-modal__inner">
+        <video class="stories-modal__video" playsinline></video>
+        <button class="stories-modal__close" aria-label="Close">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.8">
+              <rect width="36.6264" height="2.61617" transform="matrix(0.709595 -0.70461 0.709595 0.70461 0.109375 26.1133)" fill="#FFF9F3" />
+              <rect width="36.6264" height="2.61617" transform="matrix(0.709595 0.70461 -0.709595 0.70461 1.85938 0)" fill="#FFF9F3" />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script defer src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="js/transformation-cases.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
