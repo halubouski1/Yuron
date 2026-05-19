@@ -366,4 +366,8 @@ body.contact-popup-open {
     height: 16px;
   }
 
+  .contact-popup__dialog {
+    border-radius: 8px;
+  }
+
 }
