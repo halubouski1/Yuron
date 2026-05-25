@@ -248,11 +248,13 @@ svg {
 }
 
 .header__logo {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 90%;
-  letter-spacing: -0.02em;
-  color: #fff9f3;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 100px;
+  height: auto;
 }
 
 .header__nav-list {
@@ -335,7 +337,8 @@ svg {
 }
 
 .mobile-menu__logo {
-  color: #282828;
+  display: flex;
+  align-items: center;
 }
 
 .mobile-menu__close {
@@ -483,6 +486,10 @@ body.menu-open .mobile-menu {
   width: 42px;
   height: 42px;
   flex-shrink: 0;
+}
+
+.hero__title-highlight {
+  font-weight: 300;
 }
 
 .hero__feature-text {
@@ -839,6 +846,10 @@ body.menu-open .mobile-menu {
   background: #fff9f3;
 }
 
+.founder__title-highlight {
+  font-weight: 500;
+}
+
 .founder__inner {
   display: flex;
   align-items: center;
@@ -866,7 +877,7 @@ body.menu-open .mobile-menu {
 .founder__title {
   margin: 0;
   margin-bottom: 66px;
-font-weight: 400;
+font-weight: 300;
 font-size: 76px;
 line-height: 98%;
 letter-spacing: -0.02em;
@@ -1471,11 +1482,13 @@ opacity: 0.5;
 }
 
 .needs__logo {
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 98%;
-  letter-spacing: -0.02em;
-  color: #fff9f3;
+  display: flex;
+  align-items: center;
+}
+
+.needs__logo img {
+  width: 100px;
+  height: auto;
 }
 
 .needs__note {
