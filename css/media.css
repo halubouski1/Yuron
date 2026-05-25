@@ -45,6 +45,10 @@
     width: 540px;
   }
 
+  .systems-card__half {
+    min-height: 111px;
+  }
+
   /* foundation */
   .foundation {
     padding-right: 10px;
@@ -795,9 +799,17 @@
     margin-bottom: 24px;
   }
 
+  .systems-card__half {
+    min-height: 104px;
+  }
+
   .systems-card {
     width: 272px;
     height: 412px;
+  }
+
+  .systems-card__desc {
+    font-size: 10px;
   }
 
   .systems-card__half {

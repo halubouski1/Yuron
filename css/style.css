@@ -660,6 +660,10 @@ body.menu-open .mobile-menu {
   color: #fff9f3;
 }
 
+  .systems-card__half {
+    min-height: 133px;
+  }
+
 /* — Bottom row: tags + arrow (absolute, pinned to card bottom) — */
 .systems-card__bottom {
   position: absolute;
