@@ -552,7 +552,13 @@
       </div>
   
       <p class="foundation__desc">
-        When appropriate, we use advanced screenings and diagnostics, including genetic testing, blood biomarkers, and skin analysis, to better.
+        When appropriate, we use advanced screenings and diagnostics, including genetic testing, blood biomarkers, and skin analysis, to better
+        <button class="read-more-open">Read more</button>
+        <span class="read-more-content" hidden>
+          understand skin ageing and regenerative capacity.
+          Based on these insights, treatments such as Skin Restructuring are integrated into a personalised regeneration strategy, often combined with other regenerative therapies and personalised skincare protocols to support long-term skin health and lasting results.
+          <button class="read-more-close">Read less</button>
+        </span>
       </p>
     </div>
   </div>
@@ -985,5 +991,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/accordion-js@3.4.0/dist/accordion.min.js" defer></script>
     <script src="js/main.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var openBtn = document.querySelector('.read-more-open');
+        var closeBtn = document.querySelector('.read-more-close');
+        var content = document.querySelector('.read-more-content');
+        if (openBtn && closeBtn && content) {
+          openBtn.addEventListener('click', function () {
+            content.hidden = false;
+            openBtn.hidden = true;
+          });
+          closeBtn.addEventListener('click', function () {
+            content.hidden = true;
+            openBtn.hidden = false;
+          });
+        }
+      });
+    </script>
   </body>
 </html>
