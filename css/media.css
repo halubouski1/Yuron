@@ -705,6 +705,8 @@
 
   .footer__copyright {
     order: 1;
+    max-width: 205px;
+    text-align: center;
   }
 
   /* needs */

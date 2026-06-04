@@ -8,6 +8,7 @@
       name="description"
       content="Yuron Clinic — Latest news and updates on our regenerative aesthetics approach, clinical advancements, and upcoming events."
     />
+    <meta name="robots" content="index, follow" />
     <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
 
     <link rel="stylesheet" href="css/normalize.css" />
@@ -16,6 +17,88 @@
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/team.css" />
     <link rel="stylesheet" href="css/media-team.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://yuron.co.uk#organization",
+          "name": "Yuron Clinic",
+          "url": "https://yuron.co.uk",
+          "logo": "https://yuron.co.uk/assets/img/logo.svg",
+          "email": "care@yuron.co.uk",
+          "telephone": "+447777378101",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 Cadogan Gardens",
+            "addressLocality": "London",
+            "postalCode": "SW3 2RP",
+            "addressCountry": "GB"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                        "@id": "https://yuron.co.uk/",
+                        "name": "Home"
+                  }
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                        "@id": "https://yuron.co.uk/team.html",
+                        "name": "Our Team"
+                  }
+            }
+      ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "author": "Yuron Clinic",
+      "contentUrl": "https://yuron.co.uk/assets/img/team.jpg",
+      "datePublished": "2026-06-04",
+      "description": "YURON multidisciplinary clinical team of regenerative medicine specialists.",
+      "name": "Our Team"
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "productionCompany": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "author": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "name": "Only What Your Biology Actually Needs — Yuron Clinic",
+      "description": "Personalised regenerative medicine at Yuron Clinic — only what your biology actually needs.",
+      "thumbnailUrl": [
+            "https://yuron.co.uk/assets/img/image.svg"
+      ],
+      "uploadDate": "2026-06-04T00:00:00+00:00",
+      "duration": "PT1M00S",
+      "contentUrl": "https://yuron.co.uk/assets/vid/needs.mp4"
+}
+    </script>
   </head>
   <body>
     <!-- =====================================================================
@@ -156,11 +239,11 @@
     <!-- =====================================================================
          TEXT REVEAL
          ===================================================================== -->
-    <section class="text-reveal">
+    <div class="text-reveal">
       <div class="container">
         <p class="text-reveal__text">Regenerative aesthetic doctors, plastic surgeons, dermatologists, functional therapists, endocrinologists, and nutritionists <br> operate within a single coordinated framework — governed by one principle: long-term tissue integrity and biological control.</p>
       </div>
-    </section>
+    </div>
 
     <!-- =====================================================================
          TEAM MEMBERS GRID
@@ -174,7 +257,7 @@
             <img src="assets/img/team-card-1.jpg" alt="Anna Reca" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Anna Reca</h3>
+                <h2 class="systems-card__title">Anna Reca</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Plastic Surgeon &amp; Regenerative Medicine Specialist</p>
@@ -200,7 +283,7 @@
             <img src="assets/img/team-card-2.jpg" alt="Dr Jigna Patel" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Dr Jigna Patel</h3>
+                <h2 class="systems-card__title">Dr Jigna Patel</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Regenerative &amp; Functional Aesthetic Doctor</p>
@@ -227,7 +310,7 @@
             <img src="assets/img/team-card-3.jpg" alt="Dr Tatiana Antonova" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Dr Tatiana Antonova</h3>
+                <h2 class="systems-card__title">Dr Tatiana Antonova</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Reconstructive surgery and advanced aesthetic medicine</p>
@@ -252,7 +335,7 @@
             <img src="assets/img/team-card-4.jpg" alt="Tetyana Tumakova" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Tetyana Tumakova</h3>
+                <h2 class="systems-card__title">Tetyana Tumakova</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Skin Therapist</p>
@@ -276,7 +359,7 @@
             <img src="assets/img/team-card-5.jpg" alt="Julie Dime" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Julie Dime</h3>
+                <h2 class="systems-card__title">Julie Dime</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Functional Medicine Practitioner &amp; Naturopath &amp; Nutritional Therapist</p>
@@ -302,7 +385,7 @@
             <img src="assets/img/team-card-6.jpg" alt="Sascha Landskron" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Sascha Landskron</h3>
+                <h2 class="systems-card__title">Sascha Landskron</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Registered Dietitian &amp; Performance &amp; Genomic Nutrition Specialist</p>
@@ -328,7 +411,7 @@
             <img src="assets/img/team-card-7.jpg" alt="Anna Gulevskaja" class="systems-card__bg" />
             <div class="systems-card__header">
               <div class="systems-card__half">
-                <h3 class="systems-card__title">Anna Gulevskaja</h3>
+                <h2 class="systems-card__title">Anna Gulevskaja</h2>
               </div>
               <div class="systems-card__half systems-card__half--end">
                 <p class="systems-card__desc">Operations Manager</p>
@@ -394,7 +477,7 @@
         <!-- Top: 4 columns -->
         <div class="footer__top">
           <div class="footer__col">
-            <h3 class="footer__heading">Navigation</h3>
+            <span class="footer__heading">Navigation</span>
             <ul class="footer__list">
               <li><a href="#concept">Problems We Help to Solve</a></li>
               <li><a href="#founder">About Us</a></li>
@@ -405,7 +488,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Services</h3>
+            <span class="footer__heading">Services</span>
             <ul class="footer__list">
               <li><a href="#">Advanced Screening &amp; Diagnostics</a></li>
               <li><a href="#">Regenerative Skin Treatments</a></li>
@@ -418,7 +501,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Information</h3>
+            <span class="footer__heading">Information</span>
             <ul class="footer__list">
               <li><a href="#news">News</a></li>
               <li><a href="#faq">FAQ</a></li>
@@ -426,10 +509,10 @@
           </div>
 
           <div class="footer__col footer__col--end">
-            <h3 class="footer__heading">Social networks</h3>
+            <span class="footer__heading">Social networks</span>
             <ul class="footer__list">
               <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="nofollow noopener">WhatsApp</a></li>
             </ul>
           </div>
 

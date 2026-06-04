@@ -8,6 +8,7 @@
       name="description"
       content="Yuron Clinic — Skin screening"
     />
+    <meta name="robots" content="index, follow" />
     <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
 
     <link rel="stylesheet" href="css/normalize.css" />
@@ -16,6 +17,88 @@
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/skin-screening.css" />
     <link rel="stylesheet" href="css/media-skin-screening.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://yuron.co.uk#organization",
+          "name": "Yuron Clinic",
+          "url": "https://yuron.co.uk",
+          "logo": "https://yuron.co.uk/assets/img/logo.svg",
+          "email": "care@yuron.co.uk",
+          "telephone": "+447777378101",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 Cadogan Gardens",
+            "addressLocality": "London",
+            "postalCode": "SW3 2RP",
+            "addressCountry": "GB"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                        "@id": "https://yuron.co.uk/",
+                        "name": "Home"
+                  }
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                        "@id": "https://yuron.co.uk/skin-screening.html",
+                        "name": "Skin Screening"
+                  }
+            }
+      ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "author": "Yuron Clinic",
+      "contentUrl": "https://yuron.co.uk/assets/img/skin-screening.png",
+      "datePublished": "2026-06-04",
+      "description": "Skin Screening — advanced biomarker-based skin diagnostics at Yuron Clinic.",
+      "name": "Skin Screening"
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "productionCompany": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "author": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "name": "Only What Your Biology Actually Needs — Yuron Clinic",
+      "description": "Personalised regenerative medicine at Yuron Clinic — only what your biology actually needs.",
+      "thumbnailUrl": [
+            "https://yuron.co.uk/assets/img/image.svg"
+      ],
+      "uploadDate": "2026-06-04T00:00:00+00:00",
+      "duration": "PT1M00S",
+      "contentUrl": "https://yuron.co.uk/assets/vid/needs.mp4"
+}
+    </script>
   </head>
   <body>
     <!-- =====================================================================
@@ -25,7 +108,7 @@
       <!-- Background image -->
       <picture>
         <source media="(max-width: 1024px)" srcset="assets/img/skin-screening-mobile.png" />
-        <img class="hero__video" src="assets/img/skin-screening.png" alt="" />
+        <img class="hero__video" src="assets/img/skin-screening.png" alt="Skin Screening — advanced biomarker-based skin diagnostics at Yuron Clinic." />
       </picture>
 
       <!-- Dark overlay for text legibility -->
@@ -334,7 +417,7 @@
         <!-- Top: 4 columns -->
         <div class="footer__top">
           <div class="footer__col">
-            <h3 class="footer__heading">Navigation</h3>
+            <span class="footer__heading">Navigation</span>
             <ul class="footer__list">
               <li><a href="#concept">Problems We Help to Solve</a></li>
               <li><a href="#founder">About Us</a></li>
@@ -345,7 +428,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Services</h3>
+            <span class="footer__heading">Services</span>
             <ul class="footer__list">
               <li><a href="#">Advanced Screening &amp; Diagnostics</a></li>
               <li><a href="#">Regenerative Skin Treatments</a></li>
@@ -358,7 +441,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Information</h3>
+            <span class="footer__heading">Information</span>
             <ul class="footer__list">
               <li><a href="#news">News</a></li>
               <li><a href="#faq">FAQ</a></li>
@@ -366,10 +449,10 @@
           </div>
 
           <div class="footer__col footer__col--end">
-            <h3 class="footer__heading">Social networks</h3>
+            <span class="footer__heading">Social networks</span>
             <ul class="footer__list">
               <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="nofollow noopener">WhatsApp</a></li>
             </ul>
           </div>
 

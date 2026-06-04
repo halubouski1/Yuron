@@ -1,0 +1,23 @@
+# Yuron Clinic — robots.txt
+# https://yuron.co.uk
+
+User-agent: *
+Allow: /
+
+# ── Admin panel ──────────────────────────────────────────────────────────────
+Disallow: /admin/
+Disallow: /admin-canonical.html
+
+# ── Error pages ──────────────────────────────────────────────────────────────
+Disallow: /404.html
+Disallow: /503.html
+
+# ── Template / stub pages (no real content) ──────────────────────────────────
+Disallow: /post.html
+
+# ── Technical assets ─────────────────────────────────────────────────────────
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/fonts/
+
+Sitemap: https://yuron.co.uk/sitemap.xml

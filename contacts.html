@@ -8,6 +8,7 @@
       name="description"
       content="Yuron Clinic — Contacts"
     />
+    <meta name="robots" content="index, follow" />
     <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
 
     <link rel="stylesheet" href="css/normalize.css" />
@@ -16,6 +17,103 @@
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/style-contacts.css" />
     <link rel="stylesheet" href="css/media-contacts.css" />
+    
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                        "@id": "https://yuron.co.uk/",
+                        "name": "Home"
+                  }
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                        "@id": "https://yuron.co.uk/contacts.html",
+                        "name": "Contacts"
+                  }
+            }
+      ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "author": "Yuron Clinic",
+      "contentUrl": "https://yuron.co.uk/assets/img/contact-us.png",
+      "datePublished": "2026-06-04",
+      "description": "Contact Yuron Clinic — regenerative aesthetics clinic in London.",
+      "name": "Contact Yuron Clinic"
+}
+    </script>
+    
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+            {
+                  "@type": "LocalBusiness",
+                  "@id": "https://yuron.co.uk#organization",
+                  "name": "Yuron Clinic",
+                  "url": "https://yuron.co.uk",
+                  "logo": "https://yuron.co.uk/assets/img/logo.svg",
+                  "email": "care@yuron.co.uk",
+                  "telephone": "+447777378101",
+                  "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "18 Cadogan Gardens",
+                        "addressLocality": "London",
+                        "postalCode": "SW3 2RP",
+                        "addressCountry": "GB"
+                  },
+                  "sameAs": [
+                        "https://www.instagram.com/yuron_clinic/"
+                  ],
+                  "contactPoint": [
+                        {
+                              "@type": "ContactPoint",
+                              "telephone": "+447777378101",
+                              "email": "care@yuron.co.uk",
+                              "contactType": "customer service",
+                              "areaServed": "GB",
+                              "availableLanguage": [
+                                    "en"
+                              ]
+                        }
+                  ]
+            },
+            {
+                  "@type": "ContactPage",
+                  "@id": "https://yuron.co.uk/contacts.html#contactpage",
+                  "url": "https://yuron.co.uk/contacts.html",
+                  "name": "Contact Yuron Clinic",
+                  "description": "Contact Yuron Clinic — book a consultation or get support from our regenerative aesthetics team in London.",
+                  "isPartOf": {
+                        "@id": "https://yuron.co.uk#website"
+                  },
+                  "about": {
+                        "@id": "https://yuron.co.uk#organization"
+                  }
+            },
+            {
+                  "@type": "WebSite",
+                  "@id": "https://yuron.co.uk#website",
+                  "url": "https://yuron.co.uk",
+                  "name": "Yuron Clinic",
+                  "publisher": {
+                        "@id": "https://yuron.co.uk#organization"
+                  }
+            }
+      ]
+}
+    </script>
   </head>
   <body>
     <!-- =====================================================================
@@ -25,7 +123,7 @@
       <!-- Background image -->
       <picture>
         <source media="(max-width: 1016px)" srcset="assets/img/contact-us-mobile.png" />
-        <img class="hero__video" src="assets/img/contact-us.png" alt="" />
+        <img class="hero__video" src="assets/img/contact-us.png" alt="Contact Yuron Clinic — regenerative aesthetics clinic in London." />
       </picture>
 
       <!-- Dark overlay for text legibility -->
@@ -256,7 +354,7 @@
         <!-- Top: 4 columns -->
         <div class="footer__top">
           <div class="footer__col">
-            <h3 class="footer__heading">Navigation</h3>
+            <span class="footer__heading">Navigation</span>
             <ul class="footer__list">
               <li><a href="#concept">Problems We Help to Solve</a></li>
               <li><a href="#founder">About Us</a></li>
@@ -267,7 +365,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Services</h3>
+            <span class="footer__heading">Services</span>
             <ul class="footer__list">
               <li><a href="#">Advanced Screening &amp; Diagnostics</a></li>
               <li><a href="#">Regenerative Skin Treatments</a></li>
@@ -280,7 +378,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Information</h3>
+            <span class="footer__heading">Information</span>
             <ul class="footer__list">
               <li><a href="#news">News</a></li>
               <li><a href="#faq">FAQ</a></li>
@@ -288,10 +386,10 @@
           </div>
 
           <div class="footer__col footer__col--end">
-            <h3 class="footer__heading">Social networks</h3>
+            <span class="footer__heading">Social networks</span>
             <ul class="footer__list">
               <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="nofollow noopener">WhatsApp</a></li>
             </ul>
           </div>
 

@@ -8,6 +8,7 @@
       name="description"
       content="Yuron Clinic — Your Precise Health Journey with YURON. A clinical system for long-term tissue quality. Never temporary correction. Book the consultation."
     />
+    <meta name="robots" content="index, follow" />
     <script>document.documentElement.style.setProperty('--fixed-vh', window.innerHeight + 'px');</script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -15,6 +16,88 @@
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/health-journey.css" />
     <link rel="stylesheet" href="css/media-health-journey.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://yuron.co.uk#organization",
+          "name": "Yuron Clinic",
+          "url": "https://yuron.co.uk",
+          "logo": "https://yuron.co.uk/assets/img/logo.svg",
+          "email": "care@yuron.co.uk",
+          "telephone": "+447777378101",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "18 Cadogan Gardens",
+            "addressLocality": "London",
+            "postalCode": "SW3 2RP",
+            "addressCountry": "GB"
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+            {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                        "@id": "https://yuron.co.uk/",
+                        "name": "Home"
+                  }
+            },
+            {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                        "@id": "https://yuron.co.uk/health-journey.html",
+                        "name": "Your Precise Health Journey with YURON"
+                  }
+            }
+      ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "author": "Yuron Clinic",
+      "contentUrl": "https://yuron.co.uk/assets/img/health-journey.png",
+      "datePublished": "2026-06-04",
+      "description": "Your Precise Health Journey with YURON — a clinical system for long-term tissue quality.",
+      "name": "Your Precise Health Journey with YURON"
+}
+    </script>
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "productionCompany": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "author": {
+            "@type": "Organization",
+            "url": "https://yuron.co.uk/",
+            "name": "Yuron Clinic"
+      },
+      "name": "Only What Your Biology Actually Needs — Yuron Clinic",
+      "description": "Personalised regenerative medicine at Yuron Clinic — only what your biology actually needs.",
+      "thumbnailUrl": [
+            "https://yuron.co.uk/assets/img/image.svg"
+      ],
+      "uploadDate": "2026-06-04T00:00:00+00:00",
+      "duration": "PT1M00S",
+      "contentUrl": "https://yuron.co.uk/assets/vid/needs.mp4"
+}
+    </script>
   </head>
   <body>
     <!-- =====================================================================
@@ -23,7 +106,7 @@
     <section class="hero">
       <picture>
         <source media="(max-width: 1016px)" srcset="assets/img/health-journey-mobile.png" />
-        <img class="hero__video" src="assets/img/health-journey.png" alt="" />
+        <img class="hero__video" src="assets/img/health-journey.png" alt="Your Precise Health Journey with YURON — a clinical system for long-term tissue quality." />
       </picture>
 
       <!-- Dark overlay for text legibility -->
@@ -180,7 +263,7 @@
           </p>
         </div>
 
-        <div class="journey__items" aria-label="YURON health journey steps">
+        <div class="journey__items">
           <div class="journey__line" aria-hidden="true">
             <span class="journey__line-fill"></span>
           </div>
@@ -336,7 +419,7 @@
         <!-- Top: 4 columns -->
         <div class="footer__top">
           <div class="footer__col">
-            <h3 class="footer__heading">Navigation</h3>
+            <span class="footer__heading">Navigation</span>
             <ul class="footer__list">
               <li><a href="#concept">Problems We Help to Solve</a></li>
               <li><a href="#founder">About Us</a></li>
@@ -347,7 +430,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Services</h3>
+            <span class="footer__heading">Services</span>
             <ul class="footer__list">
               <li><a href="#">Advanced Screening &amp; Diagnostics</a></li>
               <li><a href="#">Regenerative Skin Treatments</a></li>
@@ -360,7 +443,7 @@
           </div>
 
           <div class="footer__col">
-            <h3 class="footer__heading">Information</h3>
+            <span class="footer__heading">Information</span>
             <ul class="footer__list">
               <li><a href="#news">News</a></li>
               <li><a href="#faq">FAQ</a></li>
@@ -368,10 +451,10 @@
           </div>
 
           <div class="footer__col footer__col--end">
-            <h3 class="footer__heading">Social networks</h3>
+            <span class="footer__heading">Social networks</span>
             <ul class="footer__list">
               <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="https://wa.me" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="https://wa.me" target="_blank" rel="nofollow noopener">WhatsApp</a></li>
             </ul>
           </div>
 

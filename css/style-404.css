@@ -1,0 +1,69 @@
+/* ==========================================================================
+   YURON CLINIC — 404 Page Styles
+   ========================================================================== */
+
+.hero--404 {
+  min-height: var(--fixed-vh, 100vh);
+}
+
+.hero__inner--404 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--fixed-vh, 100vh);
+  padding-top: 120px;
+  padding-bottom: 64px;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   404 block
+   -------------------------------------------------------------------------- */
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.not-found__code {
+  margin: 0;
+  font-weight: 300;
+  font-size: 200px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #fff9f3;
+  opacity: 0.18;
+  user-select: none;
+  pointer-events: none;
+}
+
+.not-found__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+}
+
+.not-found__desc {
+  margin: 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  color: #fff9f3;
+  opacity: 0.7;
+  max-width: 420px;
+}
+
+.not-found__btn {
+  margin-top: 16px;
+  gap: 60px;
+  min-width: 280px;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+}

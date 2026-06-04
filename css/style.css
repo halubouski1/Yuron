@@ -1570,6 +1570,7 @@ opacity: 0.5;
 }
 
 .footer__heading {
+  display: block;
   margin: 0 0 50px;
   font-weight: 500;
   font-size: 20px;

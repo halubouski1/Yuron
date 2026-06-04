@@ -1,6 +1,32 @@
 // Yuron Clinic — news.js
 
 document.addEventListener("DOMContentLoaded", () => {
+  // ── SEO: pagination meta management ──────────────────────────────────────
+  const SEO_BASE_URL   = "https://yuron.co.uk";
+  const SEO_PAGE_PATH  = "/news.html";
+  const SEO_BASE_TITLE = "Yuron Clinic — News";
+  const SEO_BASE_DESC  = "Yuron Clinic — Latest news and updates on our regenerative aesthetics approach, clinical advancements, and upcoming events.";
+
+  function updateSeoMeta(page) {
+    const suffix = page > 1 ? ` - Page ${page}` : "";
+    document.title = SEO_BASE_TITLE + suffix;
+    const descEl = document.querySelector('meta[name="description"]');
+    if (descEl) descEl.setAttribute("content", SEO_BASE_DESC + suffix);
+    const canonEl = document.getElementById("seo-canonical");
+    if (canonEl) {
+      canonEl.setAttribute("href", page > 1
+        ? `${SEO_BASE_URL}${SEO_PAGE_PATH}?page=${page}`
+        : `${SEO_BASE_URL}${SEO_PAGE_PATH}`);
+    }
+  }
+
+  function updateUrl(page, replace) {
+    const url = page > 1 ? `${SEO_PAGE_PATH}?page=${page}` : SEO_PAGE_PATH;
+    if (replace) history.replaceState({ page }, "", url);
+    else         history.pushState({ page }, "", url);
+  }
+  // ─────────────────────────────────────────────────────────────────────────
+
   const grid = document.querySelector(".news__grid");
   const paginationEl = document.querySelector(".news-pagination");
   if (!grid) return;
@@ -10,7 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let activeCategory = "";
   let activeRecency = "newest";
-  let currentPage = 1;
+
+  // Read page number from URL so direct links and browser refresh restore the correct page
+  const _urlParams = new URLSearchParams(window.location.search);
+  let currentPage = Math.max(1, parseInt(_urlParams.get("page"), 10) || 1);
+
+  // Restore state on browser back / forward
+  window.addEventListener("popstate", (e) => {
+    currentPage = (e.state && e.state.page) ? e.state.page : 1;
+    render(false, false);
+  });
 
   // ── Dropdown toggle ──────────────────────────────────────────────────────
   document.querySelectorAll(".news-filter").forEach((filter) => {
@@ -35,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setActive("#filter-category", opt);
       updateLabel("#filter-category", opt.textContent.trim(), "Category");
       currentPage = 1;
-      render();
+      render(false, true);
       closeAll();
     });
   });
@@ -46,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setActive("#filter-recency", opt);
       updateLabel("#filter-recency", opt.textContent.trim(), "By recency");
       currentPage = 1;
-      render();
+      render(false, true);
       closeAll();
     });
   });
@@ -64,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Core render ──────────────────────────────────────────────────────────
-  function render(scrollToTop = false) {
+  // pushHistory: true = pushState (user navigation), false = replaceState (init / popstate)
+  function render(scrollToTop = false, pushHistory = true) {
     // 1. Filter
     let filtered = allCards.filter((card) => {
       if (!activeCategory) return true;
@@ -105,6 +141,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // 5. Render pagination
     renderPagination(totalPages);
 
+    // 6. SEO: sync <title>, <meta description>, <link rel="canonical"> and URL
+    updateSeoMeta(currentPage);
+    updateUrl(currentPage, !pushHistory);
+
     if (scrollToTop) {
       const target = document.querySelector(".news-filters") || grid.closest("section") || grid;
       setTimeout(() => {
@@ -126,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (total <= 1) return;
 
     // Prev button
-    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 8.5L7.5 12.5L11.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 8.5L12.5 12.5L16.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage--; render(true); }, currentPage === 1));
+    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.5 8.5L7.5 12.5L11.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.5 8.5L12.5 12.5L16.5 16.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage--; render(true, true); }, currentPage === 1));
 
     // Page numbers: always show first 3, last 3, and ±1 around current
     const pages = buildPageList(currentPage, total);
@@ -141,13 +181,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const btn = document.createElement("button");
         btn.className = "news-pagination__page" + (p === currentPage ? " news-pagination__page--active" : "");
         btn.textContent = p;
-        btn.addEventListener("click", () => { currentPage = p; render(true); });
+        btn.addEventListener("click", () => { currentPage = p; render(true, true); });
         paginationEl.appendChild(btn);
       }
     });
 
     // Next button
-    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 16.5L11.5 12.5L7.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 16.5L16.5 12.5L12.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage++; render(true); }, currentPage === total));
+    paginationEl.appendChild(makeBtn(`<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 16.5L11.5 12.5L7.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.5 16.5L16.5 12.5L12.5 8.5" stroke="#9F9E9E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`, () => { currentPage++; render(true, true); }, currentPage === total));
   }
 
   function buildPageList(current, total) {
@@ -178,5 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ── Initial render ───────────────────────────────────────────────────────
-  render();
+  // false = replaceState: sets canonical history entry without adding to back stack
+  render(false, false);
 });
