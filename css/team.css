@@ -88,6 +88,7 @@
 .team-members__grid .systems-card {
   width: 100%;
   flex-shrink: unset;
+  cursor: pointer;
 }
 
 .team-members__grid .systems-card:nth-child(1) { grid-column: 1; grid-row: 1; }
@@ -97,3 +98,214 @@
 .team-members__grid .systems-card:nth-child(5) { grid-column: 2; grid-row: 3; }
 .team-members__grid .systems-card:nth-child(6) { grid-column: 3; grid-row: 3; }
 .team-members__grid .systems-card:nth-child(7) { grid-column: 1; grid-row: 4; }
+
+/* ==========================================================================
+   Team Member Popup
+   ========================================================================== */
+
+.team-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0s 0.45s;
+}
+
+.team-popup.is-open {
+  pointer-events: auto;
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+
+.team-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 40, 40, 0.45);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+.team-popup.is-open .team-popup__overlay {
+  opacity: 1;
+}
+
+.team-popup__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 52vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff5ed;
+  transform: translateX(100%);
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-popup.is-open .team-popup__panel {
+  transform: translateX(0);
+}
+
+.team-popup__close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #282828;
+  padding: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+
+.team-popup__close:hover {
+  opacity: 0.55;
+}
+
+.team-popup__scroll {
+  flex: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
+  padding: 40px 40px 60px 40px;
+}
+
+.team-popup__name {
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  margin: 0 0 16px;
+}
+
+.team-popup__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  opacity: 0.6;
+}
+
+.team-popup__meta-item {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__divider {
+  border: none;
+  border-top: 1px solid #282828;
+  opacity: 0.6;
+  margin: 0 0 24px;
+}
+
+.team-popup__intro {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  margin: 0 0 24px;
+}
+
+.team-popup__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #000;
+  opacity: 0.8;
+  margin: 0 0 24px;
+}
+
+.team-popup__quote {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 116%;
+  color: #282828;
+  margin: 0 0 24px;
+  max-width: 682px;
+}
+
+.team-popup__section-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 116%;
+  color: #282828;
+  margin: 0;
+}
+
+.team-popup__section-note {
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(40, 40, 40, 0.6);
+  margin: 0;
+}
+
+.team-popup__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-popup__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #000;
+}
+
+.team-popup__list-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #282828;
+  flex-shrink: 0;
+  opacity: 0.6;
+  display: inline-block;
+}
+
+.team-popup__list-note {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: #000;
+  opacity: 0.6;
+  display: block;
+  max-width: 600px;
+}
+
+body.team-popup-open {
+  overflow: hidden;
+}
+
+.team-popup__text--bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.team-popup__text--part {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
