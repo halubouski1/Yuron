@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <path d="M24.1211 2.12132L2.12109 24.1213M2.12109 2.12132L24.1211 24.1213" stroke="#282828" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" />
           </svg>
         </button>
-        <div class="team-popup__scroll"></div>
+        <div class="team-popup__scroll" data-lenis-prevent></div>
       </div>
     </div>
   `;
@@ -24,9 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const triggers = document.querySelectorAll('[data-member]');
   const closeEls = popup.querySelectorAll('[data-team-popup-close]');
 
+  const updateViewportHeight = () => {
+    document.documentElement.style.setProperty('--fixed-vh', `${window.innerHeight}px`);
+  };
+
   const openPopup = (memberId) => {
     const source = document.getElementById(memberId);
     if (!source) return;
+    updateViewportHeight();
     scroll.innerHTML = source.innerHTML;
     scroll.scrollTop = 0;
     popup.setAttribute('aria-hidden', 'false');
@@ -54,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && popup.classList.contains('is-open')) closePopup();
   });
+
+  window.addEventListener('resize', updateViewportHeight);
 });
 
 // ---- Text Reveal ----
