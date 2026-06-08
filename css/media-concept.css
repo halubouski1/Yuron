@@ -5,7 +5,7 @@
 
     .hero__title {
         font-size: 60px;
-        max-width: 900px;
+        max-width: 907px;
     }
 
     .hero__bottom-descr {
@@ -21,7 +21,7 @@
 
     .reflections__title {
         font-size: 65px;
-        max-width: 1200px;
+        max-width: 1300px;
     }
 
     .reflections__inner {
@@ -39,7 +39,7 @@
 
     .reflections__text {
         font-size: 32px;
-        max-width: 627px;
+        max-width: 523px;
     }
 
     .reflections__left {
@@ -69,6 +69,10 @@
     .method__text {
         font-size: 20px;
         max-width: 741px;
+    }
+
+    .method__list {
+        font-size: 20px;
     }
 
     .method__image {
@@ -164,7 +168,7 @@
     /* reflections */
     .reflections__title {
         font-size: 50px;
-        max-width: 900px;
+        max-width: 984px;
     }
 
     .reflections__list li {
@@ -177,7 +181,7 @@
 
     .reflections__text {
         font-size: 24px;
-        max-width: 487px;
+        max-width: 396px;
     }
 
     .method__title {
@@ -192,6 +196,10 @@
     .method__text {
         font-size: 16px;
         max-width: 608px;
+    }
+
+    .method__list {
+        font-size: 16px;
     }
 
     .method__image {
@@ -388,6 +396,10 @@
         padding-bottom: 60px;
     }
 
+    .reflections__title .hero__title-highlight {
+    font-weight: 300;
+    }
+
     .reflections__title {
         font-size: 32px;
         line-height: 90%;
@@ -409,10 +421,12 @@
     .reflections__text {
         font-size: 20px;
         line-height: 110%;
+        max-width: 314px;
     }
 
     .reflections__left {
         gap: 16px;
+        width: 100%;
     }
 
     /* method */
@@ -438,6 +452,14 @@
 
     .method__right {
         gap: 32px;
+    }
+
+    .method__list {
+        font-size: 19px;
+    }
+
+    .method-middle {
+        gap: 20px;
     }
 
     .method__text {

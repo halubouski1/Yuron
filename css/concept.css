@@ -4,7 +4,7 @@
     line-height: 90%;
     letter-spacing: -0.02em;
     color: #fff9f3;
-    max-width: 1105px;
+    max-width: 1148px;
 }
 
 .hero__bottom-text {
@@ -75,7 +75,7 @@
   letter-spacing: -0.02em;
   color: #282828;
   margin: 0;
-  max-width: 1533px;
+  max-width: 1575px;
 }
 
 .reflections__text {
@@ -84,7 +84,7 @@
   font-size: 40px;
   letter-spacing: -0.02em;
   color: #282828;
-  max-width: 727px;
+  max-width: 654px;
 }
 
 .reflections__list {
@@ -167,6 +167,17 @@
   color: #282828;
   opacity: 0.55;
   max-width: 810px;
+}
+
+.method-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.method__list {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .method__body {
