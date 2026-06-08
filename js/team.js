@@ -69,18 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const el = document.querySelector(".text-reveal__text");
   if (!el) return;
 
-  const raw = el.innerHTML.trim();
-  const segments = raw.split(/\s*<br\s*\/?>\s*/i);
-  el.innerHTML = segments
-    .map((seg) =>
-      seg
-        .trim()
-        .split(/\s+/)
-        .filter(Boolean)
-        .map((w) => `<span class="text-reveal__word">${w}</span>`)
-        .join(" ")
-    )
-    .join("<br> ");
+  // Walk DOM nodes so element nodes (e.g. hero__title-highlight spans) are
+  // preserved intact — only text nodes get split into per-word spans.
+  function wrapWords(node) {
+    if (node.nodeType === 3) {
+      const parts = node.textContent.split(/(\s+)/);
+      const frag = document.createDocumentFragment();
+      parts.forEach((part) => {
+        if (/^\s*$/.test(part)) {
+          frag.appendChild(document.createTextNode(part));
+        } else {
+          const span = document.createElement("span");
+          span.className = "text-reveal__word";
+          span.textContent = part;
+          frag.appendChild(span);
+        }
+      });
+      node.parentNode.replaceChild(frag, node);
+    } else if (node.nodeType === 1) {
+      Array.from(node.childNodes).forEach(wrapWords);
+    }
+  }
+
+  wrapWords(el);
 
   const words = Array.from(el.querySelectorAll(".text-reveal__word"));
 

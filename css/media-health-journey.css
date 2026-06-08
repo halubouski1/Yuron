@@ -9,6 +9,10 @@
         max-width: 550px;
     }
 
+    .hero__bottom-descr {
+        font-size: 20px;
+    }
+
     /* journey */
     .journey {
         padding-top: 120px;
@@ -25,7 +29,7 @@
     }
 
     .journey__text {
-        font-size: 12px;
+        font-size: 20px;
         max-width: 414px;
     }
 
@@ -199,7 +203,7 @@
 
     .hero__bottom-descr {
         max-width: 100%;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 140%;
     }
 

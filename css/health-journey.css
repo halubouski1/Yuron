@@ -9,11 +9,11 @@
 .hero__bottom-descr {
     margin: 0;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 28px;
     line-height: 146%;
     letter-spacing: -0.02em;
     color: #fff5ed;
-    max-width: 352px;
+    max-width: 100%;
 }
 
 .hero__inner {
@@ -61,7 +61,7 @@
     margin: 0;
     max-width: 548px;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 150%;
     letter-spacing: -0.02em;
     color: #000;
