@@ -834,6 +834,7 @@
         padding: 20px;
         width: 343px;
         min-height: 370px;
+        gap: 20px;
     }
 
     .reviews-card__title {

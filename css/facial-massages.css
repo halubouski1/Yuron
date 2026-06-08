@@ -79,6 +79,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
 }
 
 /* --------------------------------------------------------------------------
@@ -88,6 +89,23 @@ body {
   display: flex;
   flex-direction: column;
   gap: 64px;
+}
+
+.sp-hero__item-bottom {
+  font-size: 18px;
+  max-width: 400px;
+}
+
+.sp-hero__item-bottom strong {
+  font-weight: 500;
+}
+
+.sp-hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: disc;
+  padding-left: 12px;
 }
 
 .sp-hero__divider {

@@ -771,6 +771,7 @@ background: #282828;
 .reviews-card {
   width: 555px;
   min-height: 536px;
+  gap: 30px;
   height: auto;
   background: #F0ECE7;
   border-radius: 8px;

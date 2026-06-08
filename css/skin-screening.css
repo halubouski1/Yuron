@@ -76,13 +76,27 @@
   align-items: flex-end;
 }
 
+.ss-hero__bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero__bottom-label {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 120%;
+  color: #fff9f3;
+}
+
 .ss-hero__desc {
   margin: 0;
   font-weight: 400;
   font-size: 24px;
   line-height: 156%;
   color: #fff9f3;
-  max-width: 585px;
+  max-width: 643px;
+  letter-spacing: -0.02em;
 }
 
 .ss-hero__btn {
@@ -146,6 +160,10 @@
   color: #282828;
 }
 
+.screening__card:first-child .screening__card-note {
+  max-width: 200px;
+}
+
 .screening__card-desc {
   margin: 0;
   font-weight: 400;
@@ -156,6 +174,10 @@
   opacity: 0.8;
   flex: 1;
   margin-bottom: 106px;
+}
+
+.screening__card-desc strong {
+  font-weight: 500;
 }
 
 .screening__card-more {

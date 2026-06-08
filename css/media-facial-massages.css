@@ -18,6 +18,20 @@
         max-width: 438px;
     }
 
+    .sp-hero__item-bottom {
+        font-size: 14px;
+        max-width: 300px;
+    }
+
+    .sp-hero-list {
+        gap: 10px;
+        padding-left: 12px;
+    }
+
+    .sr-hero__col--desc {
+        gap: 10px;
+    }
+
     .sr-hero__price {
         font-size: 20px;
     }
@@ -136,6 +150,10 @@
 @media (max-width: 1024px) {
     .hero__inner--sp {
         padding-bottom: 45px;
+    }
+
+    .sp-hero-list {
+        display: none;
     }
 
     .sp-hero__row {

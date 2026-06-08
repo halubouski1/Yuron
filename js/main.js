@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Screening cards — inline "read more / read less" at end of line 3
   // ---------------------------------------------------------------
   document.querySelectorAll(".screening__card-desc").forEach((desc) => {
+    const fullHTML = desc.innerHTML.trim();
     const fullText = desc.textContent.trim();
     const cardWidth = desc.getBoundingClientRect().width;
 
@@ -245,6 +246,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.removeChild(ruler);
     const truncLen = lo;
 
+    // Walk DOM nodes and truncate at maxChars text characters, preserving HTML tags
+    function truncateHTML(maxChars) {
+      const temp = document.createElement("p");
+      temp.innerHTML = fullHTML;
+      let remaining = maxChars;
+      function walk(node) {
+        if (remaining <= 0) { node.parentNode.removeChild(node); return; }
+        if (node.nodeType === 3) {
+          if (node.textContent.length > remaining) {
+            node.textContent = node.textContent.slice(0, remaining);
+            remaining = 0;
+          } else {
+            remaining -= node.textContent.length;
+          }
+        } else {
+          Array.from(node.childNodes).forEach(walk);
+        }
+      }
+      Array.from(temp.childNodes).forEach(walk);
+      return temp.innerHTML;
+    }
+
     let expanded = false;
 
     function buildLink(label) {
@@ -261,11 +284,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function render() {
-      desc.innerHTML = "";
       if (expanded) {
-        desc.append(fullText + " ", buildLink("read less"));
+        desc.innerHTML = fullHTML;
+        desc.append(" ", buildLink("read less"));
       } else {
-        desc.append(fullText.slice(0, truncLen) + "... ", buildLink("read more"));
+        desc.innerHTML = truncateHTML(truncLen);
+        desc.append("... ", buildLink("read more"));
       }
     }
 
