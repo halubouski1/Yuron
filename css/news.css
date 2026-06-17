@@ -136,9 +136,9 @@ body{
 }
 
 .news {
-    background: #fff5ed;
-    z-index: -1;
-    position: relative;
+  background: #fff5ed;
+  position: relative;
+  z-index: -1;
 }
 
 .news-filter__btn {
