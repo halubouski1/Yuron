@@ -309,4 +309,47 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // ---------------------------------------------------------------
+  // Services mega-menu (full-screen overlay)
+  // Opened from any [data-services-open] trigger (the header "Services"
+  // link); closed via [data-services-close] or Escape. Big buttons and
+  // category rows are accordions toggled via [data-accordion-toggle].
+  // ---------------------------------------------------------------
+  const servicesMenu = document.querySelector(".services-menu");
+  if (servicesMenu) {
+    const setServicesState = (isOpen) => {
+      document.body.classList.toggle("services-open", isOpen);
+      servicesMenu.setAttribute("aria-hidden", String(!isOpen));
+    };
+
+    document.querySelectorAll("[data-services-open]").forEach((trigger) => {
+      trigger.addEventListener("click", (event) => {
+        event.preventDefault();
+        setServicesState(true);
+      });
+    });
+
+    document.querySelectorAll("[data-services-close]").forEach((closer) => {
+      closer.addEventListener("click", () => setServicesState(false));
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setServicesState(false);
+      }
+    });
+
+    // Accordion: each toggle reveals the panel that immediately follows it.
+    servicesMenu.querySelectorAll("[data-accordion-toggle]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const isExpanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!isExpanded));
+        const panel = btn.nextElementSibling;
+        if (panel) {
+          panel.hidden = isExpanded;
+        }
+      });
+    });
+  }
 });

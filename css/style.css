@@ -1675,3 +1675,207 @@ transition: opacity var(--t-fast);
   font-size: 16px;
   color: #413421;
 }
+
+/* ==========================================================================
+   Placed as a direct child of <body> so it is NOT trapped inside the hero's
+   `isolation: isolate` stacking context.
+   ========================================================================== */
+body.services-open {
+  overflow: hidden;
+}
+
+.services-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: 35px 58px 118px 62px;
+  background: #fbf7f1;
+  color: #282828;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+body.services-open .services-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.services-menu__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* — Top: logo + close — */
+.services-menu__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.services-menu__logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.services-menu__close {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #7b7b7b;
+  cursor: pointer;
+}
+
+/* — Bottom: label column + groups column — */
+.services-menu__body {
+  display: flex;
+  align-items: flex-start;
+}
+
+.services-menu__label {
+  flex: 0 0 auto;
+  margin-right: 400px;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: rgba(40, 40, 40, 0.35);
+}
+
+.services-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services-menu__num {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: rgba(40, 40, 40, 0.65);
+}
+
+.services-menu__big {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  color: #282828;
+  color: #282828;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* — Level-1 panel (revealed when a big button is expanded) — */
+.services-menu__panel {
+  margin-top: 55px;
+}
+
+.services-menu__panel[hidden] {
+  display: none;
+}
+
+.services-menu__cats {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  /* Level-1 indent — tune independently of the arrow↔text gap */
+  padding-left: 0;
+}
+
+/* Shared leaf link + expandable toggle (level 1 + level 2).
+   Arrow and text are flex items: vertically centered, with a fixed
+   gap between them. The per-level indent lives on the list container
+   (.services-menu__cats / .services-menu__subpanel), not here. */
+.services-menu__leaf,
+.services-menu__cat-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px; /* gap between arrow and link text */
+  border: 0;
+  background: none;
+  font-family: inherit;
+  color: #282828;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* Level-1 sizing */
+.services-menu__cat > .services-menu__leaf,
+.services-menu__cat-toggle {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+}
+
+.services-menu__cat-toggle[aria-expanded="true"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
+}
+
+/* Arrow is a flex item (reserves its space so text never reflows on
+   hover); it just fades in on hover / when expanded. */
+.services-menu__arrow {
+  flex: 0 0 auto;
+  width: 14px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.services-menu__leaf:hover .services-menu__arrow,
+.services-menu__cat-toggle:hover .services-menu__arrow,
+.services-menu__cat-toggle[aria-expanded="true"] .services-menu__arrow {
+  opacity: 1;
+}
+
+.services-menu__items .services-menu__leaf:hover, .services-menu__cat .services-menu__cat-toggle:hover {
+  font-weight: 500;
+}
+
+/* — Level-2 subpanel — */
+.services-menu__subpanel {
+  margin-top: 63px;
+  margin-bottom: 30px;
+  /* Level-2 indent — tune independently of the arrow↔text gap */
+  padding-left: 55px;
+}
+
+.services-menu__subpanel[hidden] {
+  display: none;
+}
+
+.services-menu__items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.services-menu__items .services-menu__leaf {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 128%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+/* — Featured group: Yuron signature protocols (Шаблон 3) — */
+.services-menu__group--featured .services-menu__big {
+  color: #c98a5a;
+}

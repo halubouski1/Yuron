@@ -96,6 +96,67 @@
   .faq__list {
     max-width: 770px;
   }
+
+  /* services menu */
+  .services-menu__big {
+    font-size: 50px;
+  }
+
+  .services-menu__num {
+    font-size: 12px;
+  }
+
+  .services-menu__list {
+    gap: 30px;
+  }
+
+  .services-menu__label {
+    font-size: 20px;
+    margin-right: 300px;
+  }
+
+  .services-menu {
+    padding: 35px 36px 118px 36px;
+  }
+
+  .services-menu__close svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .services-menu__top {
+    margin-bottom: 40px;
+  }
+
+  .services-menu__panel {
+    margin-top: 35px;
+  }
+
+  .services-menu__cat > .services-menu__leaf, .services-menu__cat-toggle {
+    font-size: 20px;
+  }
+
+  .services-menu__cats {
+    gap: 15px;
+  }
+
+  .services-menu__leaf, .services-menu__cat-toggle {
+    gap: 25px;
+  }
+
+  .services-menu__subpanel {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-left: 45px;
+  }
+
+  .services-menu__items .services-menu__leaf {
+    font-size: 14px;
+  }
+
+  .services-menu__arrow {
+    width: 10px;
+  }
 }
 
 @media (max-width: 1918px) {
@@ -472,7 +533,15 @@
   .needs__title {
     font-size: 42px;
     max-width: 500px;
-}
+  }
+
+  .services-menu__label {
+    margin-right: 200px;
+  }
+
+  .services-menu__big {
+    font-size: 40px;
+  }
 }
 
 
@@ -574,6 +643,20 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+  }
+
+  /* services menu */
+  .services-menu__body {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services-menu__label {
+    margin-right: 0px;
+    display: block;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(40, 40, 40, 0.35);
   }
 }
 
@@ -722,6 +805,11 @@
     letter-spacing: -0.02em;
     color: #fff9f3;
     opacity: 0.5;
+  }
+
+  /* services menu */
+  .services-menu__big {
+    font-size: 35px;
   }
 }
 
@@ -1123,5 +1211,69 @@
 
   .footer__email-label {
     font-size: 13px;
+  }
+
+  /* services menu */
+  .services-menu {
+    padding: 20px 15px 50px 15px;
+  }
+
+  .services-menu__top {
+    margin-bottom: 50px;
+  }
+
+  .services-menu__label {
+    font-size: 25px;
+    line-height: 100%;
+    padding-bottom: 10px;
+  }
+
+  .services-menu__body {
+    gap: 40px;
+  }
+
+  .services-menu__num {
+    font-size: 11px;
+    line-height: 100%;
+    color: #282828;
+  }
+
+  .services-menu__big {
+    font-size: 35px;
+    line-height: 100%;
+    max-width: 286px;
+  }
+
+  .services-menu__list {
+    gap: 20px;
+  }
+
+  .services-menu__panel {
+    margin-top: 25px;
+  }
+
+  .services-menu__leaf, .services-menu__cat-toggle {
+    gap: 8px;
+  }
+
+  .services-menu__cats {
+    gap: 10px;
+  }
+
+  .services-menu__subpanel {
+    margin-top: 15px;
+    padding-left: 8px;
+  }
+
+  .services-menu__items {
+    gap: 5px;
+  }
+
+  .services-menu__items li {
+    line-height: 100%;
+  }
+
+  .services-menu__items .services-menu__leaf:hover {
+    padding-left: 20px;
   }
 }
