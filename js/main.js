@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // (e.g. .systems__slider) are opted out via [data-lenis-prevent].
   // ---------------------------------------------------------------
   let lenis = null;
+  let servicesLenis = null; // dedicated smooth scroll for the Services overlay
   if (typeof Lenis !== "undefined") {
     lenis = new Lenis({
       duration: 1.2,
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function raf(time) {
       lenis.raf(time);
+      if (servicesLenis) servicesLenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
@@ -318,9 +320,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------------
   const servicesMenu = document.querySelector(".services-menu");
   if (servicesMenu) {
+    // Dedicated Lenis instance so the overlay scrolls smoothly (wheel + touch),
+    // independent of the page. Idle until the menu is opened.
+    if (typeof Lenis !== "undefined") {
+      servicesLenis = new Lenis({
+        wrapper: servicesMenu,
+        content: servicesMenu.querySelector(".services-menu__inner"),
+        duration: 1.0,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        syncTouch: true,
+      });
+      servicesLenis.stop();
+    }
+
     const setServicesState = (isOpen) => {
       document.body.classList.toggle("services-open", isOpen);
       servicesMenu.setAttribute("aria-hidden", String(!isOpen));
+      if (isOpen) {
+        // Pause the page scroll, hand control to the overlay's own Lenis.
+        if (lenis) lenis.stop();
+        if (servicesLenis) {
+          servicesLenis.start();
+          servicesLenis.resize();
+          servicesLenis.scrollTo(0, { immediate: true });
+        }
+      } else {
+        if (servicesLenis) servicesLenis.stop();
+        if (lenis) lenis.start();
+      }
     };
 
     document.querySelectorAll("[data-services-open]").forEach((trigger) => {
@@ -349,6 +377,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (panel) {
           panel.hidden = isExpanded;
         }
+        // Content height changed — let the overlay's Lenis recalc its limit.
+        if (servicesLenis) servicesLenis.resize();
       });
     });
   }
