@@ -1780,12 +1780,23 @@ body.services-open .services-menu {
 }
 
 /* — Level-1 panel (revealed when a big button is expanded) — */
+/* Accordion panels animate open via the grid-template-rows 0fr→1fr trick;
+   the top margin is animated alongside so the gap collapses when closed. */
 .services-menu__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  transition: grid-template-rows 0.45s ease, margin-top 0.45s ease;
+}
+
+.services-menu__panel.is-open {
+  grid-template-rows: 1fr;
   margin-top: 55px;
 }
 
-.services-menu__panel[hidden] {
-  display: none;
+.services-menu__panel > * {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .services-menu__cats {
@@ -1851,14 +1862,25 @@ body.services-open .services-menu {
 
 /* — Level-2 subpanel — */
 .services-menu__subpanel {
-  margin-top: 63px;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  margin-bottom: 0;
   /* Level-2 indent — tune independently of the arrow↔text gap */
   padding-left: 55px;
+  transition: grid-template-rows 0.45s ease, margin-top 0.45s ease,
+    margin-bottom 0.45s ease;
 }
 
-.services-menu__subpanel[hidden] {
-  display: none;
+.services-menu__subpanel.is-open {
+  grid-template-rows: 1fr;
+  margin-top: 63px;
+  margin-bottom: 30px;
+}
+
+.services-menu__subpanel > * {
+  overflow: hidden;
+  min-height: 0;
 }
 
 .services-menu__items {

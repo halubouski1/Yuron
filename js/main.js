@@ -368,18 +368,32 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Accordion: each toggle reveals the panel that immediately follows it.
+    // Panels ship with a `hidden` attribute for the no-JS case; drop it so
+    // they can animate (they stay visually collapsed via grid-template-rows: 0fr).
+    servicesMenu
+      .querySelectorAll(".services-menu__panel, .services-menu__subpanel")
+      .forEach((panel) => {
+        panel.hidden = false;
+      });
+
+    // Accordion: each toggle smoothly expands/collapses the panel that follows it.
     servicesMenu.querySelectorAll("[data-accordion-toggle]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const isExpanded = btn.getAttribute("aria-expanded") === "true";
         btn.setAttribute("aria-expanded", String(!isExpanded));
         const panel = btn.nextElementSibling;
         if (panel) {
-          panel.hidden = isExpanded;
+          panel.classList.toggle("is-open", !isExpanded);
         }
-        // Content height changed — let the overlay's Lenis recalc its limit.
-        if (servicesLenis) servicesLenis.resize();
       });
+    });
+
+    // Once an expand/collapse animation finishes, the content height is final —
+    // recalc the overlay Lenis scroll limit so newly revealed items are reachable.
+    servicesMenu.addEventListener("transitionend", (event) => {
+      if (event.propertyName === "grid-template-rows" && servicesLenis) {
+        servicesLenis.resize();
+      }
     });
   }
 });
