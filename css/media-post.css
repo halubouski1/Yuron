@@ -95,6 +95,10 @@
         line-height: 2;
     }
 
+    .post-article__body li img {
+        margin-top: 30px;
+    }
+
     .post-article__body h2 {
         font-size: 40px;
     }
@@ -200,6 +204,10 @@
     .post-article__body ul {
         gap: 30px;
         margin-left: 15px;
+    }
+
+    .post-article__body li img {
+        margin-top: 24px;
     }
 
     .post-article__body h2 {
@@ -362,6 +370,10 @@
 
     .post-article__body img {
         border-radius: 8px;
+    }
+
+    .post-article__body li img {
+        margin-top: 16px;
     }
 
     .post-article__body li {

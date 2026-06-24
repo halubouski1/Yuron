@@ -270,6 +270,11 @@ body{
   padding-left: 15px;
 }
 
+/* An image dropped inside a list item is separated from the text above it. */
+.post-article__body li img {
+  margin-top: 40px;
+}
+
 .post-article__body h2,
 .post-article__body h3,
 .post-article__body h4 {
