@@ -73,23 +73,38 @@
 
     .post-article__body p {
         font-size: 18px;
+        line-height: 2;
     }
 
     .post-article__container {
         max-width: 700px;
     }
 
-    .post-article__body {
-        gap: 40px;
+    .post-article__body > * + * {
+        margin-top: 40px;
     }
 
-    .post-article__list li {
+    .post-article__body li {
         font-size: 18px;
     }
 
-    .post-article__list {
+    .post-article__body ol,
+    .post-article__body ul {
         gap: 40px;
-        margin-left: 15px;
+        margin-left: 0px;
+        line-height: 2;
+    }
+
+    .post-article__body h2 {
+        font-size: 40px;
+    }
+
+    .post-article__body h3 {
+        font-size: 32px;
+    }
+
+    .post-article__body h4 {
+        font-size: 24px;
     }
 
     /* news */
@@ -173,17 +188,30 @@
         max-width: 600px;
     }
 
-    .post-article__body {
-        gap: 30px;
+    .post-article__body > * + * {
+        margin-top: 30px;
     }
 
-    .post-article__list li {
+    .post-article__body li {
         font-size: 16px;
     }
 
-    .post-article__list {
+    .post-article__body ol,
+    .post-article__body ul {
         gap: 30px;
         margin-left: 15px;
+    }
+
+    .post-article__body h2 {
+        font-size: 34px;
+    }
+
+    .post-article__body h3 {
+        font-size: 28px;
+    }
+
+    .post-article__body h4 {
+        font-size: 22px;
     }
 
     /* news */
@@ -325,23 +353,42 @@
     }
 
     .post-article__body p {
+        font-weight: 500;
         font-size: 13px;
         line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #6c6c6c;
     }
 
-    .post-article__image {
+    .post-article__body img {
         border-radius: 8px;
     }
 
-    .post-article__list li {
+    .post-article__body li {
+        font-weight: 500;
         font-size: 13px;
         line-height: 150%;
+        letter-spacing: -0.03em;
+        color: #6c6c6c;
         padding-left: 10px;
     }
 
-    .post-article__list {
+    .post-article__body ol,
+    .post-article__body ul {
         padding-left: 0;
         margin-left: 20px;
+    }
+
+    .post-article__body h2 {
+        font-size: 24px;
+    }
+
+    .post-article__body h3 {
+        font-size: 20px;
+    }
+
+    .post-article__body h4 {
+        font-size: 18px;
     }
 
     /* news */

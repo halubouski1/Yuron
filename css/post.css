@@ -220,30 +220,45 @@ body{
   margin: 0 0 95px;
 }
 
+/* ----------------------------------------------------------------------------
+   Article body — rich text from the WYSIWYG editor.
+   The editor outputs BARE tags (no classes) inside .post-article__body, so all
+   styling hangs off the base class via tag selectors. Vertical rhythm uses the
+   owl selector so it holds for any element order the editor produces.
+   -------------------------------------------------------------------------- */
 .post-article__body {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-.post-article__body p {
-  margin: 0;
   font-weight: 500;
   font-size: 30px;
   line-height: 180%;
   letter-spacing: -0.03em;
   color: #6c6c6c;
-  max-width: 1023px;
 }
 
-.post-article__image {
-  width: 100%;
+.post-article__body > * {
+  margin: 0;
+}
+
+.post-article__body > * + * {
+  margin-top: 80px;
+}
+
+.post-article__body p {
+  max-width: 1023px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 180%;
+  letter-spacing: -0.03em;
+  color: #6c6c6c;
+}
+
+.post-article__body img {
   display: block;
+  width: 100%;
   border-radius: 12px;
 }
 
-.post-article__list {
-  margin: 0;
+.post-article__body ol,
+.post-article__body ul {
   padding-left: 25px;
   margin-left: 25px;
   display: flex;
@@ -251,13 +266,45 @@ body{
   gap: 80px;
 }
 
-.post-article__list li {
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 180%;
-  letter-spacing: -0.03em;
-  color: #6c6c6c;
+.post-article__body li {
   padding-left: 15px;
+}
+
+.post-article__body h2,
+.post-article__body h3,
+.post-article__body h4 {
+  font-weight: 400;
+  line-height: 115%;
+  letter-spacing: -0.03em;
+  color: #000;
+}
+
+.post-article__body h2 {
+  font-size: 56px;
+}
+
+.post-article__body h3 {
+  font-size: 42px;
+}
+
+.post-article__body h4 {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+/* A heading sits closer to the content it introduces. */
+.post-article__body :is(h2, h3, h4) + * {
+  margin-top: 32px;
+}
+
+.post-article__body a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.post-article__body strong {
+  font-weight: 700;
 }
 
 /* news */
