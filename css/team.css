@@ -225,53 +225,96 @@
   margin: 0 0 24px;
 }
 
-.team-popup__text {
+/* ----------------------------------------------------------------------------
+   Popup body AFTER the intro — rich text the client fills from the editor as
+   bare tags (no classes). The intro block above (name / meta / divider / intro)
+   keeps its own classes and is left untouched, so every rule here is qualified
+   with :not([class]) to target only the class-less editor tags.
+   -------------------------------------------------------------------------- */
+.team-popup__scroll :is(h1, h2, h3, h4, h5, h6, p, ul, ol):not([class]) {
+  margin: 0;
+}
+
+/* Vertical rhythm between consecutive editor blocks (top level only). */
+.team-popup__scroll > :not([class]) + :not([class]) {
+  margin-top: 24px;
+}
+
+/* A heading sits closer to the paragraph / list it introduces. */
+.team-popup__scroll > :is(h1, h2, h3, h4, h5, h6):not([class]) + :is(p, ul, ol):not([class]) {
+  margin-top: 12px;
+}
+
+.team-popup__scroll h1:not([class]) {
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__scroll h2:not([class]) {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__scroll h3:not([class]) {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 116%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__scroll h4:not([class]) {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 116%;
+  letter-spacing: -0.02em;
+  color: #282828;
+  max-width: 682px;
+}
+
+.team-popup__scroll h5:not([class]) {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__scroll h6:not([class]) {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #282828;
+}
+
+.team-popup__scroll p:not([class]) {
   font-weight: 400;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: -0.02em;
   color: #000;
   opacity: 0.8;
-  margin: 0 0 24px;
 }
 
-.team-popup__quote {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 116%;
-  color: #282828;
-  margin: 0 0 24px;
-  max-width: 682px;
-}
-
-.team-popup__section-title {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 116%;
-  color: #282828;
-  margin: 0;
-}
-
-.team-popup__section-note {
-  font-size: 14px;
-  line-height: 150%;
-  color: rgba(40, 40, 40, 0.6);
-  margin: 0;
-}
-
-.team-popup__list {
+.team-popup__scroll ul:not([class]),
+.team-popup__scroll ol:not([class]) {
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.team-popup__list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.team-popup__scroll li {
+  position: relative;
+  padding-left: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 110%;
@@ -279,39 +322,33 @@
   color: #000;
 }
 
-.team-popup__list-bullet {
+.team-popup__scroll ul:not([class]) > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.4em;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: #282828;
-  flex-shrink: 0;
   opacity: 0.6;
-  display: inline-block;
 }
 
-.team-popup__list-note {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 110%;
-  letter-spacing: -0.02em;
-  color: #000;
+.team-popup__scroll ol:not([class]) {
+  counter-reset: team-popup-ol;
+}
+
+.team-popup__scroll ol:not([class]) > li {
+  counter-increment: team-popup-ol;
+}
+
+.team-popup__scroll ol:not([class]) > li::before {
+  content: counter(team-popup-ol) ".";
+  position: absolute;
+  left: 0;
   opacity: 0.6;
-  display: block;
-  max-width: 600px;
 }
 
 body.team-popup-open {
   overflow: hidden;
-}
-
-.team-popup__text--bottom {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-
-.team-popup__text--part {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
 }

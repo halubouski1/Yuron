@@ -57,32 +57,25 @@
         margin: 0 0 16px;
     }
 
-    .team-popup__text {
-        font-size: 12px;
-        margin: 0 0 16px;
+    .team-popup__scroll > :not([class]) + :not([class]) {
+        margin-top: 16px;
     }
 
-    .team-popup__quote {
+    .team-popup__scroll p:not([class]) {
+        font-size: 12px;
+    }
+
+    .team-popup__scroll h4:not([class]) {
         font-size: 18px;
-        margin: 0 0 16px;
         max-width: 501px;
     }
 
-    .team-popup__section-title {
+    .team-popup__scroll h3:not([class]) {
         font-size: 18px;
     }
 
-    .team-popup__list li {
+    .team-popup__scroll li {
         font-size: 12px;
-        gap: 6px;
-    }
-
-    .team-popup__text--part {
-        gap: 12px;
-    }
-
-    .team-popup__text--bottom {
-        gap: 20px;
     }
 
     .team-popup__close {
@@ -90,10 +83,6 @@
         height: 20px;
         top: 20px;
         right: 20px;
-    }
-
-    .team-popup__list-note {
-        max-width: 470px;
     }
 
     .team-popup__meta svg {
@@ -170,12 +159,8 @@
         margin: 0 0 14px;
     }
 
-    .team-popup__section-title {
+    .team-popup__scroll h3:not([class]) {
         font-size: 16px;
-    }
-
-    .team-popup__list-note {
-        max-width: 100%;
     }
 }
 
@@ -296,17 +281,13 @@
         font-size: 18px;
     }
 
-    .team-popup__quote {
+    .team-popup__scroll h4:not([class]) {
         font-size: 14px;
         max-width: 100%;
     }
 
-    .team-popup__section-title {
+    .team-popup__scroll h3:not([class]) {
         font-size: 14px;
-    }
-
-    .team-popup__list-note {
-        font-size: 12px;
     }
 
     .team-popup__meta {
