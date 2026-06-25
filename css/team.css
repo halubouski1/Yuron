@@ -80,6 +80,7 @@
 .team-members__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row;
   gap: 24px;
   row-gap: 28px;
   column-gap: 16px;
@@ -91,13 +92,15 @@
   cursor: pointer;
 }
 
-.team-members__grid .systems-card:nth-child(1) { grid-column: 1; grid-row: 1; }
-.team-members__grid .systems-card:nth-child(2) { grid-column: 3; grid-row: 1; }
-.team-members__grid .systems-card:nth-child(3) { grid-column: 1; grid-row: 2; }
-.team-members__grid .systems-card:nth-child(4) { grid-column: 2; grid-row: 2; }
-.team-members__grid .systems-card:nth-child(5) { grid-column: 2; grid-row: 3; }
-.team-members__grid .systems-card:nth-child(6) { grid-column: 3; grid-row: 3; }
-.team-members__grid .systems-card:nth-child(7) { grid-column: 1; grid-row: 4; }
+/* Repeating 6-card / 3-row pattern. Only the column is assigned per card —
+   rows auto-flow, so the staggered layout tiles for any number of cards.
+   Column sequence per cycle: 1, 3, 1, 2, 2, 3. */
+.team-members__grid .systems-card:nth-child(6n + 1) { grid-column: 1; }
+.team-members__grid .systems-card:nth-child(6n + 2) { grid-column: 3; }
+.team-members__grid .systems-card:nth-child(6n + 3) { grid-column: 1; }
+.team-members__grid .systems-card:nth-child(6n + 4) { grid-column: 2; }
+.team-members__grid .systems-card:nth-child(6n + 5) { grid-column: 2; }
+.team-members__grid .systems-card:nth-child(6n + 6) { grid-column: 3; }
 
 /* ==========================================================================
    Team Member Popup
