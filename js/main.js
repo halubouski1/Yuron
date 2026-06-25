@@ -376,10 +376,31 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.hidden = false;
       });
 
-    // Accordion: each toggle smoothly expands/collapses the panel that follows it.
+    // Accordion: each toggle smoothly expands/collapses the panel that follows
+    // it. Opening a row collapses any sibling already open at the same level
+    // (and anything still open inside it), so only one branch stays open.
+    const collapseToggle = (toggle) => {
+      toggle.setAttribute("aria-expanded", "false");
+      const panel = toggle.nextElementSibling;
+      if (panel) panel.classList.remove("is-open");
+    };
+
     servicesMenu.querySelectorAll("[data-accordion-toggle]").forEach((btn) => {
       btn.addEventListener("click", () => {
         const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+        if (!isExpanded) {
+          const item = btn.closest("li");
+          if (item && item.parentElement) {
+            Array.from(item.parentElement.children).forEach((sibling) => {
+              if (sibling === item) return;
+              sibling
+                .querySelectorAll("[data-accordion-toggle][aria-expanded='true']")
+                .forEach(collapseToggle);
+            });
+          }
+        }
+
         btn.setAttribute("aria-expanded", String(!isExpanded));
         const panel = btn.nextElementSibling;
         if (panel) {

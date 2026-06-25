@@ -1580,6 +1580,18 @@ opacity: 0.5;
   color: #413421;
 }
 
+/* Services heading doubles as the trigger that opens the Services mega-menu. */
+.footer__heading--btn {
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  transition: opacity var(--t-fast);
+}
+
+.footer__heading--btn:hover {
+  opacity: 0.7;
+}
+
 .footer__list {
   display: flex;
   flex-direction: column;
