@@ -129,6 +129,8 @@ body{
   --divider-color: #fff9f3;
   --divider-width: 2px;
   --default-handle-opacity: 0;
+  /* Divider is fixed at the centre (value="50") and non-draggable. */
+  pointer-events: none;
 }
 
 .ba-handle {
@@ -140,6 +142,7 @@ body{
   align-items: center;
   justify-content: center;
   gap: 15px;
+  display: none;
 }
 
 .before-after__btn {
