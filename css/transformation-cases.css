@@ -114,10 +114,15 @@ body{
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
+  display: flex;
+  /* 2px white divider between the two halves (matches the old slider divider) */
+  gap: 2px;
+  background: #fff9f3;
 }
 
+/* Before / after shown side by side — each image fully fills its own half. */
 .before-after-card img {
-  width: 100%;
+  width: 50%;
   height: 100%;
   object-fit: cover;
   display: block;
