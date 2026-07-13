@@ -1,7 +1,7 @@
-body{
-    background: #fff5ed;
+body {
+  background: #fff5ed;
 }
-   /* Breadcrumb */
+/* Breadcrumb */
 /* Breadcrumb */
 .contacts-breadcrumb {
   display: flex;
@@ -19,7 +19,7 @@ body{
 }
 
 .contacts-breadcrumb__link--active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .contacts-breadcrumb__link:hover {
@@ -28,37 +28,46 @@ body{
 
 /* hero */
 .hero__title {
-    font-weight: 500;
-    font-size: 76px;
-    line-height: 90%;
-    letter-spacing: -0.02em;
-    color: #fff9f3;
-    max-width: 800px;
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 76px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  max-width: 1200px;
+}
+.hero_description {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 90%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
+  margin-top: 20px;
 }
 
 .hero__top {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .hero__bottom {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .hero__desc {
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.02em;
-    color: #fff5ed;
-    max-width: 278px;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fff5ed;
+  max-width: 278px;
 }
 
 .hero__inner {
-    padding-bottom: 70px;
-    padding-top: 150px;
+  padding-bottom: 70px;
+  padding-top: 150px;
 }
 
 /* ==========================================================================
@@ -110,7 +119,7 @@ body{
 
 .before-after-card {
   width: calc(100vw - var(--container-pad) - 80px);
-  height: 891px;
+  /* height: 891px; */
   border-radius: 12px;
   overflow: hidden;
   flex-shrink: 0;
@@ -123,9 +132,10 @@ body{
 /* Before / after shown side by side — each image fully fills its own half. */
 .before-after-card img {
   width: 50%;
-  height: 100%;
-  object-fit: cover;
+  /* height: 100%; */
+  /* object-fit: cover; */
   display: block;
+  aspect-ratio: 1/1;
 }
 
 .ba-slider {
@@ -209,7 +219,8 @@ body{
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0;
 }
 
@@ -244,11 +255,11 @@ body{
 
 .reviews-showcase__title {
   margin: 0;
-    font-weight: 400;
-    font-size: 76px;
-    line-height: 98%;
-    letter-spacing: -0.02em;
-    color: #fff9f3;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 98%;
+  letter-spacing: -0.02em;
+  color: #fff9f3;
 }
 
 .reviews__slider {
@@ -265,7 +276,7 @@ body{
   width: 555px;
   min-height: 536px;
   height: auto;
-  background: #F0ECE7;
+  background: #f0ece7;
   border-radius: 8px;
   padding: 46px 30px 70px 30px;
   display: flex;
@@ -486,7 +497,7 @@ body{
   transition: background 0.2s;
 }
 
-.stories-card:hover  .stories-card__play {
+.stories-card:hover .stories-card__play {
   background: rgba(40, 40, 40, 0.4);
 }
 
@@ -567,7 +578,11 @@ body{
   left: 0;
   width: 100%;
   height: 70px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(196, 196, 196, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
   pointer-events: none;
   z-index: 1;
 }
