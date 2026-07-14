@@ -125,7 +125,7 @@ body {
   flex-shrink: 0;
   display: flex;
   /* 2px white divider between the two halves (matches the old slider divider) */
-  gap: 2px;
+  gap: 0px;
   background: #fff9f3;
 }
 
